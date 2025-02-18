@@ -365,7 +365,7 @@ html {
 
 .contact-container{
     position: absolute;
-    top: 175%;
+    top: 300%;
     display: flex;
     margin: 15% 20%;
     
@@ -470,7 +470,7 @@ html {
 
 .footer-container {
     position: absolute;
-    top:350% ;
+    top:470% ;
     height: 40%;
     width: 100vw;
     display: flex;
@@ -525,4 +525,218 @@ html {
     bottom: 5px;
     border-top: 2px solid white;
     font-size: 1.1rem;
+}
+
+
+.project-container{
+
+    position: absolute;
+    top:202%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.project-header{
+    text-align: center;
+    
+}
+
+.project-heading-content {
+    font-size: 1.3rem;
+}
+
+.project-heading{
+    font-size: 2.5rem;
+}
+
+.project-content{
+    display: flex;
+    flex-direction: column;
+    
+    width: 80vw;
+}
+
+.project-todo-app{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+}
+
+.project-img img{
+    width:90%;
+    
+    border-radius: 5px;
+   
+}
+
+.project-img-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+    font-size: 1.3rem;
+    
+}
+
+.project-img-content button{
+    font-size: 2rem;
+    border-radius:5px ; 
+    width: 70%;
+    padding: 5px;
+    
+}
+
+
+.project-img-content-btn:hover{ 
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+    transform: scale(1.22);
+}
+
+.tasknest-container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width:80vw;
+    position: absolute;
+    top:15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    align-self: center;
+    min-height: 100vh;
+}
+
+
+
+.tasknest-header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60vw;
+}
+
+
+.tasknest-heading{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.tasknest-heading-content{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+.tasknest-heading-btn{
+    width: 40%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+.tasknest-heading-btn:hover {
+    cursor: pointer;
+    transition: transform 0.4s ease-out;
+    transform: scale(1.2);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.tasknest-content{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tasknest-content h3{
+    font-size: 2rem;
+}
+.tasknest-content-img {
+    overflow: hidden;
+    width: 80vw;
+    padding: 10px;
+    border: 1px solid white;
+    
+}
+
+.tasknest-project-img {
+    
+ 
+    width:100%;    
+    object-fit: fill;         /* Ensures the image covers the container without overflow */
+    object-position: center;   /* Centers the image within the container */
+    display: block; 
+    
+}
+
+.tasknest-content-img-overview {
+    width: 60vw;
+    font-size: 1.3rem;
+}
+
+.tasknest-toolbox{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:10px;
+}
+
+
+.tasknest-tools{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.tasknest-tools h3{
+
+    font-size: 2rem;
+}
+
+.tasknest-tool{
+    background-color: darkgrey;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+
+.tasknest-links{
+    margin-top: 50px;
+
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+.tasknest-link{
+    width: 180px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+
+}
+
+.tasknest-link:hover {
+    cursor: pointer;
+    transition: transform 0.4s ease-out;
+    transform: scale(1.2);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
 }

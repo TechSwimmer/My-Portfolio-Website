@@ -44,6 +44,10 @@ const Themebar = () => {
             document.querySelector('.contact-submit-button').classList.remove('button-dark')
             document.querySelector('.footer-container').classList.add('navbar-light')
             document.querySelector('.footer-container').classList.remove('navbar-dark')
+            document.querySelector('.project-container').classList.add('light-mode')
+            document.querySelector('.project-container').classList.remove('dark-mode')
+            document.querySelector('.project-img-content-btn').classList.add('navbar-light')
+            document.querySelector('.project-img-content-btn').classList.remove('navbar-dark')
             localStorage.setItem("theme", "light")
         }
         else{
@@ -74,6 +78,10 @@ const Themebar = () => {
             document.querySelector('.contact-submit-button').classList.remove('button-light')
             document.querySelector('.footer-container').classList.add('navbar-dark')
             document.querySelector('.footer-container').classList.remove('navbar-light')
+            document.querySelector('.project-container').classList.add('dark-mode')
+            document.querySelector('.project-container').classList.remove('light-mode')
+            document.querySelector('.project-img-content-btn').classList.add('navbar-dark')
+            document.querySelector('.project-img-content-btn').classList.remove('navbar-light')
             localStorage.setItem("theme", "dark")
         }
     },[theme])
