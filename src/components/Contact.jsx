@@ -15,7 +15,7 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent page reload
 
-        const response = await fetch("https://my-portfolio-website-83bd.onrender.com", {
+        const response = await fetch("https://my-portfolio-website-83bd.onrender.com/send-mail", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
