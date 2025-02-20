@@ -10,11 +10,11 @@ const Logobar = () => {
 
     return (
         <div className="logobar">
-            <a href="" target="_blank" rel="noopener noreferrer">
-            <img className="logo" src={githubLogo} alt="github"></img>
-            </a>
+            <a href="#contact" target="_blank" rel="noopener noreferrer">
             <img className="logo" src={contactLogo} alt="contact"></img>
-            <a href="" target="_blank" rel="noopener noreferrer">
+            </a>
+           
+            <a href="https://github.com/TechSwimmer" target="_blank" rel="noopener noreferrer">
             <img className="logo" src={githubLogo} alt="github"></img>
             </a>
             
