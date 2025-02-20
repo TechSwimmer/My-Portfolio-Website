@@ -10,6 +10,9 @@ import nodemailer from "nodemailer";
 const PORT = 5000
 const app = express()
 app.use(cors());
+app.use(cors({
+    origin: "*"  // Allow requests from anywhere
+}));
 app.use(bodyParser.json());
 
 const transport = nodemailer.createTransport({
