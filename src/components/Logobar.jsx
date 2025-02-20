@@ -10,9 +10,18 @@ const Logobar = () => {
 
     return (
         <div className="logobar">
-            <img className="logo" src={contactLogo} alt="contact"></img>
+            <a href="" target="_blank" rel="noopener noreferrer">
             <img className="logo" src={githubLogo} alt="github"></img>
-            <img className="logo" src={linkedinLogo} alt="linked-in"></img>
+            </a>
+            <img className="logo" src={contactLogo} alt="contact"></img>
+            <a href="" target="_blank" rel="noopener noreferrer">
+            <img className="logo" src={githubLogo} alt="github"></img>
+            </a>
+            
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <img className="logo" src={linkedinLogo} alt="linked-in"></img>
+            </a>
+            
         </div>
     )
 }

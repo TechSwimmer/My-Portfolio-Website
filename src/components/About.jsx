@@ -1,11 +1,15 @@
 import { useState } from "react";
 import "./styles/styles.css";
 
-const About = () => {
+import { Link,useLocation } from "react-router-dom";
 
+const About = ({navigateToSection}) => {
+
+    const location = useLocation();
+    const isProjectPage = location.pathname.startsWith('/Projects/');
 
     return (
-        <div className="about-container">
+        <div id="about" className="about-container">
             <section className="about-header">
                 <h2>ABOUT ME</h2>
                 <p>Here you will find more information about me, what I do, and my current skills mostly
@@ -18,7 +22,7 @@ const About = () => {
                          with intuitive and responsive design. </p>
                     <p>I'm open to Job opportunities where I can contribute, learn and grow. If you have a 
                         good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
-                        <button type="button" className="about-contact-tab">CONTACT</button>
+                        <button type="button" onClick={() => navigateToSection("contact")} className="about-contact-tab">CONTACT</button>
                 </div>
                 <div className="about-skills">
                     <h4>My Skills</h4>

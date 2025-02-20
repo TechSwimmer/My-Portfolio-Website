@@ -4,6 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 import basicProjImg from "../../assets/basic-shot-2.png"
 
+import allTaskImg from "../../assets/all-task-shot.png"
+
+import createTaskShot from  "../../assets/create-task-shot.png"
+
+
 import "../styles/styles.css"
 
 
@@ -30,9 +35,19 @@ const TodoAppDetails = () => {
                         Vanilla JavaScript. Designed to help users manage their daily tasks seamlessly, TaskNest 
                         offers an intuitive and organized way to plan, track, and complete tasks.</p>
 
+                        <div className="tasknest-content-img">
+
+                            <img src={allTaskImg} className="tasknest-project-image" alt="project-image"></img>
+                        </div>
                         <p>With a dynamic calendar view, users can effortlessly navigate through their schedules, add tasks with due 
-                        dates, mark them as completed, and even filter tasks based on their status.</p>
+                        dates, mark them as completed,edit specific tasks and even filter tasks based on their status.</p>
                         
+
+                        <div className="tasknest-content-img">
+
+                            <img src={createTaskShot} className="tasknest-project-image" alt="project-image"></img>
+                        </div>
+
                         <p>This project highlights my ability to build a complete web application from scratch using core web technologies,
                         focusing on both functionality and user experience. TaskNest not only helps users stay productive but also
                         showcases my skills in full-stack development, database management, and responsive design.</p>
@@ -49,12 +64,13 @@ const TodoAppDetails = () => {
                 <div className="tasknest-tool">JAVASCRIPT</div>
                 <div className="tasknest-tool">GIT</div>
                 <div className="tasknest-tool">GITHUB</div>
+                <div className="tasknest-tool">NODE.JS</div>
 
                 </div>
             </div>
             <div className="tasknest-links">
-                <button type="click" className="tasknest-link">PROJECT LINK</button> 
-                <button type="click" className="tasknest-link" onClick={() => navigate('/')}>GO BACK</button> 
+                <button type="click" className="tasknest-link-btn">PROJECT LINK</button> 
+                <button type="click" className="tasknest-link-btn" onClick={() => navigate('/')}>GO BACK</button> 
 
             </div>
         </div>

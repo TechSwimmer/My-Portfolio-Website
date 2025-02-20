@@ -11,7 +11,7 @@ const Projects = () => {
 
 
     return (
-        <div className="project-container">
+        <div id="project" className="project-container">
             <div className="project-header">
                 <h2 className="project-heading">PROJECTS</h2>
                 <p className="project-heading-content">Here you will find some of the personal and clients projects
@@ -29,7 +29,7 @@ const Projects = () => {
                             and JavaScript. It features a dynamic calendar to manage daily tasks,
                             task categorization by due dates and completion status, and secure MongoDB 
                             authentication.</p>
-                        <button type="click" className="project-img-content-btn"><Link to="/Projects/TodoAppDetails">CASE STUDY</Link> </button>
+                        <Link to="/Projects/TodoAppDetails" className="project-img-content-btn">CASE STUDY</Link> 
                     </div>
                 </div>
             </div>

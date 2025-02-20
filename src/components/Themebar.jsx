@@ -1,114 +1,133 @@
 import { useState, useEffect } from "react";
-import "./styles/styles.css"
+import "./styles/styles.css";
 
-import lightlogo from "../assets/icons8-sun-50.png"
-import darklogo from "../assets/icons8-dark-60.png"
-
-
+import lightlogo from "../assets/icons8-sun-50.png";
+import darklogo from "../assets/icons8-dark-60.png";
 
 const Themebar = () => {
-
     const [theme, setTheme] = useState(() => {
-
         return localStorage.getItem("theme") === "dark" ? false : true;
     });
 
     useEffect(() => {
-        if(theme){
-            document.querySelector('.home-container').classList.add("light-mode")
-            document.querySelector('.home-container').classList.remove("dark-mode")
-            document.querySelector('.themebar').classList.remove("navbar-dark")
-            document.querySelector('.themebar').classList.add("navbar-light")
-            document.querySelector('.themebar-light').classList.add("light-mode", "active-scale")
-            document.querySelector('.themebar-dark').classList.remove("dark-mode", "active-scale")
-            document.querySelector('.logobar').classList.add("logobar-light")
-            document.querySelector('.logobar').classList.remove("logobar-dark")
-            document.querySelector('.navbar').classList.add('navbar-light')
-            document.querySelector('.navbar').classList.remove('navbar-dark')
-            document.querySelector('.home-projects-button').classList.add('navbar-light');
-            document.querySelector('.home-projects-button').classList.remove('navbar-dark');
-            document.querySelectorAll('.navbar a').forEach((link) => {link.classList.add('navbar-links-light')});
-            document.querySelectorAll('.navbar a').forEach((link) => {link.classList.remove('navbar-links-dark')});
-            document.querySelector('.about-container').classList.add("light-mode")
-            document.querySelector('.about-container').classList.remove("dark-mode")
-            document.querySelector('body').classList.add('light-mode');
-            document.querySelector('body').classList.remove('dark-mode');
-            document.querySelectorAll('.skill-tab').forEach((e) => {e.classList.add('navbar-light')})
-            document.querySelectorAll('.skill-tab').forEach((e) => {e.classList.remove('navbar-dark')})
-            document.querySelector('.about-contact-tab').classList.add('navbar-light')  
-            document.querySelector('.about-contact-tab').classList.remove('navbar-dark')  
+        const elements = {
+            homeContainer: document.querySelector('.home-container'),
+            body: document.querySelector('body'),
+            tasknestContainer: document.querySelector('.tasknest-container'),
+            aboutContainer: document.querySelector('.about-container'),
+            contactForm: document.querySelector('.contact-form'),
+            projectContainer: document.querySelector('.project-container'),
+            homeProjectsButton: document.querySelector('.home-projects-button'),
+            aboutContactTab: document.querySelector('.about-contact-tab'),
+            contactSubmitButton: document.querySelector('.contact-submit-button'),
+            projectImgBtn: document.querySelector('.project-img-content-btn'),
+        };
 
-            document.querySelector('.contact-form').classList.add('navbar-light');
-            document.querySelector('.contact-form').classList.remove('navbar-dark');
-            document.querySelector('.contact-submit-button').classList.add('button-light')
-            document.querySelector('.contact-submit-button').classList.remove('button-dark')
-            document.querySelector('.footer-container').classList.add('navbar-light')
-            document.querySelector('.footer-container').classList.remove('navbar-dark')
-            document.querySelector('.project-container').classList.add('light-mode')
-            document.querySelector('.project-container').classList.remove('dark-mode')
-            document.querySelector('.project-img-content-btn').classList.add('navbar-light')
-            document.querySelector('.project-img-content-btn').classList.remove('navbar-dark')
-            localStorage.setItem("theme", "light")
+        Object.values(elements).forEach(el => {
+            if (el) {
+                el.classList.toggle("light-mode", theme);
+                el.classList.toggle("dark-mode", !theme);
+            }
+          
+        });
+
+        const elementsTwo = {
+            navbar: document.querySelector('.navbar'),
+            logobar: document.querySelector('.logobar'),
+            footerContainer: document.querySelector('.footer-container'),
+            tasknestHeadBtn: document.querySelector('.tasknest-heading-btn')
+        };
+
+        Object.values(elementsTwo).forEach(el => {
+            if (el) {
+                el.classList.toggle("navbar-light", theme);
+                el.classList.toggle("navbar-dark", !theme);
+            }
+            if(elementsTwo.tasknestHeadBtn) {
+                elementsTwo.tasknestHeadBtn.classList.toggle("navbar-light", theme);
+                elementsTwo.tasknestHeadBtn.classList.toggle("navbar-dark", !theme);
+                
+            }
+        });
+
+        const elementsThree = {
+            themeBar: document.querySelector('.themebar'),
+            themebarlight: document.querySelector('.themebar-light'),
+            themebarDark: document.querySelector('.themebar-dark'),
+        };
+
+        Object.values(elementsThree).forEach(el => {
+            if (el) {
+                el.classList.toggle("navbar-light", theme);
+                el.classList.toggle("navbar-dark", !theme);
+            }
+        });
+
+        if (elementsThree.themebarlight) {
+            elementsThree.themebarlight.classList.toggle("active-scale", theme);
+            elementsThree.themebarlight.classList.toggle("light-mode", theme);
         }
-        else{
-            document.querySelector('.home-container').classList.add("dark-mode")
-            document.querySelector('.home-container').classList.remove("light-mode")
-            document.querySelector('.themebar').classList.add("navbar-dark")
-            document.querySelector('.themebar-dark').classList.add("dark-mode", "active-scale")
-            document.querySelector('.themebar-light').classList.remove("light-mode", "active-scale")
-            document.querySelector('.logobar').classList.add("logobar-dark")
-            document.querySelector('.logobar').classList.remove("logobar-light")
-            document.querySelector('.navbar').classList.add('navbar-dark')
-            document.querySelector('.navbar').classList.remove('navbar-light')
-            document.querySelector('.home-projects-button').classList.add('navbar-dark');
-            document.querySelector('.home-projects-button').classList.remove('navbar-light')
-            document.querySelectorAll('.navbar a').forEach((link) => {link.classList.add('navbar-links-dark')});
-            document.querySelectorAll('.navbar a').forEach((link) => {link.classList.remove('navbar-links-light')});
-            document.querySelector('.about-container').classList.add("dark-mode")
-            document.querySelector('.about-container').classList.remove("light-mode")
-            document.querySelector('body').classList.add('dark-mode');
-            document.querySelector('body').classList.remove('light-mode');
-            document.querySelectorAll('.skill-tab').forEach((e) => {e.classList.add('navbar-dark')})
-            document.querySelectorAll('.skill-tab').forEach((e) => {e.classList.remove('navbar-light')})
-            document.querySelector('.about-contact-tab').classList.add('navbar-dark')  
-            document.querySelector('.about-contact-tab').classList.remove('navbar-light')  
-            document.querySelector('.contact-form').classList.add('navbar-dark');
-            document.querySelector('.contact-form').classList.remove('navbar-light');
-            document.querySelector('.contact-submit-button').classList.add('button-dark')
-            document.querySelector('.contact-submit-button').classList.remove('button-light')
-            document.querySelector('.footer-container').classList.add('navbar-dark')
-            document.querySelector('.footer-container').classList.remove('navbar-light')
-            document.querySelector('.project-container').classList.add('dark-mode')
-            document.querySelector('.project-container').classList.remove('light-mode')
-            document.querySelector('.project-img-content-btn').classList.add('navbar-dark')
-            document.querySelector('.project-img-content-btn').classList.remove('navbar-light')
-            localStorage.setItem("theme", "dark")
+
+        if (elementsThree.themebarDark) {
+            elementsThree.themebarDark.classList.toggle("active-scale", !theme);
+            elementsThree.themebarDark.classList.toggle("dark-mode", !theme);
         }
-    },[theme])
-    
 
-    const handleLightClick = () => {
-        setTheme(true);
-    }
+        // Handle elements with multiple items
+        document.querySelectorAll('.navbar a, .skill-tab').forEach(link => {
+            if (theme) {
+                link.classList.add('navbar-links-light', 'navbar-light');
+                link.classList.remove('navbar-links-dark', 'navbar-dark');
+            } else {
+                link.classList.add('navbar-links-dark', 'navbar-dark');
+                link.classList.remove('navbar-links-light', 'navbar-light');
+            }
+        });
+        // handle tools per theme
 
-    const handleDarkClick = () => {
-        setTheme(false);
-    }
+        document.querySelectorAll('.tasknest-tool').forEach(link => {
+            if (theme) {
+                link.classList.add('logobar-light')
+                link.classList.remove('logobar-dark')
+            }
+            else {
+                link.classList.add('logobar-dark')
+                link.classList.remove('logobarlight')
+            }
+        })
 
+        // handle project page buttion
+
+        document.querySelectorAll('.tasknest-link-btn').forEach(link => {
+            if(theme) {
+                link.classList.add('logobar-light')
+                link.classList.remove('logobar-dark')
+            }
+            else {
+                link.classList.add('logobar-dark')
+                link.classList.remove('logobar-light')
+            }
+        })
+        
+        // handle home page button
+        
+      
+
+        // Update localStorage
+        localStorage.setItem("theme", theme ? "light" : "dark");
+
+    }, [theme]); // This dependency array ensures effect runs when `theme` changes
 
     return (
         <div className="themebar">
-            <div className="themebar-light">
-                <img src={lightlogo} onClick={handleLightClick} alt="light-mode"></img>
+            <div className={`themebar-light ${theme ? "active-scale" : ""}`} onClick={() => setTheme(true)}>
+                <img src={lightlogo} alt="light-mode" />
             </div>
-            <div className="themebar-dark">
-                <img src={darklogo} onClick={handleDarkClick} alt="dark-mode"></img>
+            <div className={`themebar-dark ${!theme ? "active-scale" : ""}`} onClick={() => setTheme(false)}>
+                <img src={darklogo} alt="dark-mode" />
             </div>
         </div>
-    )
-}
-
-
-
+    );
+};
 
 export default Themebar;
