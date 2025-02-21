@@ -1,8 +1,15 @@
-# React + Vite
+# 🚀 Nikhil Pillai - Personal Portfolio
+Welcome to my personal portfolio! This website showcases my projects, skills, and experience as a full-stack web developer.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
+* 🖥️ Projects – A collection of my personal and client projects with case studies.
+* 📜 About Me – Insights into my background, skills, and experience.
+* 📬 Contact – Get in touch with me for collaborations or inquiries.
+## 🛠 Tech Stack
+### Frontend: React.js, HTML, CSS, JavaScript
+### Backend: Node.js, Express.js
+## 🔗 Live Demo
+Check out my portfolio here: https://techdevnikhil.netlify.app/
+### 📩 Contact
+Feel free to connect with me on:
+### Email: niku101095@gmail.com
