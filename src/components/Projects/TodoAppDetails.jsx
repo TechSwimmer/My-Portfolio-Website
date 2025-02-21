@@ -27,7 +27,7 @@ const TodoAppDetails = () => {
                 <h2 className="tasknest-heading">TASKNEST</h2>
                 <p className="tasknest-heading-content">This page contains the case study of TaskNest, a project
                      that includes the project overview, tools used, and live links to the official product.</p>
-                <button className="tasknest-heading-btn">PROJECT LINK</button>
+                <button className="tasknest-heading-btn"><a href="https://github.com/TechSwimmer/Todo-list-app">PROJECT LINK</a></button>
             </div>
             <div className="tasknest-content">
                 <h3>PROJECT OVERVIEW</h3>
@@ -74,7 +74,7 @@ const TodoAppDetails = () => {
                 </div>
             </div>
             <div className="tasknest-links">
-                <button type="click" className="tasknest-link-btn">PROJECT LINK</button> 
+                <button type="click" className="tasknest-link-btn"><a href="https://github.com/TechSwimmer/Todo-list-app">PROJECT LINK</a></button> 
                 <button type="click" className="tasknest-link-btn" onClick={() => navigate('/')}>GO BACK</button> 
 
             </div>
