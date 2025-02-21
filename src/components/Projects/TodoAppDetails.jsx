@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -16,6 +16,11 @@ import "../styles/styles.css"
 const TodoAppDetails = () => {
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     return (
         <div className="tasknest-container">
             <div className="tasknest-header">

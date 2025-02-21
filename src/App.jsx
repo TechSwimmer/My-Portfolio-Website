@@ -44,13 +44,13 @@ const AppContent = () => {
   return (
     <div>
         <Navbar navigateToSection = {navigateToSection} />
-        <Logobar/>
+        <Logobar navigateToSection = {navigateToSection}/>
         <Themebar/>
 
         {!isProjectPage && (
 
           <>
-            <Home id="home"/>
+            <Home id="home" navigateToSection={navigateToSection}/>
             <About id="about" navigateToSection={navigateToSection}/>
             <Projects id="project"/>
             <Contact id="contact"/>
