@@ -75,7 +75,7 @@ const TodoAppDetails = () => {
             </div>
             <div className="tasknest-links">
                 <button type="click" className="tasknest-link-btn"><a href="https://github.com/TechSwimmer/Todo-list-app">PROJECT LINK</a></button> 
-                <button type="click" className="tasknest-link-btn" onClick={() => navigate('/')}>GO BACK</button> 
+                <button type="click" className="tasknest-link-btn" onClick={() => navigate('/Home')}>GO BACK</button> 
 
             </div>
         </div>

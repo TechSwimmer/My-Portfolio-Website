@@ -46,24 +46,28 @@ const AppContent = () => {
         <Navbar navigateToSection = {navigateToSection} />
         <Logobar navigateToSection = {navigateToSection}/>
         <Themebar/>
+        <Routes>
+          <Route path="/Projects/TodoAppDetails" element={<TodoAppDetails />}/>
+          
+          <Route path="/Projects" element={<Projects />}/>
+          
+        </Routes>
+
 
         {!isProjectPage && (
 
           <>
-            <Home id="home" navigateToSection={navigateToSection}/>
-            <About id="about" navigateToSection={navigateToSection}/>
-            <Projects id="project"/>
-            <Contact id="contact"/>
+            <Home id="home" navigateToSection={navigateToSection} />
+            <About id="about" navigateToSection={navigateToSection} />
+            <Projects id="project" navigateToSection={navigateToSection} />
+            <Contact id="contact" navigateToSection={navigateToSection} />
 
 
           </>
         )}
 
 
-        <Routes>
-          <Route path="/Projects/TodoAppDetails" element={<TodoAppDetails />}/>
-        </Routes>
-
+        
 
         <Footer/>
     </div>
@@ -77,7 +81,7 @@ const App = () => {
   return(
     
       <AppContent/>
-    
+      
   )
 }
 

@@ -26,9 +26,9 @@ const Footer = () => {
                         <h2>SOCIAL</h2>
                     </div>
                     <div className="footer-right-logos">
-                        <div className="footer-logo"><img src={githubLogo} alt="github"></img></div>
-                        <div className="footer-logo"><img src={linkedinLogo} alt="linked-in"></img></div>
-                        <div className="footer-logo"><img src={contactLogo} alt="contact"></img></div>
+                        <div className="footer-logo"><a href="https://github.com/TechSwimmer"><img src={githubLogo} alt="github"></img></a></div>
+                        <div className="footer-logo"><a href=""><img src={linkedinLogo} alt="linked-in"></img></a></div>
+                        <div className="footer-logo"><a href="#contact"><img src={contactLogo} alt="contact"></img></a></div>
                     </div>
                 </div>
             </div>

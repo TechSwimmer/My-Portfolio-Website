@@ -2,6 +2,8 @@ import { useState } from "react";
 import './styles/styles.css'
 import profilePic from '../assets/cool-profile-pictures-monkey-face-0jxwmq6bpm3hs9cb.jpg'
 
+import menuIcon from '../assets/134216_menu_lines_hamburger_icon.svg'
+
 
 import { Link,useLocation } from "react-router-dom"
 
@@ -9,6 +11,8 @@ const Navbar = ({navigateToSection}) => {
     
     const location = useLocation();
     const isProjectPage = location.pathname.startsWith('/Projects/');
+
+    const [menuStatus, setMenuStatus] = useState(false);
   
     return (
         <div className="navbar">
@@ -34,6 +38,13 @@ const Navbar = ({navigateToSection}) => {
               <h4><a href="#contact">CONTACT</a></h4>
             </>
           )}
+          <div className="hamburger" onClick={() => setMenuStatus(!menuStatus)}><img src={menuIcon} alt="Menu-icon"></img></div>
+          <div className={`dropdown-menu ${menuStatus ? "open" : ""}`}>
+                <Link  onClick={() => {setMenuStatus(false);navigateToSection("home")}}>Home</Link>
+                <Link  onClick={() => {setMenuStatus(false);navigateToSection("about")}}>About</Link>
+                <Link  onClick={() => {setMenuStatus(false);navigateToSection("project")}}>Projects</Link>
+                <Link  onClick={() => {setMenuStatus(false);navigateToSection("contact")}}>Contact</Link>
+            </div>
         </div>
       </div>
     )
