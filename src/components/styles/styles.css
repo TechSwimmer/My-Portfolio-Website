@@ -72,13 +72,13 @@ html {
 
 .home-head{
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: bolder;
     }
 
 .home-content{
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     padding-left: 20px;
     padding-right: 20px;
     width: 70%;
@@ -87,7 +87,7 @@ html {
 .home-projects-button {
     align-self: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     padding: 10px 25px;
     border-radius: 15px;
     }
@@ -121,13 +121,13 @@ html {
 
 
 .about-header h2{
-    font-size: 2.56rem;
+    font-size: 2.1rem;
     font-weight: bold;
     text-decoration: underline;
     }
 
 .about-header p{
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     }
 
 .about-content-skills{
@@ -146,12 +146,12 @@ html {
     }
 
 .about-content h4{
-    font-size: 2.3rem;
+    font-size: 2rem;
     text-align: center;
    }
    
 .about-content p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-align: center;
     }
 
@@ -177,7 +177,7 @@ html {
     }
 
 .about-skills h4{
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-align: right;
     }
 
@@ -186,10 +186,10 @@ html {
     border-radius: 10px;
     display: flex;
     padding: 5px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    font-size: 1.3rem;
-    font-weight: bold;
+    font-size: 0.7rem;
+    
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     }
 
@@ -198,7 +198,7 @@ html {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 17px;
+    gap: 10px;
     text-align: center;
    }
 
@@ -232,14 +232,14 @@ html {
 
 
 .contact-header{
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: bold;
     text-decoration: underline;
     
     }
 
 .contact-header-content{
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-align: center;
     }
 
@@ -250,7 +250,7 @@ html {
     width: 50%;
     border-radius: 5px;
     height: 45px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     }      
 
@@ -269,7 +269,7 @@ html {
     width: 100%;
     align-items: center;
     align-self: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding-top: 10%;
     padding-bottom: 5%;
     margin-bottom: 20%;
@@ -323,11 +323,11 @@ html {
     }
 
 .project-heading-content {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     }
 
 .project-heading{
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     }
 
 .project-content{
@@ -360,18 +360,18 @@ html {
     align-items: center;
     
     width: 99%;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-align: center;
     }
 
 .project-img-content h3{
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     }
 
 
 .project-img-content-btn{
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.6rem;
     border-radius:5px ; 
     width: 70%;
     padding: 5px;
@@ -429,10 +429,11 @@ html {
     }
 .navbar-left h2{
     margin-left: 10px;
+    font-size: 1.1rem;
 }
 
 .profilePic{
-    width: 25%;
+    width: 20%;
     object-fit: contain;
     border-radius: 20px;
     }
@@ -502,7 +503,7 @@ html {
     padding: 10px;
     
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     transition: 0.3s;
 }
 
@@ -650,7 +651,7 @@ html {
     flex-direction: column;
     width: 100%;
     height: 90%;
-   justify-content: center;
+   justify-content: space-around;
    align-items: center;
    
    }
@@ -665,7 +666,8 @@ html {
 }
 
 .footer-content-left p {
-    font-size:1.8rem;
+    font-size:1rem;
+    font-weight: bold;
     }
 
 .footer-content-right{
@@ -694,7 +696,7 @@ html {
     position: relative;
     bottom: 5px;
     border-top: 2px solid white;
-    font-size: 1.7rem;
+    font-size: 1rem;
     margin-bottom: 18%;
     width: 100%;
     text-align: center;
@@ -731,13 +733,13 @@ html {
 
 
 .tasknest-heading{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     text-align: center;
     }
 
 .tasknest-heading-content{
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1rem;
     }
 
 
@@ -745,7 +747,7 @@ html {
     width: 80%;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     }
 
 .tasknest-heading-btn a{
@@ -768,7 +770,7 @@ html {
     }
 
 .tasknest-content h3{
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     }
 .tasknest-content-img {
     overflow: hidden; /* Prevents overflow */
@@ -795,7 +797,7 @@ html {
 
 .tasknest-content-img-overview {
     width: 100vw;
-    font-size: 1.9rem;
+    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -809,7 +811,7 @@ html {
     align-items: center;
     gap:10%;
     flex-wrap: wrap;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     }
 
 
@@ -824,7 +826,7 @@ html {
 
 
 .tasknest-tools h3{
-    font-size: 2.4rem;
+    font-size: 1.7rem;
     }
 
 .tasknest-tool{
@@ -848,7 +850,7 @@ html {
     width: 45%;
     padding: 8px 15px;
     border-radius: 5px;
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-top: 10%;
     }
 
@@ -885,13 +887,13 @@ html {
 
 .home-head{
     text-align: center;
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     font-weight: bolder;
     }
 
 .home-content{
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     padding-left: 20px;
     padding-right: 20px;
     width: 70%;
@@ -900,7 +902,7 @@ html {
 .home-projects-button {
     align-self: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding: 10px 25px;
     border-radius: 15px
     }
@@ -935,13 +937,13 @@ html {
 
 
 .about-header h2{
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-weight: bold;
     text-decoration: underline;
     }
 
 .about-header p{
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     }
 
 .about-content-skills{
@@ -959,12 +961,12 @@ html {
     }
 
 .about-content h4{
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     text-align: left;
    }
    
 .about-content p {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-align: left;
     }
 
@@ -990,7 +992,7 @@ html {
     }
 
 .about-skills h4{
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     text-align: right;
     }
 
@@ -1001,7 +1003,7 @@ html {
     padding: 5px;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     }
 
@@ -1010,7 +1012,7 @@ html {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 17px;
+    gap: 12px;
     text-align: center;
    }
 
@@ -1045,14 +1047,14 @@ html {
 
 
 .contact-header{
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     font-weight: bold;
     text-decoration: underline;
     
     }
 
 .contact-header-content{
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     text-align: center;
     }
 
@@ -1063,7 +1065,7 @@ html {
     width: 50%;
     border-radius: 5px;
     height: 45px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     }      
 
@@ -1081,7 +1083,7 @@ html {
     height: 100%;
     width: 100%;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding-top: 10%;
     padding-bottom: 5%;
     margin-bottom: 20%;
@@ -1135,11 +1137,11 @@ html {
     }
 
 .project-heading-content {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     }
 
 .project-heading{
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     }
 
 .project-content{
@@ -1172,18 +1174,18 @@ html {
     align-items: center;
     
     width: 65%;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     text-align: center;
     }
 
 .project-img-content h3{
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     }
 
 
 .project-img-content-btn{
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.7rem;
     border-radius:5px ; 
     width: 70%;
     padding: 5px;
@@ -1245,7 +1247,7 @@ html {
 }
 
 .profilePic{
-    width: 25%;
+    width: 22%;
     object-fit: contain;
     border-radius: 20px;
     }
@@ -1272,7 +1274,7 @@ html {
    
     display: none;
     position: absolute;
-    top:123px;
+    top:90px;
     right: 0;
     width: 100%;
     flex-direction: column;
@@ -1289,11 +1291,10 @@ html {
     .hamburger {
         visibility: visible;
         display: block;
-        min-width: 20%;
-        height: 20%;
-        margin-right: 15px;
-        margin-top: 6px;
-        padding: 10px;
+        min-width: 15%;
+        
+        margin: 8px;
+        padding: 7px;
     }
     
     .hamburger:hover{
@@ -1471,7 +1472,7 @@ html {
 }
 
 .footer-content-left p {
-    font-size:1.8rem;
+    font-size:1.5rem;
     }
 
 .footer-content-right{
@@ -1500,7 +1501,7 @@ html {
     position: relative;
     bottom: 5px;
     border-top: 2px solid white;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     }
 
     /*-------------------------------------------project-tasknest-section--------------------------------------*/
@@ -1535,13 +1536,13 @@ html {
 
 
 .tasknest-heading{
-    font-size: 2.6rem;
+    font-size: 2.3rem;
     text-align: center;
     }
 
 .tasknest-heading-content{
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     }
 
 
@@ -1549,7 +1550,7 @@ html {
     width: 60%;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     }
 
 .tasknest-heading-btn a{
@@ -1571,7 +1572,7 @@ html {
     }
 
 .tasknest-content h3{
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     }
 .tasknest-content-img {
     overflow: hidden; /* Prevents overflow */
@@ -1599,7 +1600,7 @@ html {
 
 .tasknest-content-img-overview {
     width: 60vw;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     width: 75vw;
     text-align: center;
     }
@@ -1611,7 +1612,7 @@ html {
     align-items: center;
     gap:10%;
     flex-wrap: wrap;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     }
 
 
@@ -1626,7 +1627,7 @@ html {
 
 
 .tasknest-tools h3{
-    font-size: 2.6rem;
+    font-size: 2.3rem;
     }
 
 .tasknest-tool{
@@ -1650,7 +1651,7 @@ html {
     width: 45%;
     padding: 8px 15px;
     border-radius: 5px;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     margin-top: 10%;
     }
 

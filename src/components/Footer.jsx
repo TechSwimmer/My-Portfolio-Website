@@ -5,6 +5,8 @@ import githubLogo from "../assets/icons8-github-50.png"
 import contactLogo from "../assets/icons8-contact-50.png"
 import linkedinLogo from "../assets/icons8-linked-in-50.png"
 
+import codewarsLogo from "../assets/icons8-codewars-48.png"
+
 const Footer = () => {
 
 
@@ -17,8 +19,7 @@ const Footer = () => {
                     <h2>NIKHIL PILLAI</h2>
                 </div>
                 <div className="footer-left-content">
-                    <p>I am a Full-stack web developer building and managing websites and web applications
-                    with intuitive and responsive design.</p>
+                    <p>(FULL STACK WEB DEV)</p>
                 </div>
                 </div>
                 <div className="footer-content-right">
@@ -27,8 +28,9 @@ const Footer = () => {
                     </div>
                     <div className="footer-right-logos">
                         <div className="footer-logo"><a href="https://github.com/TechSwimmer"><img src={githubLogo} alt="github"></img></a></div>
-                        <div className="footer-logo"><a href=""><img src={linkedinLogo} alt="linked-in"></img></a></div>
+                        <div className="footer-logo"><a href="https://linkedin.com/in/techdevnikhil"><img src={linkedinLogo} alt="linked-in"></img></a></div>
                         <div className="footer-logo"><a href="#contact"><img src={contactLogo} alt="contact"></img></a></div>
+                        <div className="footer-logo"><a href="https://www.codewars.com/users/code_toad"><img src={codewarsLogo} alt="codewars"></img></a></div>
                     </div>
                 </div>
             </div>

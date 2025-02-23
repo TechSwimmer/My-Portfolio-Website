@@ -18,8 +18,8 @@ const About = ({navigateToSection}) => {
             <section className="about-content-skills">   
                 <div className="about-content">
                     <h4>Get to know me!</h4>
-                    <p>I am a Full-stack web developer building and managing websites and web applications
-                         with intuitive and responsive design. </p>
+                    <p>I specialize in MERN stack development, creating seamless user experiences with
+                         React, and building efficient backend systems with Node.js and MongoDB. </p>
                     <p>I'm open to Job opportunities where I can contribute, learn and grow. If you have a 
                         good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
                         <button type="button" onClick={() => navigateToSection("contact")} className="about-contact-tab">CONTACT</button>
