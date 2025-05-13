@@ -9,7 +9,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Projects from './components/Projects'
 import TodoAppDetails from './components/Projects/TodoAppDetails';
-import CvBuilderDetails from './components/Projects/cvBuilderdetails';
+import CvBuilderDetails from './components/Projects/CvBuilderDetails';
 
 
 const AppContent = () => {
