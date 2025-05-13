@@ -49,7 +49,7 @@ const Projects = () => {
                                 Features include layout switching, section visibility toggles, custom styling,
                                 print-friendly formatting, and persistent data handling. Utilizes html2canvas, jsPDF, and responsive design principles
                                 for a seamless user experience.</p>
-                            <Link to="/Projects/TodoAppDetails" className="project-img-content-btn">CASE STUDY</Link>
+                            <Link to="/Projects/CvBuilderDetails" className="project-img-content-btn">CASE STUDY</Link>
                         </div>
                     </div>
                 </div>

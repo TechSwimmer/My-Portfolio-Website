@@ -9,7 +9,7 @@ import allTaskImg from "../../assets/all-task-shot.png"
 import createTaskShot from  "../../assets/create-task-shot.png"
 
 
-import "../styles/styles.css"
+import "../styles/tasknestStyles.css"
 
 
 

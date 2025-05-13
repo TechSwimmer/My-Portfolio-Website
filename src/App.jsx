@@ -9,6 +9,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Projects from './components/Projects'
 import TodoAppDetails from './components/Projects/TodoAppDetails';
+import CvBuilderDetails from './components/Projects/cvBuilderdetails';
 
 
 const AppContent = () => {
@@ -48,6 +49,7 @@ const AppContent = () => {
         <Themebar/>
         <Routes>
           <Route path="/Projects/TodoAppDetails" element={<TodoAppDetails />}/>
+          <Route path="/Projects/CvBuilderDetails" element={<CvBuilderDetails />}/>
           
           <Route path="/Projects" element={<Projects />}/>
           
