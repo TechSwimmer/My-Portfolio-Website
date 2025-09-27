@@ -7,6 +7,7 @@ import githubLogo from "../assets/icons8-github-50.png"
 import contactLogo from "../assets/icons8-contact-50.png"
 import linkedinLogo from "../assets/icons8-linked-in-50.png"
 import codewarsLogo from "../assets/icons8-codewars-48.png"
+import hackerEarthLogo from "../assets/hackerearth.png"
 
 
 const Logobar = () => {
@@ -40,6 +41,9 @@ const Logobar = () => {
             
             <a href="https://www.codewars.com/users/code_toad" target="_blank" rel="noopener noreferrer">
                 <img className="logo" src={codewarsLogo} alt="linked-in"></img>
+            </a>
+            <a href="https://www.hackerearth.com/@niku101095/" target="_blank" rel="noopener noreferrer">
+                <img className="logo" src={hackerEarthLogo} alt="hyackerearth"></img>
             </a>
         </div>
     )

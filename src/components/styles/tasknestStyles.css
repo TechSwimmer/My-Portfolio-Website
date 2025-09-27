@@ -114,6 +114,7 @@
         gap:10%;
         flex-wrap: wrap;
         font-size: 1.2rem;
+        
     }
 
     .tasknest-tools{
@@ -165,7 +166,29 @@
         transform: scale(1.2);
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
     }
-    
+    .achievement-list-head{
+        text-align: center;
+        
+    }
+
+    .achievements-list-points{
+        font-size: 1rem;
+        text-align: center;
+        
+    }
+     .achievements-list-points ul li {
+        margin-top: 10px;
+        list-style: none;
+        margin-right: 30px;
+    }
+
+    .vanilla-js-head{
+        text-align: center;
+    }
+    .vanilla-js-content{
+        font-size: 1rem;
+        margin: 10px;
+    }
 
 }
 
@@ -337,7 +360,23 @@
     transform: scale(1.2);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
     }
+    .achievement-list-head{
+        text-align: center;
+    }
 
+    .achievements-list-points{
+        font-size: 1.2rem;
+    }
+     .achievements-list-points ul li {
+        margin-top: 8px;
+    }
+
+    .vanilla-js-head{
+        text-align: center;
+    }
+    .vanilla-js-content{
+        font-size: 1.2rem;
+    }
 
 }
 
@@ -451,9 +490,11 @@
     .tasknest-toolbox{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 2%;
+    gap: 3%;
+    flex-wrap: wrap;
+    width: 70%;
     }
 
     .tasknest-tools{
@@ -461,6 +502,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+   
     }
 
     .tasknest-tools h3{
@@ -472,6 +514,12 @@
     padding: 10px 20px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
     font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    .tasknest-tool:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .tasknest-links{
@@ -504,4 +552,32 @@
         display:none ;
     }
 
+    .achievement-list-head{
+        text-align: center;
+    }
+
+    .achievements-list-points{
+        font-size: 1.4rem;
+    }
+     .achievements-list-points ul li {
+        margin-top: 10px;
+    }
+
+    .vanilla-js-head{
+        text-align: center;
+    }
+    .vanilla-js-content{
+        font-size: 1.4rem;
+    }
+
+    .key-features-section h3{
+        text-align: center;;
+    }
+    .features-list{
+        font-size: 1.3rem;
+       
+    }
+    .features-list li {
+        margin: 10px;
+    }
 }
