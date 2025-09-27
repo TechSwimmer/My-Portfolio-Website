@@ -18,7 +18,7 @@ app.use(cors({
 app.use(bodyParser.json());
 
 const transport = nodemailer.createTransport({
-    service: 'smtp.sendgrid.net',
+    host: 'smtp.sendgrid.net',
     PORT:587,
     secure:false,
     auth: {
