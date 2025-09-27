@@ -18,10 +18,11 @@ app.use(cors({
 app.use(bodyParser.json());
 
 const transport = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'smtp.sendgrid.net',
+    PORT:587,
     auth: {
-         user: process.env.EMAIL_USER,
-         pass:process.env.EMAIL_PASS   
+         user: "apiKey",
+         pass:process.env.SENDGRID_API_KEY   
 
     }
 });
