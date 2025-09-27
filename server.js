@@ -31,9 +31,12 @@ app.get("/", (req, res) => {
     res.send("Backend is running!");
 });
 
-app.post("/send-email", (req, res) => {
+app.post("/send-email", async (req, res) => {
+    console.log("Received request:", req.body);
+
     const { name, email, message } = req.body;
     if (!name || !email || !message) {
+        console.log("Validation failed");
         return res.status(400).json({ error: "All fields are required" });
     }
 
@@ -44,15 +47,15 @@ app.post("/send-email", (req, res) => {
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
 
-    transport.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return res.status(500).json({ error: error.message });
-        }
+    try {
+        const info = await transport.sendMail(mailOptions);
         console.log("Email sent:", info.response);
         res.status(200).json({ message: "Email sent successfully!" });
-    });
+    } catch (error) {
+        console.error("Nodemailer error:", error); // <-- See exact error
+        res.status(500).json({ error: error.message });
+    }
 });
-
 
 
 app.listen(5000, () => console.log(`Server running on port ${PORT}`));
