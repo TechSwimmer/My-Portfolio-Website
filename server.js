@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 const transport = nodemailer.createTransport({
     service: 'smtp.sendgrid.net',
     PORT:587,
+    secure:false,
     auth: {
          user: "apiKey",
          pass:process.env.SENDGRID_API_KEY   
