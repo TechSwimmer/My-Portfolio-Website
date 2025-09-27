@@ -9,9 +9,11 @@ import nodemailer from "nodemailer";
 
 const PORT = 5000
 const app = express()
-app.use(cors());
+// app.use(cors());
 app.use(cors({
-    origin: "*"  // Allow requests from anywhere
+        origin: "https://techdevnikhil.netlify.app",
+        methods: ["GET", "POST", "OPTIONS"],
+        allowedHeaders: ["Content-Type"],
 }));
 app.use(bodyParser.json());
 
