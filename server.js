@@ -6,6 +6,7 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser  from "body-parser";
 import nodemailer from "nodemailer";
+import sgTransport from "nodemailer-sendgrid"
 
 const PORT = 5000
 const app = express()
@@ -17,16 +18,11 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 
-const transport = nodemailer.createTransport({
-    host: 'smtp.sendgrid.net',
-    port:587,
-    secure:false,
-    auth: {
-         user: "apikey",
-         pass:process.env.SENDGRID_API_KEY,  
-
-    }
-});
+const transport = nodemailer.createTransport(
+   sgTransport({
+    apiKey: process.env.SENDGRID_API_KEY,
+  })
+);
 
 
 app.get("/", (req, res) => {
@@ -51,7 +47,7 @@ app.post("/send-email", async (req, res) => {
 
     try {
         const info = await transport.sendMail(mailOptions);
-        console.log("Email sent:", info.response);
+        console.log("Email sent:", info);
         res.status(200).json({ message: "Email sent successfully!" });
     } catch (error) {
         console.error("Nodemailer error:", error); // <-- See exact error
@@ -60,4 +56,4 @@ app.post("/send-email", async (req, res) => {
 });
 
 
-app.listen(5000, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
