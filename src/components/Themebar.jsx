@@ -21,6 +21,9 @@ const Themebar = () => {
             aboutContactTab: document.querySelector('.about-contact-tab'),
             contactSubmitButton: document.querySelector('.contact-submit-button'),
             projectImgBtn: document.querySelector('.project-img-content-btn'),
+            cvBuilder: document.querySelector('cvbuilder-container'),
+            cvBuilderIndexitems:document.querySelector('.nav-index'),
+            
             
         };
 
@@ -37,7 +40,9 @@ const Themebar = () => {
             logobar: document.querySelector('.logobar'),
             footerContainer: document.querySelector('.footer-container'),
             tasknestHeadBtn: document.querySelector('.tasknest-heading-btn'),
-            dropdownMenu: document.querySelector('.dropdown-menu')
+            dropdownMenu: document.querySelector('.dropdown-menu'),
+            cvBuilderIndexbtn:document.querySelector('.toggle-nav'),
+           
         };
 
         Object.values(elementsTwo).forEach(el => {

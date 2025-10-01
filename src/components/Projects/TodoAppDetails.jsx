@@ -21,15 +21,37 @@ const TodoAppDetails = () => {
         window.scrollTo(0, 0);
     }, []);
 
+      function toggleIndex() {
+        const index = document.getElementById('navIndex');
+        index.classList.toggle('active');
+    }
+
+
     return (
+
         <div className="tasknest-container">
+
+            <nav className='fixed-nav'>
+                <button className='toggle-nav' onClick={() => toggleIndex()}><div>▼</div><div>Index</div> </button>
+                <ul className='nav-index' id='navIndex'>
+                    <li className='nav-index-item'><a href='#tasknest-content'>Project overview</a></li>
+                    <li className='nav-index-item'><a href='#vanilla-js-container'>The Vanilla JavaScript Approach</a></li>
+                    <li className='nav-index-item'><a href='#key-features-section'>Key Features</a></li>
+                    <li className='nav-index-item'><a href='#achievements-list'>Key achievements</a></li>
+                    <li className='nav-index-item'><a href='#tasknest-tools'>Technology Stack Content:</a></li>
+                    
+
+                    <li className='nav-index-item'><a href='#tasknest-links'>PROJECT LINK</a></li>
+                </ul>
+            </nav>
+
             <div className="tasknest-header">
                 <h2 className="tasknest-heading">TASKNEST</h2>
                 <p className="tasknest-heading-content">This page contains the case study of TaskNest, Feature-Rich Full-Stack Todo Application, this page
                     includes the project overview, tools used, and live links to the official product.</p>
                 <button className="tasknest-heading-btn"><a href="https://github.com/TechSwimmer/Todo-list-app">PROJECT LINK</a></button>
             </div>
-            <div className="tasknest-content">
+            <div className="tasknest-content" id="tasknest-content">
                 <h3>PROJECT OVERVIEW</h3>
                 <div className="tasknest-content-img">
 
@@ -57,7 +79,7 @@ const TodoAppDetails = () => {
                         focusing on both functionality and user experience. TaskNest not only helps users stay productive but also
                         showcases my skills in full-stack development, database management, and responsive design.Features secure user authentication and real-time data persistence.</p>
                 </div>
-                <div className="vanilla-js-container">
+                <div className="vanilla-js-container" id="vanilla-js-container">
                     <div className="vanilla-js-head"><h3>The Vanilla JavaScript Approach</h3></div>
                     <div className="vanilla-js-content"><p>This project represents a conscious learning decision to master foundational web
                         development skills by building the entire frontend with vanilla JavaScript. While modern frameworks offer
@@ -68,7 +90,7 @@ const TodoAppDetails = () => {
 
                 </div>
 
-                <div className="key-features-section">
+                <div className="key-features-section" id="key-features-section">
                     <h3>Key Features</h3>
                     <ul className="features-list">
                         <li>🔐 <strong>User Authentication:</strong> Secure login/register with JWT</li>
@@ -81,7 +103,7 @@ const TodoAppDetails = () => {
                     </ul>
                 </div>
 
-                <div className="achievements-list">
+                <div className="achievements-list" id="achievements-list">
                     <div className="achievement-list-head">
                         <h3>Key achievements</h3>
                     </div>
@@ -96,29 +118,51 @@ const TodoAppDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className="tasknest-tools">
+            <div className="tasknest-tools" id="tasknest-tools">
                 <div className="tasknest-tool-head">
-                    <h3>Tools used</h3>
+                    <h3>Technology Stack Content:</h3>
                 </div>
 
                 <div className="tasknest-toolbox">
-                    <div className="tasknest-tool">HTML</div>
-                    <div className="tasknest-tool">CSS</div>
-                    <div className="tasknest-tool">JAVASCRIPT</div>
-                    <div className="tasknest-tool">GIT</div>
-                    <div className="tasknest-tool">GITHUB</div>
-                    <div className="tasknest-tool">NODE.JS</div>
-                    <div className="tasknest-tool">Express.js</div>
-                    <div className="tasknest-tool">MongoDB</div>
-                    <div className="tasknest-tool">Mongoose</div>
-                    <div className="tasknest-tool">JWT</div>
-                    <div className="tasknest-tool">REST APIs</div>
-                    <div className="tasknest-tool">Netlify</div>
-                    <div className="tasknest-tool">Render</div>
+                  
+                    <div>
+                        <h4>Frontend</h4>
+                        <div className="frontend-tools">
+                            <div className="tasknest-tool">HTML</div>
+                            <div className="tasknest-tool">CSS</div>
+                            <div className="tasknest-tool">JAVASCRIPT</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Backend</h4>
+                        <div className="backend-tools">
+                            <div className="tasknest-tool">NODE.JS</div>
+                            <div className="tasknest-tool">Express.js</div>
+                            <div className="tasknest-tool">MongoDB</div>
+                            <div className="tasknest-tool">Mongoose</div>
+                            <div className="tasknest-tool">JWT</div>
+                            <div className="tasknest-tool">REST APIs</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Libraries & Tools</h4>
+                        <div className="libraries-tools">
+
+
+                            <div className="tasknest-tool">GIT</div>
+                            <div className="tasknest-tool">GITHUB</div>
+
+                            <div className="tasknest-tool">Netlify</div>
+                            <div className="tasknest-tool">Render</div>
+
+                        </div>
+                    </div>
+
+
 
                 </div>
             </div>
-            <div className="tasknest-links">
+            <div className="tasknest-links" id="tasknest-links">
                 <button type="click" className="tasknest-link-btn"><a href="https://todotasknest.netlify.app">SEE IT LIVE</a></button>
                 <button type="click" className="tasknest-link-btn" onClick={() => navigate('/Home')}>BACK TO PORTFOLIO</button>
 
