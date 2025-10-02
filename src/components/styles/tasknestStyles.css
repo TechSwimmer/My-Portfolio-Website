@@ -108,7 +108,7 @@
 
     .tasknest-toolbox{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content:center;
         align-items: center;
         gap:10%;
@@ -116,7 +116,17 @@
         font-size: 1.2rem;
         
     }
+    .tasknest-toolbox h4{
+        font-size: 1.8rem;
+        text-align: center;
+    }
 
+    .frontend-tools,.backend-tools,.libraries-tools{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1%;
+    }
     .tasknest-tools{
         display: flex;
         flex-direction: column;
@@ -189,6 +199,98 @@
         font-size: 1rem;
         margin: 10px;
     }
+
+           /* The fixed navigation bar */
+.fixed-nav {
+   /* Set a background to prevent content showing through */
+  position: fixed;
+  bottom: 40%;
+  left: 92%;
+    
+  z-index: 10000; /* Ensures the menu stays above other content */
+  overflow: visible; /* Critical: Allows dropdown to show outside the nav */
+}
+.toggle-nav{
+    width: 6vww;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    font-weight: bolder;
+}
+
+.vertical-label {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+   
+  line-height: 1;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+
+/* Links inside the navbar */
+.fixed-nav a {
+float: right;
+display: block;
+width:100% ;
+text-align: center;
+padding: 4px 3px;
+  text-decoration: none;
+  z-index: 10000;
+  
+}
+
+
+/* Style for the dropdown index container */
+.nav-index {
+display: none; /* Hidden by default */
+position: fixed;
+right:1vw;
+top:20vh;
+opacity: 1;
+
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+text-align: left;
+width: 80vw;
+}
+.fixed-nav a:hover {
+opacity: 1;
+border-radius: 12px;
+}
+
+.nav-index-item{
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+    opacity: 1;
+}
+.nav-index-item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Show the dropdown when the parent nav is hovered or has a class */
+.fixed-nav:hover .nav-index,
+.nav-index.active { /* You can use this class for JavaScript toggle */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+}
+
+
+
+.toggle-nav::before {
+    content: "◀"; /* Up arrow for mobile */
+  }
 
 }
 
@@ -311,6 +413,10 @@
     flex-wrap: wrap;
     font-size: 1.4rem;
     }
+    .tasknest-toolbox h4{
+        font-size: 1.8rem;
+        text-align: center;
+    }
 
     .tasknest-tools{
         display: flex;
@@ -330,6 +436,12 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
     font-weight: bold;
     margin-top: 4%;
+    }
+    .frontend-tools,.backend-tools,.libraries-tools{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1%;
     }
 
     .tasknest-links{
@@ -377,6 +489,93 @@
     .vanilla-js-content{
         font-size: 1.2rem;
     }
+
+    
+    
+    /* The fixed navigation bar */
+.fixed-nav {
+   /* Set a background to prevent content showing through */
+  position: fixed;
+  bottom: 1%;
+  left: 60%;
+ 
+  z-index: 10000; /* Ensures the menu stays above other content */
+  overflow: visible; /* Critical: Allows dropdown to show outside the nav */
+}
+.toggle-nav{
+    width: 40.0vw;
+    height: 4.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    font-weight: bolder;
+}
+
+
+
+
+/* Links inside the navbar */
+.fixed-nav a {
+float: right;
+display: block;
+width:100% ;
+text-align: center;
+padding: 4px 3px;
+  text-decoration: none;
+  z-index: 10000;
+  
+}
+
+
+/* Style for the dropdown index container */
+.nav-index {
+display: none; /* Hidden by default */
+position: fixed;
+right: 2px;
+bottom: 3.6%;
+opacity: 1;
+
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+text-align: left;
+width: 34.5vw;
+}
+.fixed-nav a:hover {
+opacity: 1;
+border-radius: 12px;
+}
+
+.nav-index-item{
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+    opacity: 1;
+}
+.nav-index-item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Show the dropdown when the parent nav is hovered or has a class */
+.fixed-nav:hover .nav-index,
+.nav-index.active { /* You can use this class for JavaScript toggle */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+}
+
+  .toggle-nav::before {
+    content: "▲"; /* Up arrow for mobile */
+  }
+
+
+
 
 }
 
@@ -589,4 +788,86 @@
     .features-list li {
         margin: 10px;
     }
+
+        /* The fixed navigation bar */
+.fixed-nav {
+   /* Set a background to prevent content showing through */
+  position: fixed;
+  top: 12%;
+  left: 77%;
+ 
+  z-index: 10000; /* Ensures the menu stays above other content */
+  overflow: visible; /* Critical: Allows dropdown to show outside the nav */
+}
+.toggle-nav{
+    width: 22.70vw;
+    height: 4.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    font-weight: bold;
+}
+
+
+
+
+/* Links inside the navbar */
+.fixed-nav a {
+float: right;
+display: block;
+width:100% ;
+text-align: center;
+padding: 4px 3px;
+  text-decoration: none;
+  z-index: 10000;
+  
+}
+
+
+/* Style for the dropdown index container */
+.nav-index {
+display: none; /* Hidden by default */
+position: fixed;
+right: 2px;
+top: 14%;
+opacity: 1;
+
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+text-align: left;
+width: 20vw;
+}
+.fixed-nav a:hover {
+opacity: 1;
+border-radius: 12px;
+}
+
+.nav-index-item{
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+    opacity: 1;
+}
+.nav-index-item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Show the dropdown when the parent nav is hovered or has a class */
+.fixed-nav:hover .nav-index,
+.nav-index.active { /* You can use this class for JavaScript toggle */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+}
+.toggle-nav::before {
+  content: "▼"; /* Down arrow for desktop */
+  transition: transform 0.3s ease;
+}
 }

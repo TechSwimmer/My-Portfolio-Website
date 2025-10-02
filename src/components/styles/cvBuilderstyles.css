@@ -8,7 +8,7 @@
         overflow: hidden;
         position: relative;
         margin-top: 25%;
-        width: 100%;
+        width: 100vw;
         align-items: center;
         align-self: center;
         margin-bottom: 2%;
@@ -151,40 +151,59 @@
         justify-content: center;
         align-items: center;
     }
-    .cvbuilder-toolbox{
-        display: flex;
-        flex-direction: row;
-        justify-content:center;
-        align-items: center;
-        gap:10%;
-        flex-wrap: wrap;
-        font-size: 1.2rem;
-    }
-
+  
     .cvbuilder-tools{
+        margin-top: 10%;
+    }
+    .cvbuilder-toolbox{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin-top: 4%;
+        gap: 1%;
+        
     }
-    .cvbuilder-tools:hover{
+    .toolbox-items{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .toolbox-items h4{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .toolbox-item{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        justify-content: space-around;
+    }
+    .cvbuilder-tools{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    }
+     .cvbuilder-tool:hover{
         transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .cvbuilder-tools h3{
-        font-size: 1.7rem;
+    font-size: 2.3rem;
     }
 
     .cvbuilder-tool{
-        border-radius: 10px;
-        padding: 8px 16px;
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
-        font-weight: bold;
-        margin-top: 4%;
+    border-radius: 10px;
+    padding: 8px 16px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+    font-weight: bold;
     }
-
+    .future-container {
+        text-align: center;
+        margin-top: 10%;
+    }
     .cvbuilder-links{
         margin-top: 5%;
         display: flex;
@@ -206,6 +225,122 @@
         text-decoration: none;
         color: inherit;
         }
+    .future-container h3{
+        text-align: center;
+    }
+    .cvbuilder-tool-head h3{
+        text-align: center;
+    }
+    .challenges-container{
+        text-align: center;
+    }
+    .backend-architecture-container{
+        text-align: center;
+    }
+
+    .technical-implementation-container{
+        text-align: center;
+    }
+    .project-highlights{
+        text-align: center;
+    }
+
+
+        /* The fixed navigation bar */
+.fixed-nav {
+   /* Set a background to prevent content showing through */
+  position: fixed;
+  bottom: 40%;
+  left: 92%;
+    
+  z-index: 10000; /* Ensures the menu stays above other content */
+  overflow: visible; /* Critical: Allows dropdown to show outside the nav */
+}
+.toggle-nav{
+    width: 6vww;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    font-weight: bolder;
+}
+
+.vertical-label {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+   
+  line-height: 1;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+
+/* Links inside the navbar */
+.fixed-nav a {
+float: right;
+display: block;
+width:100% ;
+text-align: center;
+padding: 4px 3px;
+  text-decoration: none;
+  z-index: 10000;
+  
+}
+
+
+/* Style for the dropdown index container */
+.nav-index {
+display: none; /* Hidden by default */
+position: fixed;
+right:1vw;
+bottom:16vh;
+opacity: 1;
+
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+text-align: left;
+width: 80vw;
+}
+.fixed-nav a:hover {
+opacity: 1;
+border-radius: 12px;
+}
+
+.nav-index-item{
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+    opacity: 1;
+}
+.nav-index-item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Show the dropdown when the parent nav is hovered or has a class */
+.fixed-nav:hover .nav-index,
+.nav-index.active { /* You can use this class for JavaScript toggle */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+}
+
+
+
+.toggle-nav::before {
+    content: "◀"; /* Up arrow for mobile */
+  }
+
+
+
+
 }
 
 
@@ -405,34 +540,50 @@
         margin-right:5% ;
     }
 
-
-    .cvbuilder-toolbox{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items: center;
-    gap:10%;
-    flex-wrap: wrap;
-    font-size: 1.4rem;
-    }
-
     .cvbuilder-tools{
+        margin-top: 10%;
+    }
+    .cvbuilder-toolbox{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin-top: 4%;
+        gap: 1%;
+        
     }
+    .toolbox-items{
+        display: flex;
+        flex-direction: column;
+    }
+    .toolbox-items h4{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .toolbox-item{
+        display: flex;
+        gap: 7px;
+    }
+    .cvbuilder-tools{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    }
+     .cvbuilder-tool:hover{
+        transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
     .cvbuilder-tools h3{
     font-size: 2.3rem;
     }
 
     .cvbuilder-tool{
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 8px 16px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
     font-weight: bold;
-    margin-top: 4%;
     }
     .cvbuilder-links{
     margin-top: 5%;
@@ -470,14 +621,14 @@
 .fixed-nav {
    /* Set a background to prevent content showing through */
   position: fixed;
-  top: inherit;
-  left: 77%;
+  bottom: 1%;
+  left: 60%;
  
   z-index: 10000; /* Ensures the menu stays above other content */
   overflow: visible; /* Critical: Allows dropdown to show outside the nav */
 }
 .toggle-nav{
-    width: 22.70vw;
+    width: 40.0vw;
     height: 4.5vh;
     display: flex;
     justify-content: space-between;
@@ -486,7 +637,7 @@
     border-bottom: 1px;
     border-left: 1px;
     border-right: 1px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 
@@ -510,13 +661,13 @@ padding: 4px 3px;
 display: none; /* Hidden by default */
 position: fixed;
 right: 2px;
-top: 14%;
+bottom: 3.6%;
 opacity: 1;
 
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
 text-align: left;
-width: 25vw;
+width: 34.5vw;
 }
 .fixed-nav a:hover {
 opacity: 1;
@@ -543,6 +694,10 @@ border-radius: 12px;
   align-items: left;
   justify-content: space-between;
 }
+
+  .toggle-nav::before {
+    content: "▲"; /* Up arrow for mobile */
+  }
 
 
 
@@ -1026,6 +1181,10 @@ border-radius: 12px;
   flex-direction: column;
   align-items: left;
   justify-content: space-between;
+}
+.toggle-nav::before {
+  content: "▼"; /* Down arrow for desktop */
+  transition: transform 0.3s ease;
 }
 
 }

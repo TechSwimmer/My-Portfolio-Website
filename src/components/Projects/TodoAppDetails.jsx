@@ -32,7 +32,7 @@ const TodoAppDetails = () => {
         <div className="tasknest-container">
 
             <nav className='fixed-nav'>
-                <button className='toggle-nav' onClick={() => toggleIndex()}><div>▼</div><div>Index</div> </button>
+                <button className='toggle-nav' onClick={() => toggleIndex()}><div></div><div className="vertical-label">Index</div> </button>
                 <ul className='nav-index' id='navIndex'>
                     <li className='nav-index-item'><a href='#tasknest-content'>Project overview</a></li>
                     <li className='nav-index-item'><a href='#vanilla-js-container'>The Vanilla JavaScript Approach</a></li>

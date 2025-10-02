@@ -684,9 +684,10 @@ html {
 
 .footer-right-logos{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 35%;
+    gap: 10%;
     }
 
 
@@ -1379,6 +1380,7 @@ html {
 
 .footer-right-logos{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 35%;

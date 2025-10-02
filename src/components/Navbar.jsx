@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import './styles/styles.css'
 import profilePic from '../assets/cool-profile-pictures-monkey-face-0jxwmq6bpm3hs9cb.jpg'
 
@@ -8,7 +10,7 @@ import menuIcon from '../assets/134216_menu_lines_hamburger_icon.svg'
 import { Link,useLocation } from "react-router-dom"
 
 const Navbar = ({navigateToSection}) => {
-    
+    const navigate = useNavigate();
     const location = useLocation();
     const isProjectPage = location.pathname.startsWith('/Projects/');
 
@@ -40,10 +42,10 @@ const Navbar = ({navigateToSection}) => {
           )}
           <div className="hamburger" onClick={() => setMenuStatus(!menuStatus)}><img src={menuIcon} alt="Menu-icon"></img></div>
           <div className={`dropdown-menu ${menuStatus ? "open" : ""}`}>
-                <Link  onClick={() => {setMenuStatus(false);navigateToSection("home")}}>Home</Link>
-                <Link  onClick={() => {setMenuStatus(false);navigateToSection("about")}}>About</Link>
-                <Link  onClick={() => {setMenuStatus(false);navigateToSection("project")}}>Projects</Link>
-                <Link  onClick={() => {setMenuStatus(false);navigateToSection("contact")}}>Contact</Link>
+                <Link  to="/#home" onClick={() => setMenuStatus(false)}>Home</Link>
+                <Link  to="/#about" onClick={() => setMenuStatus(false)}>About</Link>
+                <Link  to="/#project" onClick={() => setMenuStatus(false)}>Projects</Link>
+                <Link  to="/#contact" onClick={() => setMenuStatus(false)}>Contact</Link>
             </div>
         </div>
       </div>
