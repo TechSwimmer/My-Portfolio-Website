@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Projects from './components/Projects'
 import TodoAppDetails from './components/Projects/TodoAppDetails';
 import CvBuilderDetails from './components/Projects/CvBuilderDetails';
+import AffinaDetails from './components/Projects/AffinaDetails';
 
 
 const AppContent = () => {
@@ -50,7 +51,7 @@ const AppContent = () => {
         <Routes>
           <Route path="/Projects/TodoAppDetails" element={<TodoAppDetails />}/>
           <Route path="/Projects/CvBuilderDetails" element={<CvBuilderDetails />}/>
-          
+          <Route path="/Projects/AffinaDetails" element={<AffinaDetails />}/>
           <Route path="/Projects" element={<Projects />}/>
           
         </Routes>

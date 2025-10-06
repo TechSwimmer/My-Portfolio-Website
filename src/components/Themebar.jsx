@@ -105,7 +105,7 @@ const Themebar = () => {
 
         // handle project page buttion
 
-        document.querySelectorAll('.tasknest-link-btn').forEach(link => {
+        document.querySelectorAll('.tasknest-link-btn','.btn-primary','.btn-secondary').forEach(link => {
             if(theme) {
                 link.classList.add('logobar-light')
                 link.classList.remove('logobar-dark')

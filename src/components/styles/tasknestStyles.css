@@ -200,97 +200,93 @@
         margin: 10px;
     }
 
-           /* The fixed navigation bar */
+/* The fixed navigation bar */
 .fixed-nav {
-   /* Set a background to prevent content showing through */
   position: fixed;
   bottom: 40%;
   left: 92%;
-    
-  z-index: 10000; /* Ensures the menu stays above other content */
-  overflow: visible; /* Critical: Allows dropdown to show outside the nav */
+  z-index: 10000;
+  /* Removed: overflow: visible (default for fixed positioning) */
 }
-.toggle-nav{
-    width: 6vww;
-    height: 18vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem;
-    border-bottom: 1px;
-    border-left: 1px;
-    border-right: 1px;
-    font-weight: bolder;
+
+.toggle-nav {
+  width: 6vw; /* Fixed typo: removed extra 'w' */
+  height: 18vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  opacity: 0.8;
+ 
+  font-weight: bolder;
 }
 
 .vertical-label {
   writing-mode: vertical-lr;
   text-orientation: upright;
-   
   line-height: 1;
   font-size: 0.9em;
   letter-spacing: 1px;
-}
-
-
-/* Links inside the navbar */
-.fixed-nav a {
-float: right;
-display: block;
-width:100% ;
-text-align: center;
-padding: 4px 3px;
-  text-decoration: none;
-  z-index: 10000;
   
 }
 
+/* Links inside the navbar */
+.fixed-nav a {
+  /* Removed: float: right (conflicts with flexbox) */
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 4px 3px;
+  text-decoration: none;
+  /* Removed: z-index: 10000 (not needed on children) */
+}
 
 /* Style for the dropdown index container */
 .nav-index {
-display: none; /* Hidden by default */
-position: fixed;
-right:1vw;
-top:20vh;
-opacity: 1;
-
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
-text-align: left;
-width: 80vw;
+  display: none;
+  position: fixed;
+  right: 1vw;
+  bottom: 16vh;
+  /* Removed: opacity: 1 (redundant - default value) */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-align: left;
+  width: 80vw;
 }
+
 .fixed-nav a:hover {
-opacity: 1;
-border-radius: 12px;
+  /* Removed: opacity: 1 (redundant) */
+  border-radius: 12px;
 }
 
-.nav-index-item{
-    list-style: none;
-    text-align: left;
-    width: 100%;
-    align-self: flex-start;
-    opacity: 1;
+.nav-index-item {
+  list-style: none;
+  text-align: left;
+  width: 100%;
+  /* Removed: align-self: flex-start (not needed in column layout) */
+  /* Removed: opacity: 1 (redundant) */
 }
-.nav-index-item a{
-    text-decoration: none;
-    color: inherit;
+
+.nav-index-item a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Show the dropdown when the parent nav is hovered or has a class */
 .fixed-nav:hover .nav-index,
-.nav-index.active { /* You can use this class for JavaScript toggle */
+.nav-index.active {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start; /* Fixed: changed 'left' to 'flex-start' */
   justify-content: space-between;
 }
 
-
-
 .toggle-nav::before {
-    content: "◀"; /* Up arrow for mobile */
-  }
+  content: "◀";
+}
+.fixed-nav:hover .toggle-nav::before {
+  transform: rotate(180deg);
+}
 
 }
 
@@ -491,91 +487,84 @@ border-radius: 12px;
     }
 
     
-    
     /* The fixed navigation bar */
 .fixed-nav {
-   /* Set a background to prevent content showing through */
   position: fixed;
   bottom: 1%;
   left: 60%;
- 
-  z-index: 10000; /* Ensures the menu stays above other content */
-  overflow: visible; /* Critical: Allows dropdown to show outside the nav */
-}
-.toggle-nav{
-    width: 40.0vw;
-    height: 4.5vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem;
-    border-bottom: 1px;
-    border-left: 1px;
-    border-right: 1px;
-    font-weight: bolder;
+  z-index: 10000;
+  /* Removed: overflow: visible (default for fixed positioning) */
 }
 
-
-
+.toggle-nav {
+  width: 40.0vw;
+  height: 4.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  border: 1px solid; /* Consolidated borders */
+  border-top: none; /* If you want to remove top border */
+  font-weight: bolder;
+}
 
 /* Links inside the navbar */
 .fixed-nav a {
-float: right;
-display: block;
-width:100% ;
-text-align: center;
-padding: 4px 3px;
+  /* Removed: float: right (conflicts with flexbox) */
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 4px 3px;
   text-decoration: none;
-  z-index: 10000;
-  
+  /* Removed: z-index: 10000 (not needed on children) */
 }
-
 
 /* Style for the dropdown index container */
 .nav-index {
-display: none; /* Hidden by default */
-position: fixed;
-right: 2px;
-bottom: 3.6%;
-opacity: 1;
-
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
-text-align: left;
-width: 34.5vw;
+  display: none;
+  position: fixed;
+  right: 2px;
+  bottom: 3.6%;
+  /* Removed: opacity: 1 (redundant - default value) */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-align: left;
+  width: 34.5vw;
 }
+
 .fixed-nav a:hover {
-opacity: 1;
-border-radius: 12px;
+  /* Removed: opacity: 1 (redundant) */
+  border-radius: 12px;
 }
 
-.nav-index-item{
-    list-style: none;
-    text-align: left;
-    width: 100%;
-    align-self: flex-start;
-    opacity: 1;
+.nav-index-item {
+  list-style: none;
+  text-align: left;
+  width: 100%;
+  /* Removed: align-self: flex-start (not needed in column layout) */
+  /* Removed: opacity: 1 (redundant) */
 }
-.nav-index-item a{
-    text-decoration: none;
-    color: inherit;
+
+.nav-index-item a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Show the dropdown when the parent nav is hovered or has a class */
 .fixed-nav:hover .nav-index,
-.nav-index.active { /* You can use this class for JavaScript toggle */
+.nav-index.active {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  /* Removed: align-items: left (invalid - should be flex-start if needed) */
   justify-content: space-between;
 }
 
-  .toggle-nav::before {
-    content: "▲"; /* Up arrow for mobile */
-  }
+.toggle-nav::before {
+  content: "▲"; /* Up arrow for mobile */
+}
 
-
-
+.fixed-nav:hover .toggle-nav::before {
+  transform: rotate(180deg);
+}
 
 }
 
@@ -789,85 +778,81 @@ border-radius: 12px;
         margin: 10px;
     }
 
-        /* The fixed navigation bar */
+  
+/* The fixed navigation bar */
 .fixed-nav {
-   /* Set a background to prevent content showing through */
   position: fixed;
   top: 12%;
   left: 77%;
- 
-  z-index: 10000; /* Ensures the menu stays above other content */
-  overflow: visible; /* Critical: Allows dropdown to show outside the nav */
-}
-.toggle-nav{
-    width: 22.70vw;
-    height: 4.5vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem;
-    border-bottom: 1px;
-    border-left: 1px;
-    border-right: 1px;
-    font-weight: bold;
+  z-index: 10000;
+  /* Removed: overflow: visible (not needed for fixed position) */
 }
 
-
-
+.toggle-nav {
+  width: 22.70vw;
+  height: 4.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  
+  border-top: 1px solid; 
+  font-weight: bold;
+}
 
 /* Links inside the navbar */
 .fixed-nav a {
-float: right;
-display: block;
-width:100% ;
-text-align: center;
-padding: 4px 3px;
+  /* Removed: float: right (conflicts with flexbox) */
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 4px 3px;
   text-decoration: none;
-  z-index: 10000;
-  
+  /* Removed: z-index (not needed on child elements) */
 }
-
 
 /* Style for the dropdown index container */
 .nav-index {
-display: none; /* Hidden by default */
-position: fixed;
-right: 2px;
-top: 14%;
-opacity: 1;
-
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
-text-align: left;
-width: 20vw;
+  display: none;
+  position: fixed;
+  right: 2px;
+  top: 14%;
+  /* Removed: opacity: 1 (redundant - default value) */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-align: left;
+  width: 20vw;
 }
+
 .fixed-nav a:hover {
-opacity: 1;
-border-radius: 12px;
+  /* Removed: opacity: 1 (redundant - default value) */
+  border-radius: 12px;
 }
 
-.nav-index-item{
-    list-style: none;
-    text-align: left;
-    width: 100%;
-    align-self: flex-start;
-    opacity: 1;
+.nav-index-item {
+  list-style: none;
+  text-align: left;
+  width: 100%;
+  align-self: flex-start;
+  /* Removed: opacity: 1 (redundant) */
 }
-.nav-index-item a{
-    text-decoration: none;
-    color: inherit;
+
+.nav-index-item a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Show the dropdown when the parent nav is hovered or has a class */
 .fixed-nav:hover .nav-index,
-.nav-index.active { /* You can use this class for JavaScript toggle */
+.nav-index.active {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  /* Removed: align-items: left (redundant with text-align) */
   justify-content: space-between;
 }
+
 .toggle-nav::before {
-  content: "▼"; /* Down arrow for desktop */
+  content: "▼";
   transition: transform 0.3s ease;
 }
+
 }
