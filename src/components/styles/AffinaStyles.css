@@ -205,7 +205,7 @@
   align-items: center;
   font-size: 1.2rem;
   opacity: 0.8;
-  border-top: none; /* If you want no top border */
+  border: 0;
   font-weight: bolder;
 }
 
@@ -215,7 +215,7 @@
   line-height: 1;
   font-size: 0.9em;
   letter-spacing: 1px;
-  margin-right: 2vw;
+  margin-right: 2.3vw;
 }
 
 /* Links inside the navbar */
@@ -440,8 +440,7 @@ th {
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
-  border: 1px solid; /* Consolidated borders */
-  border-top: none; /* If you want to remove top border */
+  border: 0;
   font-weight: bolder;
 }
 

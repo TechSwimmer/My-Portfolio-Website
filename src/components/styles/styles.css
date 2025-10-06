@@ -428,12 +428,14 @@ html {
     display: flex;
     justify-content: left;
     align-items: center;
+    vertical-align: middle;
     width: 70%;
     flex-direction: row;
     }
 .navbar-left h2{
     margin-left: 10px;
     font-size: 1.1rem;
+    margin-top: 10vw;
 }
 
 .profilePic{
