@@ -21,6 +21,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-left-content">
                     <p>(FULL STACK WEB DEV)</p>
+                    
                 </div>
                 </div>
                 <div className="footer-content-right">

@@ -202,6 +202,26 @@ html {
     text-align: center;
    }
 
+.skill-tabs div{
+    width: 100%;
+}
+
+    .skill-tabs-items{
+    display: flex;
+    flex-wrap: wrap;
+   
+    gap: 10px;
+    
+   }
+   .skill-tabs-heading{
+    width: 100%;
+   }
+   .skill-tabs-heading h4{
+    font-size: 1.2rem;
+    
+   }
+
+
 
    /*----------------------------------------contact-section------------------------------------*/
 
@@ -883,6 +903,7 @@ html {
 .about-skills{
     flex: 1;
     display: flex;
+    
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
@@ -912,6 +933,17 @@ html {
     gap: 12px;
     text-align: center;
    }
+    .skill-tabs-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: end;
+    gap: 10px;
+   }
+   .skill-tabs-heading h4{
+    font-size: 1.2rem;
+   }
+
 
 
    /*----------------------------------------contact-section------------------------------------*/
@@ -1526,6 +1558,7 @@ html {
 .about-skills{
     flex: 1;
     display: flex;
+   
     flex-wrap: wrap;
     justify-content: end;
     width: 38%;
@@ -1548,10 +1581,21 @@ html {
 
 .skill-tabs{
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: 17px;
     text-align: center;
+   }
+   .skill-tabs-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: end;
+    gap: 10px;
+   }
+   .skill-tabs-heading h4{
+    font-size: 1.2rem;
    }
 
 
