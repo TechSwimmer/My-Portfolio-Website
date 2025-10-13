@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import './styles/styles.css'
-import profilePic from '../assets/cool-profile-pictures-monkey-face-0jxwmq6bpm3hs9cb.jpg'
+import profilePic from '../assets/my-img.jpg'
 
 import menuIcon from '../assets/134216_menu_lines_hamburger_icon.svg'
 
