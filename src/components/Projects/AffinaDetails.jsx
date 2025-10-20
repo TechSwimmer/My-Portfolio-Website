@@ -43,7 +43,7 @@ const AffinaDetails = () => {
                     <div className="project-links">
                        
                         <button className="btn-secondary">
-                            <a href="https://your-affina-demo-link.com" target="_blank" rel="noopener noreferrer">PROJECT LINK</a>
+                            <a href="https://affina.netlify.app/" target="_blank" rel="noopener noreferrer">PROJECT LINK</a>
                         </button>
                     </div>
                 </div>
@@ -284,10 +284,10 @@ const AffinaDetails = () => {
                     <p>Check out the live application or dive into the code to see the implementation details.</p>
                     <div className="cta-buttons">
                         <button className="btn-primary">
-                            <a href="https://github.com/your-username/affina" target="_blank" rel="noopener noreferrer">VIEW SOURCE CODE</a>
+                            <a href="https://github.com/TechSwimmer/Affina" target="_blank" rel="noopener noreferrer">VIEW SOURCE CODE</a>
                         </button>
                         <button className="btn-secondary">
-                            <a href="https://your-affina-demo-link.com" target="_blank" rel="noopener noreferrer">EXPLORE LIVE DEMO</a>
+                            <a href="https://affina.netlify.app/" target="_blank" rel="noopener noreferrer">EXPLORE LIVE DEMO</a>
                         </button>
                     </div>
                 </div>
