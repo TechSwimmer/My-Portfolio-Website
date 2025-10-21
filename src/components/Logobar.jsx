@@ -8,7 +8,7 @@ import contactLogo from "../assets/icons8-contact-50.png"
 import linkedinLogo from "../assets/icons8-linked-in-50.png"
 import codewarsLogo from "../assets/icons8-codewars-48.png"
 import hackerEarthLogo from "../assets/hackerearth.png"
-
+import hackerRankLogo from "../assets/hackerrank.png"
 
 const Logobar = () => {
 
@@ -44,6 +44,9 @@ const Logobar = () => {
             </a>
             <a href="https://www.hackerearth.com/@niku101095/" target="_blank" rel="noopener noreferrer">
                 <img className="logo" src={hackerEarthLogo} alt="hyackerearth"></img>
+            </a>
+            <a href="https://www.hackerrank.com/profile/niku101095" target="_blank" rel="noopener noreferrer">
+                <img className="logo" src={hackerRankLogo} alt="hackerRank"></img>
             </a>
         </div>
     )
