@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 import basicProjImg from "../../assets/basic-shot-2.png"
 
-import allTaskImg from "../../assets/all-task-shot.png"
+import allTaskImg from "../../assets/editTaskgif.gif"
 
-import createTaskShot from "../../assets/create-task-shot.png"
+import createTaskShot from "../../assets/create-task.gif"
 
 
 import "../styles/tasknestStyles.css"
@@ -81,12 +81,14 @@ const TodoAppDetails = () => {
                 </div>
                 <div className="vanilla-js-container" id="vanilla-js-container">
                     <div className="vanilla-js-head"><h3>The Vanilla JavaScript Approach</h3></div>
-                    <div className="vanilla-js-content"><p>This project represents a conscious learning decision to master foundational web
-                        development skills by building the entire frontend with vanilla JavaScript. While modern frameworks offer
-                        convenience, I wanted to deeply understand the underlying mechanics of single-page applications, including
-                        manual DOM manipulation, event delegation, AJAX requests, and client-side routing. Working without framework
-                        abstractions forced me to solve challenges like state synchronization and UI updates through pure JavaScript,
-                        giving me a robust understanding of how web applications actually work at their core.</p></div>
+                    <div className="vanilla-js-content"><p>I built TaskNest to gain a deep understanding of how
+                        the web truly works under the hood — without relying on a frontend framework. The app is
+                        written in<strong> vanilla JavaScript (≈1400 lines), intentionally showcasing real-world patterns
+                        such as centralized DOM caching, manual state synchronization, event delegation versus
+                        per-element listeners, calendar rendering logic, REST API interaction with auth tokens, 
+                        and essential UI/UX behavior</strong>  for small-scale applications. This approach highlights 
+                        practical full-stack skills and demonstrates how modern web apps can be constructed 
+                        without framework abstractions.</p></div>
 
                 </div>
 
@@ -94,12 +96,13 @@ const TodoAppDetails = () => {
                     <h3>Key Features</h3>
                     <ul className="features-list">
                         <li>🔐 <strong>User Authentication:</strong> Secure login/register with JWT</li>
-                        <li>📅 <strong>Calendar Integration:</strong> Interactive date-based task management</li>
-                        <li>✅ <strong>Full CRUD Operations:</strong> Add, edit, delete, and complete tasks</li>
+                        <li>📅 <strong>Calendar Integration:</strong> Custom calendar UI with date highlighting and click-to-load tasks</li>
+                        <li>✅ <strong>Full CRUD Operations:</strong> Full CRUD for tasks (user-scoped)</li>
                         <li>👀 <strong>Smart Task Filtering:</strong> Today, Tomorrow, and All Tasks views</li>
-                        <li>🌤️ <strong>Real-time Weather:</strong> Location-based weather and time display</li>
-                        <li>📱 <strong>Responsive Design:</strong> Works seamlessly across all devices</li>
-                        <li>💬 <strong>Feedback System:</strong> Integrated contact form with email notifications</li>
+                        <li>🌤️ <strong>Real-time Weather:</strong> Fetches weather based on user’s location and displays a live ticking local time.</li>
+                        <li>📱 <strong>Responsive Design:</strong> Responsive layout and mobile friendly navigation</li>
+                        <li>💬 <strong>Feedback System:</strong> Integrated contact form with email notifications (Nodemailer)</li>
+                        <li>✅ <strong>hand-crafted DOM logic:</strong>  1400+ lines of vanilla JS (intentional learning choice)</li>
                     </ul>
                 </div>
 
@@ -116,6 +119,51 @@ const TodoAppDetails = () => {
                             <li>Secured application secrets using environment variables and successfully deployed the frontend to Netlify and backend to Render, configuring CORS for cross-origin requests.</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            
+            <div className="security-notes" id="security-notes">
+                <div className="security-notes-head">
+                    <h3>Security notes</h3>
+                </div>
+                <div className="security-notes-points">
+                    <ul>
+                        <li>Passwords hashed with bcrypt on the server.</li>
+                        <li>JWT tokens are used for auth and sent in Authorization headers.</li>
+                        <li>Backend is hosted with HTTPS (Render), CORS enabled to allow frontend origins</li>
+                        <li>Currently JWT stored in localStorage (easy to implement, but XSS risk — see improvements).</li>
+                        <li>No sensitive data is stored on the frontend.</li>
+                    </ul>
+                </div>
+              
+            </div>
+            <div className="challenges" id="challenges">
+                <div className="challenges-head">
+                    <h3>Challenges & what I learned</h3>
+                </div>
+                <div className="challenges-points">
+                    <ul>
+                        <li>Manual calendar rendering and event delegation (no framework) taught me DOM performance patterns.</li>
+                        <li>De-bouncing and avoiding duplicate event listeners were critical as UI grew.</li>
+                        <li>Handling geolocation permission fallbacks and graceful UI when WeatherAPI fails.</li>
+                        <li>Building auth + protected routes end-to-end — hashing, tokens, and middleware.</li>
+                    </ul>
+                </div>
+            </div>
+            <div className="future-improvement" id="future-improvement">
+                <div className="future-improvement-head">
+                    <h3>Future improvements</h3>
+                </div>
+                <div className="future-improvement-points">
+                    <ul>
+                        <li>Move JWT from localStorage → HttpOnly cookies (better XSS protection).</li>
+                        <li>Add token expiry & refresh tokens (prevent unlimited login sessions).</li>
+                        <li>Add tests (unit + integration).</li>
+                        <li>Add rate limiting on backend and input validation (e.g., express-validator).</li>
+                        <li>Add CI/CD + automated deploy preview on PRs.</li>
+                        <li>Convert frontend to a component-based framework (React) and compare performance → but
+                            only after abstracting DOM logic</li>
+                    </ul>
                 </div>
             </div>
             <div className="tasknest-tools" id="tasknest-tools">

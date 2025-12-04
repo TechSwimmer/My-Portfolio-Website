@@ -760,6 +760,40 @@
         margin-top: 10px;
     }
 
+    
+    .security-notes-head{
+      text-align:center;
+      font-size: 1.8rem;
+    }
+    .security-notes-points{
+      font-size: 1.4rem;
+    }
+    .security-notes ul li {
+      margin-top: 10px;
+    }
+
+    .challenges-head{
+       text-align:center;
+      font-size: 1.8rem;
+    }
+    .challenges-points{
+      font-size: 1.4rem;
+    }
+    .challenges-points ul li{
+        margin-top: 10px;
+    } 
+
+    .future-improvement-head{
+        text-align:center;
+      font-size: 1.8rem;
+    }
+    .future-improvement-points{
+      font-size: 1.4rem;
+    }
+    .future-improvement-points ul li {
+      margin-top: 10px;
+    }
+
     .vanilla-js-head{
         text-align: center;
     }
