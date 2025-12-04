@@ -260,14 +260,15 @@
   text-decoration: none;
   color: inherit;
 }
-
-/* Show the dropdown when the parent nav is hovered or has a class */
-.fixed-nav:hover .nav-index,
-.nav-index.active {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Fixed: changed 'left' to 'flex-start' */
-  justify-content: space-between;
+/* When parent has light theme */
+.project-details-container.light-mode .nav-index {
+  background-color: white;
+  color: black;
+}
+/* When parent has dark theme */
+.project-details-container.dark-mode .nav-index {
+  background-color: #333; /* better than flat grey */
+  color: white;
 }
 
 .toggle-nav::before {
@@ -276,7 +277,10 @@
 .fixed-nav:hover .toggle-nav::before {
   transform: rotate(180deg);
 }
-
+.nav-index.active{
+    display: flex;
+  flex-direction: column;
+}
 }
 
 
@@ -485,13 +489,15 @@ th {
   color: inherit;
 }
 
-/* Show the dropdown when the parent nav is hovered or has a class */
-.fixed-nav:hover .nav-index,
-.nav-index.active {
-  display: flex;
-  flex-direction: column;
-  /* Removed: align-items: left (invalid - should be flex-start if needed) */
-  justify-content: space-between;
+/* When parent has light theme */
+.project-details-container.light-mode .nav-index {
+  background-color: white;
+  color: black;
+}
+/* When parent has dark theme */
+.project-details-container.dark-mode .nav-index {
+  background-color: #333; /* better than flat grey */
+  color: white;
 }
 
 .toggle-nav::before {
@@ -501,7 +507,10 @@ th {
 .fixed-nav:hover .toggle-nav::before {
   transform: rotate(180deg);
 }
-
+.nav-index.active{
+    display: flex;
+  flex-direction: column;
+}
 
 
 }
@@ -729,15 +738,17 @@ th {
   text-decoration: none;
   color: inherit;
 }
-
-/* Show the dropdown when the parent nav is hovered or has a class */
-.fixed-nav:hover .nav-index,
-.nav-index.active {
-  display: flex;
-  flex-direction: column;
-  /* Removed: align-items: left (redundant with text-align) */
-  justify-content: space-between;
+/* When parent has light theme */
+.project-details-container.light-mode .nav-index {
+  background-color: white;
+  color: black;
 }
+/* When parent has dark theme */
+.project-details-container.dark-mode .nav-index {
+  background-color: #333; /* better than flat grey */
+  color: white;
+}
+/* Show the dropdown when the parent nav is hovered or has a class */
 
 .toggle-nav::before {
   content: "▼";

@@ -21,8 +21,8 @@ const Themebar = () => {
             aboutContactTab: document.querySelector('.about-contact-tab'),
             contactSubmitButton: document.querySelector('.contact-submit-button'),
             projectImgBtn: document.querySelector('.project-img-content-btn'),
-            cvBuilder: document.querySelector('cvbuilder-container'),
-            cvBuilderIndexitems:document.querySelector('.nav-index'),
+            cvBuilder: document.querySelector('.cvbuilder-container'),
+            projectDetailsContainer : document.querySelector('.project-details-container')
             
             
         };

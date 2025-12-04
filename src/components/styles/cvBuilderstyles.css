@@ -247,11 +247,14 @@
 
 
 /* The fixed navigation bar */
+
 .fixed-nav {
   position: fixed;
-  bottom: 40%;
+  bottom: 20%;
   left: 92%;
-  z-index: 10000;
+  z-index: 1000;
+  
+  text-align: center;
   /* Removed: overflow: visible (default for fixed positioning) */
 }
 
@@ -263,7 +266,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
-  
+  border-radius: 5px;
   border: 0;
   font-weight: bolder;
 }
@@ -274,7 +277,7 @@
   line-height: 1;
   font-size: 0.9em;
   letter-spacing: 1px;
-  padding: 10px;
+  
 }
 
 /* Links inside the navbar */
@@ -287,49 +290,40 @@
   text-decoration: none;
   /* Removed: z-index: 10000 (not needed on children) */
 }
-
-/* Style for the dropdown index container */
 .nav-index {
-  display: none;
   position: fixed;
   right: 1vw;
+  top: 30vh;
+  max-height: 70vh;
+  width: max-content;
+  max-width: 90vw;
+  padding: 10px;
+  overflow-y: auto;
+  border-radius: 8px;
+
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   
-
-
-
-
-  
-  /* Removed: opacity: 1 (redundant - default value) */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  text-align: left;
-  width: 80vw;
 }
-
-.fixed-nav a:hover {
-  /* Removed: opacity: 1 (redundant) */
-  border-radius: 12px;
+/* When parent has light theme */
+.cvbuilder-container.light-mode .nav-index {
+  background-color: white;
+  color: black;
 }
-
+/* When parent has dark theme */
+.cvbuilder-container.dark-mode .nav-index {
+  background-color: #333; /* better than flat grey */
+  color: white;
+}
 .nav-index-item {
   list-style: none;
-  text-align: left;
   width: 100%;
-  /* Removed: align-self: flex-start (not needed in column layout) */
-  /* Removed: opacity: 1 (redundant) */
 }
 
 .nav-index-item a {
+  display: block;
+  padding: 4px 3px;
   text-decoration: none;
-  color: inherit;
-}
 
-/* Show the dropdown when the parent nav is hovered or has a class */
-.fixed-nav:hover .nav-index,
-.nav-index.active {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Fixed: changed 'left' to 'flex-start' */
-  justify-content: space-between;
 }
 
 .toggle-nav::before {
@@ -337,6 +331,11 @@
 }
 .fixed-nav:hover .toggle-nav::before {
   transform: rotate(180deg);
+}
+
+.nav-index.active{
+    display: flex;
+  flex-direction: column;
 }
 
 }
@@ -621,12 +620,13 @@
   bottom: 1%;
   left: 60%;
   z-index: 10000;
+ 
   /* Removed: overflow: visible (default for fixed positioning) */
 }
 
 .toggle-nav {
   width: 40.0vw;
-  height: 4.5vh;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -656,11 +656,25 @@ border: 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   text-align: left;
   width: 34.5vw;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .fixed-nav a:hover {
   /* Removed: opacity: 1 (redundant) */
   border-radius: 12px;
+}
+
+/* When parent has light theme */
+.cvbuilder-container.light-mode .nav-index {
+  background-color: white;
+  color: black;
+}
+/* When parent has dark theme */
+.cvbuilder-container.dark-mode .nav-index {
+  background-color: #333; /* better than flat grey */
+  color: white;
 }
 
 .nav-index-item {
@@ -673,17 +687,11 @@ border: 0;
 
 .nav-index-item a {
   text-decoration: none;
-  color: inherit;
+  
 }
 
 /* Show the dropdown when the parent nav is hovered or has a class */
-.fixed-nav:hover .nav-index,
-.nav-index.active {
-  display: flex;
-  flex-direction: column;
-  /* Removed: align-items: left (invalid - should be flex-start if needed) */
-  justify-content: space-between;
-}
+
 
 .toggle-nav::before {
   content: "▲"; /* Up arrow for mobile */
@@ -692,7 +700,10 @@ border: 0;
 .fixed-nav:hover .toggle-nav::before {
   transform: rotate(180deg);
 }
-
+.nav-index.active{
+    display: flex;
+  flex-direction: column;
+}
 }
 
 
@@ -1160,18 +1171,29 @@ border: 0;
   /* Removed: opacity: 1 (redundant) */
 }
 
+/* When parent has light theme */
+.cvbuilder-container.light-mode .nav-index {
+  background-color: white;
+  color: black;
+}
+/* When parent has dark theme */
+.cvbuilder-container.dark-mode .nav-index {
+  background-color: #333; /* better than flat grey */
+  color: white;
+}
+
 .nav-index-item a {
   text-decoration: none;
   color: inherit;
 }
 
 /* Show the dropdown when the parent nav is hovered or has a class */
-.fixed-nav:hover .nav-index,
+
 .nav-index.active {
   display: flex;
   flex-direction: column;
   /* Removed: align-items: left (redundant with text-align) */
-  justify-content: space-between;
+  
 }
 
 .toggle-nav::before {

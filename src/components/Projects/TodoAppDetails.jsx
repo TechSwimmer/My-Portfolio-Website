@@ -21,28 +21,35 @@ const TodoAppDetails = () => {
         window.scrollTo(0, 0);
     }, []);
 
-      function toggleIndex() {
-        const index = document.getElementById('navIndex');
-        index.classList.toggle('active');
-    }
-
-
+    const [indexOpen,setIndexOpen] = useState(false)
+    const toggleIndex = () => {
+        setIndexOpen(prev => !prev)
+    } ; 
+  
     return (
 
         <div className="tasknest-container">
 
             <nav className='fixed-nav'>
-                <button className='toggle-nav' onClick={() => toggleIndex()}><div></div><div className="vertical-label">Index</div> </button>
-                <ul className='nav-index' id='navIndex'>
-                    <li className='nav-index-item'><a href='#tasknest-content'>Project overview</a></li>
-                    <li className='nav-index-item'><a href='#vanilla-js-container'>The Vanilla JavaScript Approach</a></li>
-                    <li className='nav-index-item'><a href='#key-features-section'>Key Features</a></li>
-                    <li className='nav-index-item'><a href='#achievements-list'>Key achievements</a></li>
-                    <li className='nav-index-item'><a href='#tasknest-tools'>Technology Stack Content:</a></li>
+                <button className='toggle-nav'onClick={toggleIndex}><div></div><div className="vertical-label">Index</div> </button>
+               
+                      <ul className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
+                    <li className='nav-index-item'><a href='#tasknest-content' onClick={toggleIndex}>Project overview</a></li>
+                    <li className='nav-index-item'><a href='#vanilla-js-container' onClick={toggleIndex}>The Vanilla JavaScript Approach</a></li>
+                    <li className='nav-index-item'><a href='#key-features-section' onClick={toggleIndex}>Key Features</a></li>
+                    <li className='nav-index-item'><a href='#achievements-list' onClick={toggleIndex}>Key achievements</a></li>
+                    <li className='nav-index-item'><a href='#architecture-calendar' onClick={toggleIndex}>Architeture & Calendar behaviour</a></li>
+                    <li className='nav-index-item'><a href='#security-notes' onClick={toggleIndex}>Security notes</a></li>
+                    <li className='nav-index-item'><a href='#api-endpoints' onClick={toggleIndex}>API endpoints (server routes)</a></li>
+                    <li className='nav-index-item'><a href='#challenges' onClick={toggleIndex}>Challenges</a></li>
+                    <li className='nav-index-item'><a href='#future-improvement' onClick={toggleIndex}>Future improvements</a></li>
+                    <li className='nav-index-item'><a href='#tasknest-tools' onClick={toggleIndex}>Technology Stack Content:</a></li>
                     
 
-                    <li className='nav-index-item'><a href='#tasknest-links'>PROJECT LINK</a></li>
+                    <li className='nav-index-item'><a href='#tasknest-links' onClick={toggleIndex}>PROJECT LINK</a></li>
                 </ul>
+              
+              
             </nav>
 
             <div className="tasknest-header">
@@ -121,7 +128,58 @@ const TodoAppDetails = () => {
                     </div>
                 </div>
             </div>
-            
+            <div className="architecture-calendar" id="architecture-calendar">
+                <div className="architecture-calendar-main-head"><h3>Architeture & Calendar behaviour</h3></div>
+                <div className="architecture-calendar-head"><h3>High-level</h3></div>
+                <div className="architecture-calendar-notes">
+                    <ul>
+                        <li>Frontend calls backend under /api/... for protected actions.</li>
+                        <li>Frontend stores authToken (JWT) and userID in localStorage.</li>
+                        <li>Calendar is rendered by creating &lt;tr&gt; / &lt;td&gt; elements in JS, with at most 6 rows (weeks) and 7 columns (days).</li>
+                        <li>Calendar interaction uses event delegation on the calendar body (#table-body) where possible to avoid re-attaching listeners every re-render.</li>
+                        <li>When a date is selected the app highlights the cell and calls /api/user/tasks/fetch with the selected date to load tasks on that specific date.</li>
+                    </ul>
+                </div>
+                <div className="architecture-calendar-head"><h3>Important calendar notes</h3></div>
+                <div className="architecture-calendar-notes">
+                    <ul>
+                        <li>Months are shown by name (array months[]) and converted to month number when calling APIs.</li>
+                        <li>Dates in UI are compared to today / tomorrow using canonical YYYY-M-D or YYYY-M-DD as appropriate — there's a helper formatDate() to normalize comparisons.</li>
+                        <li>Rendering functions clear tableBody and re-create cells each month change</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div className="api-endpoints" id="api-endpoints">
+                <div className="api-endpoints-main-head"><h3>API Endpoints (server routes)</h3></div>
+                <div className="api-endpoints-head"><h3>Auth:</h3></div>
+                <div className="api-endpoints-points">
+                    <ul>
+                        <li>POST /api/auth/user/register -- Register (return token and userID)</li>
+                        <li>POST /api/auth/user/login -- Login (returns token & userID)</li>
+                       
+                    </ul>
+                </div>
+                 <div className="api-endpoints-head"><h3>Tasks:</h3></div>
+                <div className="api-endpoints-points">
+                    <ul>
+                        <li>POST /api/user/tasks/add -- add task (protected)</li>
+                        <li>GET /api/user/tasks/fetch?year=&month=&day=&userID= -- fetch tasks for a specific date (protected)</li>
+                        <li>GET /api/user/tasks/alltasks -- fetch all tasks for user (protected)</li>
+                        <li>PUT /api/user/tasks/update/:id -- update a specific task (protected)</li>
+                        <li>DELETE /api/user/tasks/delete/:id -- delete a specific tas (protected)</li>
+                    </ul>
+                </div>
+                 <div className="api-endpoints-head"><h3>Other:</h3></div>
+                <div className="api-endpoints-points">
+                    <ul>
+                        <li>PATCH /api/tasks/completed/:id -- mark task completed (protected)</li>
+                        <li>DELETE /api/tasks/delete-completed -- delete all completed tasks (protected)</li>
+                        <li>POST /api/submit-feedback -- submit feedback (sends email; optional DB model - current setup sends email)</li>
+                        
+                    </ul>
+                </div>
+            </div>
             <div className="security-notes" id="security-notes">
                 <div className="security-notes-head">
                     <h3>Security notes</h3>

@@ -10,11 +10,7 @@ const About = ({navigateToSection}) => {
 
     return (
         <div id="about" className="about-container">
-            <section className="about-header">
-                <h2>ABOUT ME</h2>
-                <p>Here you will find more information about me, what I do, and my current skills mostly
-                     in terms of programming and technology</p>
-            </section>
+            
             <section className="about-content-skills">   
                 <div className="about-content">
                     <h4>Get to know me!</h4>

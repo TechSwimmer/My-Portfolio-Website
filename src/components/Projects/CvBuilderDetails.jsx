@@ -16,30 +16,33 @@ const CvBuilderDetails = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    function toggleIndex() {
-        const index = document.getElementById('navIndex');
-        index.classList.toggle('active');
-    }
+  const [indexOpen,setIndexOpen] = useState(false)
+    const toggleIndex = () => {
+        setIndexOpen(prev => !prev)
+    } ; 
 
     return (
         <div className="cvbuilder-container">
             <nav className='fixed-nav'>
                 <button className='toggle-nav' onClick={() => toggleIndex()}><div></div><div className='vertical-label'>Index</div> </button>
-                <ul className='nav-index' id='navIndex'>
-                    <li className='nav-index-item'><a href='#project-highlights'>PROJECT HIGHLIGHTS</a></li>
-                    <li className='nav-index-item'><a href='#technical-implementation-container'>TECHNICAL IMPLEMENTATION CONTENT</a></li>
-                    <li className='nav-index-item'><a href='#backend-architecture-container'>BACKEND ARCHITECTURE CONTENT</a></li>
-                    <li className='nav-index-item'><a href='#challenges-container'>CHALLENGES AND SOLUTIONS CONTENT</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-content'>Real-Time CV Preview</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-form-content'>Dynamic Form Input System</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-stylepage-content'>Style Customization Panel</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-layout-img-content-heading'>Multiple Layout Templates</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-fullscreen-img-content'>Full-Screen Preview & PDF Export</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-tools'>Technology Stack Content</a></li>
-                    <li className='nav-index-item'><a href='#future-container'>FUTURE ENHANCEMENTS CONTENT</a>
+               
+                     <ul  className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
+                    <li className='nav-index-item'><a href='#project-highlights' onClick={toggleIndex}>PROJECT HIGHLIGHTS</a></li>
+                    <li className='nav-index-item'><a href='#technical-implementation-container' onClick={toggleIndex}>TECHNICAL IMPLEMENTATION CONTENT</a></li>
+                    <li className='nav-index-item'><a href='#backend-architecture-container' onClick={toggleIndex}>BACKEND ARCHITECTURE CONTENT</a></li>
+                    <li className='nav-index-item'><a href='#challenges-container' onClick={toggleIndex}>CHALLENGES AND SOLUTIONS CONTENT</a></li>
+                    <li className='nav-index-item'><a href='#cvbuilder-content' onClick={toggleIndex}>Real-Time CV Preview</a></li>
+                    <li className='nav-index-item'><a href='#cvbuilder-form-content' onClick={toggleIndex}>Dynamic Form Input System</a></li>
+                    <li className='nav-index-item'><a href='#cvbuilder-stylepage-content' onClick={toggleIndex}>Style Customization Panel</a></li>
+                    <li className='nav-index-item'><a href='#cvbuilder-layout-img-content-heading' onClick={toggleIndex}>Multiple Layout Templates</a></li>
+                    <li className='nav-index-item'><a href='#cvbuilder-fullscreen-img-content' onClick={toggleIndex}>Full-Screen Preview & PDF Export</a></li>
+                    <li className='nav-index-item'><a href='#cvbuilder-tools' onClick={toggleIndex}>Technology Stack Content</a></li>
+                    <li className='nav-index-item'><a href='#future-container' onClick={toggleIndex}>FUTURE ENHANCEMENTS CONTENT</a>
 </li>
                     <li className='nav-index-item'><a href='#cvbuilder-links'>PROJECT LINK</a></li>
                 </ul>
+               
+               
             </nav>
             <div className="cvbuilder-header">
                 <h2 className="cvbuilder-heading">CV-BAKER : Full-stack resume builder</h2>

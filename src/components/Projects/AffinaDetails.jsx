@@ -1,4 +1,4 @@
-import {usestate, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
 import "../styles/AffinaStyles.css"
 
@@ -10,30 +10,33 @@ const AffinaDetails = () => {
     }, []);
 
 
-    function toggleIndex() {
-        const index = document.getElementById('navIndex');
-        index.classList.toggle('active');
-    }
+    const [indexOpen,setIndexOpen] = useState(false)
+      const toggleIndex = () => {
+          setIndexOpen(prev => !prev)
+      }; 
 
 
     return(
          <div className="project-details-container">
                <nav className='fixed-nav'>
                 <button className='toggle-nav' onClick={() => toggleIndex()}><div></div><div className="vertical-label">Index</div> </button>
-                <ul className='nav-index' id='navIndex'>
-                    <li className='nav-index-item'><a href='#project-hero'>Project Heading</a></li>
-                    <li className='nav-index-item'><a href='#project-overview'>Project overview</a></li>
-                    <li className='nav-index-item'><a href='#tech-stack'>Technology Stack Content:</a></li>
-                    <li className='nav-index-item'><a href='#key-features'>Key Features</a></li>
-                    <li className='nav-index-item'><a href='#challenges'>Challenges</a></li>
-                    <li className='nav-index-item'><a href='#project-impact'>Project Impact & Result</a></li>
-                    <li className='nav-index-item'><a href='#api-docs'>API architecture</a></li>
-                    <li className='nav-index-item'><a href='#lessons-learned'>Lessons learned</a></li>
+                
+                     <ul className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
+                    <li className='nav-index-item'><a href='#project-hero' onClick={toggleIndex}>Project Heading</a></li>
+                    <li className='nav-index-item'><a href='#project-overview' onClick={toggleIndex}>Project overview</a></li>
+                    <li className='nav-index-item'><a href='#tech-stack' onClick={toggleIndex}>Technology Stack Content:</a></li>
+                    <li className='nav-index-item'><a href='#key-features' onClick={toggleIndex}>Key Features</a></li>
+                    <li className='nav-index-item'><a href='#challenges' onClick={toggleIndex}>Challenges</a></li>
+                    <li className='nav-index-item'><a href='#project-impact' onClick={toggleIndex}>Project Impact & Result</a></li>
+                    <li className='nav-index-item'><a href='#api-docs' onClick={toggleIndex}>API architecture</a></li>
+                    <li className='nav-index-item'><a href='#lessons-learned' onClick={toggleIndex}>Lessons learned</a></li>
                   
                     
 
-                    <li className='nav-index-item'><a href='#projects-cta'>PROJECT LINK</a></li>
+                    <li className='nav-index-item'><a href='#projects-cta' onClick={toggleIndex}>PROJECT LINK</a></li>
                 </ul>
+                
+               
             </nav>
             {/* Header Section */}
             <div className="project-hero" id='project-hero'>

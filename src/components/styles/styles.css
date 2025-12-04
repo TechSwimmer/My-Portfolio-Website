@@ -35,7 +35,7 @@ html {
 
 /* Dark mode */
 .dark-mode {
-    background-color: grey;
+    background-color: #333;
     color: white;
     }
 
@@ -45,7 +45,7 @@ html {
     }
 
 .button-dark{
-    background-color: grey;
+    background-color: #333;
     color: white
     }
 
@@ -650,8 +650,8 @@ html {
         cursor: pointer;
         transition: transform 0.5s ease-in;
         transform: scale(1.2);
-        background-color: grey;
-        border: 1px solid grey;
+        background-color: #333;
+        border: 1px solid #333;
     }    
 
 
@@ -732,50 +732,6 @@ html {
     /*-------------------------------------------project-tasknest-section--------------------------------------*/
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .cvbuilder-link-btn:hover {
         cursor: pointer;
         transition: transform 0.4s ease-out;
@@ -932,6 +888,13 @@ html {
     flex-wrap: wrap;
     gap: 12px;
     text-align: center;
+   }
+   .frontend-tabs, .backend-tabs, .database-tabs,.authentication-security-tabs,.tools-deployement-tabs{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
    }
     .skill-tabs-items{
     display: flex;
@@ -1168,11 +1131,13 @@ html {
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 50%;
+    width: 100%;
     flex-direction: row;
     }
 .navbar-left h2{
-    margin-left: 10px;
+    margin-left: 2px;
+    font-size: 1.5rem;
+    margin-top: 30px;
 }
 
 .profilePic{
@@ -1185,8 +1150,8 @@ html {
 
 .navbar-left img{
     border-radius: 20px;
-    margin-left: 8px;
-    margin-top: 8px;
+    margin-left: 6px;
+   
     }
 
 .navbar h4 {
@@ -1362,8 +1327,8 @@ html {
         cursor: pointer;
         transition: transform 0.5s ease-in;
         transform: scale(1.2);
-        background-color: grey;
-        border: 1px solid grey;
+        background-color: #333;
+        border: 1px solid #333;
     }    
 
 
@@ -1962,8 +1927,8 @@ html {
         cursor: pointer;
         transition: transform 0.5s ease-in;
         transform: scale(1.2);
-        background-color: grey;
-        border: 1px solid grey;
+        background-color:#333;
+        border: 1px solid #333;
     }    
 
 
