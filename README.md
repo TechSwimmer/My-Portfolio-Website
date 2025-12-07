@@ -75,16 +75,16 @@ This portfolio is more than a profile — it includes **detailed case study page
 * ✔ Focus on user experience + developer experience
 * ✔ Clean code, reusable components, readable structure
 
-> I believe good software is not just functional — it's intuitive, fast, and enjoyable to use.
+> **I believe good software is not just functional — it's intuitive, fast, and enjoyable to use.**
 
 ### 📩 Contact
 
-**📧 Email**: techdevnikhil95@gmail.com
-**🌐 Portfolio**: https://techdevnikhil.netlify.app/
-**🔗 GitHub**: https://github.com/TechSwimmer
+**📧 Email**: techdevnikhil95@gmail.com   
+**🌐 Portfolio**: https://techdevnikhil.netlify.app/   
+**🔗 GitHub**: https://github.com/TechSwimmer   
 
 ## Closing Note
 
 * This portfolio will continue expanding with advanced case studies, new project documentation, and future experiments.
 
-> If you're a recruiter, developer, or collaborator — thank you for taking the time to explore my work.
+> **If you're a recruiter, developer, or collaborator — thank you for taking the time to explore my work.**
