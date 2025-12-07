@@ -1,3 +1,74 @@
+
+/* Whole TaskNest page background + text based on body theme */
+body.light .tasknest-container {
+  background-color: bisque;      /* matches your light theme */
+  color: #111;
+}
+
+body.dark .tasknest-container {
+  background-color: #121212;     /* your dark theme background */
+  color: #f5f5f5;
+}
+
+/* "Card-like" elements: boxes, chips, buttons, floating index, toggle btn */
+
+/* Light theme: slightly brighter card, darker shadow */
+
+
+body.light .tasknest-content-img,
+
+body.light .tasknest-tool,
+body.light .tasknest-link-btn,
+body.light .tasknest-heading-btn,
+body.light .nav-index,
+body.light .toggle-nav {
+  background-color: #fff8f0; /* soft light card on bisque */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+body.light .tasknest-container,
+body.light .tasknest-content,
+body.light .tasknest-content-img-overview{
+  background-color: #fff8f0; /* soft light card on bisque */
+}
+
+/* Dark theme: slightly lighter card (#1e1e1e), light glow shadow */
+
+
+body.dark .tasknest-content-img,
+
+body.dark .tasknest-tool,
+body.dark .tasknest-link-btn,
+body.dark .tasknest-heading-btn,
+body.dark .nav-index,
+body.dark .toggle-nav {
+  background-color: #111;
+  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.15);
+}
+body.dark .tasknest-container,
+body.dark .tasknest-content,
+body.dark .tasknest-content-img-overview{
+  background-color: #1e1e1e;
+}
+
+/* (Optional for better UX) keep link text readable inside buttons */
+.tasknest-link-btn a,
+.tasknest-heading-btn a {
+  color: inherit;
+}
+
+body.light .nav-index a:hover{
+ background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+body.dark .nav-index a:hover{
+  background-color: #fff8f0;
+  color: #111;
+  font-weight: bold;
+}
+
+
+
 @media (max-width: 600px) {
 
     .tasknest-container{
@@ -6,11 +77,11 @@
         min-height: 100vh;
         width:100%;
         position: relative;
-        margin-top: 25%;
+        padding-top: 25%;
        
         align-items: center;
         align-self: center;
-        margin-bottom: 2%;
+        padding-bottom: 7%;
     }
 
     .tasknest-header{
@@ -31,7 +102,7 @@
 
     .tasknest-heading-content{
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     }
 
     
@@ -50,7 +121,7 @@
         cursor: pointer;
         transition: transform 0.4s ease-out;
         transform: scale(1.2);
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+       
     }
 
     .tasknest-content{
@@ -143,7 +214,7 @@
     .tasknest-tool{
         border-radius: 10px;
         padding: 8px 16px;
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+        
         font-weight: bold;
         margin-top: 4%;
     }
@@ -163,13 +234,15 @@
     font-size: 1rem;
     margin-top: 10%;
     }
-
-    .features-list li {
-       list-style: none;
-        padding-top: 13px;
-      padding-bottom: 13px;
-      width: 90%;
-    }
+.key-features-section{
+  width: 85%;
+}
+.features-list li {
+    list-style: none;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    width: 90%;
+  }
     
 .tasknest-link-btn a{
     text-decoration: none;
@@ -180,7 +253,10 @@
         cursor: pointer;
         transition: transform 0.4s ease-out;
         transform: scale(1.2);
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+        
+    }
+    .achievements-list{
+      width: 85%;
     }
     .achievement-list-head{
         text-align: center;
@@ -197,7 +273,9 @@
         list-style: none;
         margin-right: 30px;
     }
-
+    .api-endpoints{
+      width: 85%;
+    }
     .api-endpoints-main-head{
       text-align:center;
       font-size: 1.7rem;
@@ -210,6 +288,9 @@
        padding-top: 12px;
       padding-bottom: 12px;
       padding-right: 15px;
+    }
+    .architecture-calendar{
+      width: 85%;
     }
     .architecture-calendar-main-head{
       text-align:center;
@@ -225,6 +306,9 @@
        list-style: none;
         padding-top: 12px;
       padding-bottom: 12px;
+    }
+    .security-notes{
+      width: 85%;
     }
     .security-notes-head{
       text-align:center;
@@ -244,6 +328,9 @@
       margin-bottom: 50px;
       padding-right: 15px;
     }
+    .challenges{
+      width: 85%;
+    }
     .challenges-head{
        text-align:center;
       font-size: 1.7rem;
@@ -258,7 +345,9 @@
         padding-top: 10px;
       padding-bottom: 10px;
     } 
-
+    .future-improvement{
+      width: 85%;
+    }
     .future-improvement-head{
         text-align:center;
         font-size: 1.7rem;
@@ -338,29 +427,17 @@
   overflow-y: auto;
  
   color: inherit;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  
   border-radius: 8px;
 }
-/* When parent has light theme */
-.tasknest-container.light-mode .nav-index {
-  background-color: white;
-  color: black;
-}
-/* When parent has dark theme */
-.tasknest-container.dark-mode .nav-index {
-  background-color: #333; /* better than flat grey */
-  color: white;
-}
-.nav-index-item {
-  list-style: none;
-  width: 100%;
-}
 
-.nav-index-item a {
+
+.nav-index a {
   display: block;
   padding: 4px 3px;
   text-decoration: none;
-
+  list-style: none;
+  width: 100%;
 }
 .nav-index.active {
   display: flex;
@@ -392,17 +469,15 @@
 
 @media (min-width: 601px) and (max-width: 1024px) {
     .tasknest-container{
-    display: flex;
+      display: flex;
       flex-direction: column;
       min-height: 100vh;
-      width:80vw;
+      width:100vw;
       position: relative;
       margin-top: 15%;
-      margin-left: 10%;
-      margin-right: 10%;
       align-items: center;
       align-self: center;
-      margin-bottom: 2%;
+      padding-bottom: 3%;
     }
 
     .tasknest-header{
@@ -439,7 +514,7 @@
       cursor: pointer;
       transition: transform 0.4s ease-out;
       transform: scale(1.2);
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+      
     }
     
     .tasknest-content{
@@ -507,6 +582,7 @@
       justify-content: space-between;
       align-items: center;
       margin-top: 4%;
+      width: 80%;
     }
     
     .tasknest-tools h3{
@@ -516,7 +592,7 @@
     .tasknest-tool{
       border-radius: 10px;
       padding: 10px 20px;
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+       
       font-weight: bold;
       margin-top: 4%;
     }
@@ -553,12 +629,18 @@
       cursor: pointer;
       transition: transform 0.4s ease-out;
       transform: scale(1.2);
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+     
+    }
+      .key-features-section{
+      width: 80%;
     }
     .features-list li {
       list-style: none;
       padding-top: 10px;
       padding-bottom: 10px;
+    }
+    .achievements-list{
+      width: 80%;
     }
     .achievement-list-head{
       text-align: center;
@@ -590,6 +672,9 @@
     }
 
     
+    .api-endpoints{
+      width: 80%;
+    }
     .api-endpoints-main-head{
       text-align:center;
       font-size: 1.8rem;
@@ -602,6 +687,9 @@
        padding-top: 12px;
       padding-bottom: 12px;
       font-size: 1.1rem;
+    }
+    .security-notes{
+      width: 80%;
     }
 
     .security-notes-head{
@@ -620,6 +708,10 @@
     .architecture-calendar{
       margin-top: 50px;
       margin-bottom: 50px;
+      width: 80%;
+    }
+    .challenges{
+      width: 80%;
     }
     .challenges-head{
        text-align:center;
@@ -634,6 +726,9 @@
         padding-top: 10px;
       padding-bottom: 10px;
     } 
+    .future-improvement{
+      width: 80%;
+    }
 
     .future-improvement-head{
         text-align:center;
@@ -648,6 +743,9 @@
       padding-top: 10px;
       padding-bottom: 10px;
     }
+    .vanilla-js-container{
+      width: 80%;
+    }
 
     .vanilla-js-head{
         text-align: center;
@@ -661,13 +759,13 @@
 .fixed-nav {
   position: fixed;
   bottom: 01%;
-  left: 60%;
+  left: 50%;
   z-index: 10000;
   /* Removed: overflow: visible (default for fixed positioning) */
 }
 
 .toggle-nav {
-  width: 40.0vw;
+  width: 50vw;
   height: 4.5vh;
   display: flex;
   justify-content: space-between;
@@ -696,9 +794,9 @@
  bottom: 0.5%;
  
   /* Removed: opacity: 1 (redundant - default value) */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
   text-align: left;
-  width: 34.5vw;
+  width: 45vw;
  
   
 }
@@ -708,29 +806,17 @@
   border-radius: 12px;
 }
 
-.nav-index-item {
-  list-style: none;
-  text-align: left;
-  width: 100%;
-  /* Removed: align-self: flex-start (not needed in column layout) */
-  /* Removed: opacity: 1 (redundant) */
-}
 
-.nav-index-item a {
+.nav-index a {
   text-decoration: none;
   color: inherit;
+    list-style: none;
+  text-align: center;
+  width: 100%;
 }
 
 /* When parent has light theme */
-.tasknest-container.light-mode .nav-index {
-  background-color: white;
-  color: black;
-}
-/* When parent has dark theme */
-.tasknest-container.dark-mode .nav-index {
-  background-color: #333; /* better than flat grey */
-  color: white;
-}
+
 .toggle-nav::before {
   content: "▲"; /* Up arrow for mobile */
 }
@@ -756,15 +842,14 @@
     .tasknest-container{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    width:80vw;
+    min-height: 100%;
+    width:100vw;
     position: relative;
-    margin-top: 15%;
-    margin-left: 10%;
-    margin-right: 10%;
+    
+   
     align-items: center;
     align-self: center;
-    margin-bottom: 2%;
+    padding-bottom: 2%;
     }
 
     .tasknest-header{
@@ -800,7 +885,7 @@
     cursor: pointer;
     transition: transform 0.4s ease-out;
     transform: scale(1.2);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+   
     }
     .tasknest-content{
     margin-top: 5%;
@@ -886,14 +971,14 @@
     .tasknest-tool{
     border-radius: 10px;
     padding: 10px 20px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+    
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
     }
     .tasknest-tool:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    
     }
 
     .tasknest-links{
@@ -920,12 +1005,14 @@
     cursor: pointer;
     transition: transform 0.4s ease-out;
     transform: scale(1.2);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+    
     }  
     .hamburger{
         display:none ;
     }
-
+    .achievements-list{
+      width: 80%;
+    }
     .achievement-list-head{
         text-align: center;
     }
@@ -936,7 +1023,9 @@
      .achievements-list-points ul li {
         margin-top: 10px;
     }
-
+    .architecture-calendar{
+      width: 80%;
+    }
     .architecture-calendar-main-head{
       text-align:center;
       font-size: 1.8rem;
@@ -950,7 +1039,9 @@
       margin-top: 10px;
     }
 
-    
+    .api-endpoints{
+      width: 80%;
+    }
     .api-endpoints-main-head{
       text-align:center;
       font-size: 1.8rem;
@@ -965,7 +1056,9 @@
       padding-right: 15px;
       font-size: 1.4rem;
     }
-
+    .security-notes{
+      width: 80%;
+    }
     .security-notes-head{
       text-align:center;
       font-size: 1.8rem;
@@ -980,6 +1073,9 @@
       margin-top: 50px;
       margin-bottom: 50px;
     }
+    .challenges{
+      width: 80%;
+    }
     .challenges-head{
        text-align:center;
       font-size: 1.8rem;
@@ -990,6 +1086,9 @@
     .challenges-points ul li{
         margin-top: 10px;
     } 
+    .future-improvement{
+      width: 80%;
+    }
 
     .future-improvement-head{
         text-align:center;
@@ -1001,12 +1100,17 @@
     .future-improvement-points ul li {
       margin-top: 10px;
     }
-
+    .vanilla-js-container{
+      width: 80%;
+    }
     .vanilla-js-head{
         text-align: center;
     }
     .vanilla-js-content{
         font-size: 1.4rem;
+    }
+    .key-features-section{
+      width: 80%;
     }
 
     .key-features-section h3{
@@ -1026,13 +1130,13 @@
 .fixed-nav {
   position: fixed;
   top: 12%;
-  left: 77%;
+  left: 74.5%;
   z-index: 10000;
   /* Removed: overflow: visible (not needed for fixed position) */
 }
 
 .toggle-nav {
-  width: 22.70vw;
+  width: 25vw;
   height: 4.5vh;
   display: flex;
   justify-content: space-between;
@@ -1044,55 +1148,34 @@
 }
 
 /* Links inside the navbar */
-.fixed-nav a {
-  /* Removed: float: right (conflicts with flexbox) */
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 4px 3px;
-  text-decoration: none;
-  /* Removed: z-index (not needed on child elements) */
-}
+
 
 /* Style for the dropdown index container */
 .nav-index {
   display: none;
-  position: fixed;
-  right: 2px;
-  top: 14%;
-  /* Removed: opacity: 1 (redundant - default value) */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  text-align: left;
-  width: 20vw;
+  position: absolute;    /* 🔥 relative to .fixed-nav now */
+  width: 45vw;
+  right: 2;
+  width: 100%;           /* same width as .toggle-nav */
+  text-align: center;
+  
 }
 
-.fixed-nav a:hover {
+
+.nav-index a {
+  display: block;        /* full clickable row */
+  width: 100%;           /* fill .nav-index */
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 10px;
+  text-align: center;
+}
+.nav-index a:hover {
   /* Removed: opacity: 1 (redundant - default value) */
   border-radius: 12px;
 }
 
-.nav-index-item {
-  list-style: none;
-  text-align: left;
-  width: 100%;
-  align-self: flex-start;
-  /* Removed: opacity: 1 (redundant) */
-}
 
-.nav-index-item a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.tasknest-container.light-mode .nav-index {
-  background-color: white;
-  color: black;
-}
-/* When parent has dark theme */
-.tasknest-container.dark-mode .nav-index {
-  background-color: #333; /* better than flat grey */
-  color: white;
-}
 
 .nav-index.active {
   display: flex;

@@ -21,20 +21,17 @@ const AffinaDetails = () => {
                <nav className='fixed-nav'>
                 <button className='toggle-nav' onClick={() => toggleIndex()}><div></div><div className="vertical-label">Index</div> </button>
                 
-                     <ul className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
-                    <li className='nav-index-item'><a href='#project-hero' onClick={toggleIndex}>Project Heading</a></li>
-                    <li className='nav-index-item'><a href='#project-overview' onClick={toggleIndex}>Project overview</a></li>
-                    <li className='nav-index-item'><a href='#tech-stack' onClick={toggleIndex}>Technology Stack Content:</a></li>
-                    <li className='nav-index-item'><a href='#key-features' onClick={toggleIndex}>Key Features</a></li>
-                    <li className='nav-index-item'><a href='#challenges' onClick={toggleIndex}>Challenges</a></li>
-                    <li className='nav-index-item'><a href='#project-impact' onClick={toggleIndex}>Project Impact & Result</a></li>
-                    <li className='nav-index-item'><a href='#api-docs' onClick={toggleIndex}>API architecture</a></li>
-                    <li className='nav-index-item'><a href='#lessons-learned' onClick={toggleIndex}>Lessons learned</a></li>
-                  
-                    
-
-                    <li className='nav-index-item'><a href='#projects-cta' onClick={toggleIndex}>PROJECT LINK</a></li>
-                </ul>
+                     <div className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
+                   <a href='#project-hero' onClick={toggleIndex}>Project Heading</a>    
+                    <a href='#project-overview' onClick={toggleIndex}>Project overview</a>
+                    <a href='#tech-stack' onClick={toggleIndex}>Technology Stack Content:</a>
+                    <a href='#key-features' onClick={toggleIndex}>Key Features</a>
+                    <a href='#challenges' onClick={toggleIndex}>Challenges</a>
+                    <a href='#project-impact' onClick={toggleIndex}>Project Impact & Result</a>
+                    <a href='#api-docs' onClick={toggleIndex}>API architecture</a>
+                    <a href='#lessons-learned' onClick={toggleIndex}>Lessons learned</a>
+                    <a href='#projects-cta' onClick={toggleIndex}>PROJECT LINK</a>
+                </div>
                 
                
             </nav>
@@ -46,7 +43,7 @@ const AffinaDetails = () => {
                     <div className="project-links">
                        
                         <button className="btn-secondary">
-                            <a href="https://affina.netlify.app/" target="_blank" rel="noopener noreferrer">PROJECT LINK</a>
+                            <a href="https://affina.netlify.app/" target="_blank" rel="noopener noreferrer">LIVE PROJECT LINK</a>
                         </button>
                     </div>
                 </div>
@@ -287,10 +284,10 @@ const AffinaDetails = () => {
                     <p>Check out the live application or dive into the code to see the implementation details.</p>
                     <div className="cta-buttons">
                         <button className="btn-primary">
-                            <a href="https://github.com/TechSwimmer/Affina" target="_blank" rel="noopener noreferrer">VIEW SOURCE CODE</a>
+                            <a href="https://github.com/TechSwimmer/Affina" target="_blank" rel="noopener noreferrer">GITHUB REPO</a>
                         </button>
-                        <button className="btn-secondary">
-                            <a href="https://affina.netlify.app/" target="_blank" rel="noopener noreferrer">EXPLORE LIVE DEMO</a>
+                        <button className="btn-secondary" onClick={() => navigate('/Home')}>
+                            <a href="" target="_blank" rel="noopener noreferrer">GO BACK</a>
                         </button>
                     </div>
                 </div>

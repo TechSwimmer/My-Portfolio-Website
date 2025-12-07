@@ -1,57 +1,191 @@
-html {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    }
+/* ------------------ THEME BASE ------------------ */
+:root {
+  --light-bg: bisque;
+  --dark-bg: #121212;
+
+  --light-text: #000;
+  --dark-text: #fff;
+
+  --light-button-bg: #ffffff;
+  --dark-button-bg: #333333;
+
+  --light-card-bg: #fff;
+  --dark-card-bg: #1e1e1e;
+}
+
+/* GLOBAL BODY APPLICATION */
+body.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* ------------------ NAVBAR ------------------ */
+
+body.light .navbar,
+body.light .dropdown-menu {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.dark .navbar,
+body.dark .dropdown-menu  {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.light .navbar a,
+body.light .dropdown-menu a  {
+  color: var(--light-text);
+}
+
+body.dark .navbar a,
+body.dark .dropdown-menu a {
+  color: var(--dark-text);
+}
+
+body.light .dropdown-menu a:hover{
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+body.dark .dropdown-menu a:hover{
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+body.dark .hamburger {
+    box-shadow: 5px 5px 10px rgba(242, 239, 239, 0.4);
+    background-color: var(--dark-button-bg);
+}
+body.light .hamburger {
+    box-shadow: 5px 5px 10px rgba(11, 8, 8, 0.4);
+    background-color: var(--light-button-bg);
+}
+body.light .hamburger:hover{
+    box-shadow: 5px 5px 10px rgba(11, 8, 8, 2.8);
+}
+body.dark .hamburger:hover{
+    box-shadow: 5px 5px 10px rgba(242, 239, 239, 2.8);
+}
+
+/* ------------------ LOGOBAR ------------------ */
+body.light .logobar {
+  background-color: var(--light-bg);
+}
+
+body.dark .logobar {
+  background-color: var(--dark-bg);
+}
+
+/* ------------------ THEME SWITCHER ------------------ */
+body.light .themebar-light {
+  background-color: var(--light-card-bg);
+}
+
+body.dark .themebar-dark {
+  background-color: var(--dark-card-bg);
+}
+
+body.light .themebar-light.active-scale {
+  transform: scale(1.2);
+}
+
+body.dark .themebar-dark.active-scale {
+  transform: scale(1.2);
+}
+body.dark .themebar{
+    background-color:var(--dark-bg) ;
+}
+body.light .themebar{
+    background-color: var(--light-bg);
+}
 
 
+/* ------------------ COMMON BUTTONS ------------------ */
+button,
+.contact-submit-button,
+.about-contact-tab,
+.project-img-content-btn,
+.home-projects-button {
+  transition: 0.3s;
+}
 
+body.light button,
+body.light .project-img-content-btn,
+body.light .about-contact-tab,
+body.light .home-projects-button,
+body.light .contact-submit-button {
+  background-color: var(--light-button-bg);
+  color: var(--light-text);
+}
 
-/*--------------------------------------------------theme-support----------------------------------------------*/
-.navbar-light{
-    background-color: bisque;
-    color: black;
-    }
+body.dark button,
+body.dark .project-img-content-btn,
+body.dark .about-contact-tab,
+body.dark .home-projects-button,
+body.dark .contact-submit-button {
+  background-color: var(--dark-button-bg);
+  color: var(--dark-text);
+}
 
-.navbar-dark {
-    background-color: darkgrey;
-    color: white;
-    }
+/* ------------------ CARDS / SECTIONS ------------------ */
 
-.navbar-links-light{
-    color: black;
-    }
-.navbar-links-dark{
-    color: white;
-    }   
+body.light .home-container,
+body.light .about-container,
+body.light .project-container,
+body.light .contact-container,
+body.light .cvbuilder-container {
+  background-color: var(--light-card-bg);
+}
 
+body.dark .home-container,
+body.dark .about-container,
+body.dark .project-container,
+body.dark .contact-container,
+body.dark .cvbuilder-container {
+  background-color: var(--dark-card-bg);
+}
 
+/*-----------------------box-shadow--------------------------*/
 
+body.dark .home-projects-button, 
+body.dark .about-contact-tab,
+body.dark .skill-tab,
+body.dark .contact-submit-button,
+body.dark .contact-submit-button:hover,
+body.dark .contact-form,
+body.dark .project-img-content-btn,
+body.dark .navbar,
+body.dark .navbar h4:hover,
+body.dark .logobar,
+body.dark .cvbuilder-link-btn:hover, 
+body.dark .dropdown-menu a{
+box-shadow: 5px 5px 10px rgba(242, 239, 239, 0.4);
+}
+body.light .home-projects-button, 
+body.light .about-contact-tab,
+body.light .skill-tab,
+body.light .contact-submit-button,
+body.light .contact-submit-button:hover,
+body.light .contact-form,
+body.light .project-img-content-btn,
+body.light .navbar,
+body.light .navbar h4:hover,
+body.light .logobar,
+body.light .cvbuilder-link-btn:hover, 
+body.light .dropdown-menu a{
+box-shadow: 5px 5px 10px rgba(11, 8, 8, 0.4);
+}
 
-
-.light-mode {
-    background-color: white;
-    color: black;
-    }
-
-/* Dark mode */
-.dark-mode {
-    background-color: #333;
-    color: white;
-    }
-
-.button-light{
-    background-color: bisque;
-    color: black;
-    }
-
-.button-dark{
-    background-color: #333;
-    color: white
-    }
-
-
-
-
+body.light .footer-container{
+    box-shadow: 0px -5px 10px rgba(11, 8, 8, 0.4);
+}
+body.dark .footer-container{
+    box-shadow: 0px -5px 10px rgba(242, 239, 239, 0.4);
+}
 
 
 /*--------------------------------------------- For small screens (mobile)-------------------------------- */
@@ -60,10 +194,8 @@ html {
 .home-container {
     position: relative;
     width: 100%;
-    
-    margin-top: 18%;
+    padding-top: 25%;
     padding-bottom: 10%;
-   
     align-items: center;
     display: flex;
     justify-content: center;
@@ -86,7 +218,7 @@ html {
 
 .home-projects-button {
     align-self: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    
     font-size: 1.3rem;
     padding: 10px 25px;
     border-radius: 15px;
@@ -159,7 +291,7 @@ html {
     padding: 8px;
     border-radius:10px ;
     font-size: larger;
-    box-shadow:  4px 4px 8px rgba(0, 0, 0, 0.3);;
+    
     }
 
 .about-contact-tab:hover{
@@ -190,7 +322,7 @@ html {
     align-items: center;
     font-size: 0.7rem;
     
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    
     }
 
 .skill-tabs{
@@ -237,7 +369,7 @@ html {
     flex-direction: column;
     justify-content: space-around;
     
-    width: 100%;
+    width: 100vw;
     gap: 15px;
     align-items: center;
     align-self: center;
@@ -271,12 +403,12 @@ html {
     border-radius: 5px;
     height: 45px;
     font-size: 1rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
     }      
 
 .contact-submit-button:hover{
     cursor: pointer;
-    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4);
+   
     transition: transform 0.4s ease-out;
     transform:scale(1.2);
     }
@@ -294,7 +426,7 @@ html {
     padding-bottom: 5%;
     margin-bottom: 20%;
     border-radius: 10px;
-    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.4) ;
+    
     }
 
 
@@ -399,7 +531,7 @@ html {
     border-radius:5px ; 
     width: 70%;
     padding: 5px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+    
     text-align: center;
     color: inherit;
     }
@@ -423,7 +555,7 @@ html {
     justify-content: space-between;
     
     align-items: center;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    
     }
 
 .navbar a{
@@ -446,16 +578,16 @@ html {
 
 .navbar-left {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;
-    vertical-align: middle;
-    width: 70%;
+  
+    width: 100%;
     flex-direction: row;
     }
 .navbar-left h2{
     margin-left: 10px;
-    font-size: 1.1rem;
-    margin-top: 10vw;
+    font-size: 1.5rem;
+    margin-top: 25px;
 }
 
 .profilePic{
@@ -463,7 +595,6 @@ html {
     object-fit: contain;
     border-radius: 20px;
     }
-
 
 
 .navbar-left img{
@@ -485,7 +616,7 @@ html {
 .navbar h4:hover {
     cursor: pointer;
     transition: transform 0.3s ease;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  
     transform: scale(1.25);
     }
 
@@ -495,13 +626,13 @@ html {
     min-width: 29%;
     height: 29%;
     margin: 15px 6px;
-    
+    border-radius: 10px;
     padding: 12px;
 }
 
 .hamburger:hover{
     cursor: pointer;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0.3, 0.3);
+    
     border-radius: 10px;
 }
 
@@ -509,7 +640,7 @@ html {
     z-index: 999;
     display: none;
     position: absolute;
-    top: 75px;
+    top: 15vh;
     right: 0;
    
     width: 100%;
@@ -523,19 +654,16 @@ html {
     flex-direction: column;
     opacity: 1;
     transform: translateY(0);
-    
+    z-index: 999;
 }
 .dropdown-menu a {
     padding: 10px;
     
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     font-size: 1.5rem;
     transition: 0.3s;
 }
 
-.dropdown-menu a:hover {
-    background-color: #555;
-}
+
 
 .hamburger img{
     width: 100%;
@@ -558,17 +686,10 @@ html {
     padding: 2px;
     bottom: 5%;
     border-radius: 10px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    
 
     }
 
-.logobar-light{
-    background-color: bisque;
-    }
-
-.logobar-dark{
-    background-color: darkgrey;
-    }
 
 .logo {
     width: 40px;
@@ -683,7 +804,7 @@ html {
    }
 
 .footer-content-left {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -697,7 +818,7 @@ html {
     }
 
 .footer-content-right{
-    width: 25%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -709,7 +830,7 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10%;
+    gap: 12%;
     }
 
 
@@ -736,7 +857,7 @@ html {
         cursor: pointer;
         transition: transform 0.4s ease-out;
         transform: scale(1.2);
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+        
         }
 }
 
@@ -748,7 +869,7 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
-    margin-top: 18%;
+    padding-top:30% ;
     padding-bottom: 10%;
     top:0;
     left: 0;
@@ -774,7 +895,7 @@ html {
 
 .home-projects-button {
     align-self: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+   
     font-size: 1.7rem;
     padding: 10px 25px;
     border-radius: 15px
@@ -799,7 +920,7 @@ html {
     text-align: center;
     position: relative;
     
-    width: 78%;
+    width: 80%;
     top:100%;
     gap: 30px;
     }
@@ -847,7 +968,7 @@ html {
     padding: 8px;
     border-radius:10px ;
     font-size: larger;
-    box-shadow:  4px 4px 8px rgba(0, 0, 0, 0.3);;
+    
     }
 
 .about-contact-tab:hover{
@@ -878,7 +999,7 @@ html {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+   
     }
 
 .skill-tabs{
@@ -914,17 +1035,13 @@ html {
 
    
 .contact-container{
-    position: relative;
-    
+    position: relative; 
     display: flex;
-    margin-left:17% ;
-    margin-right:17% ;
-    padding-bottom: 10%;
     margin-bottom: 20px;
     flex-direction: column;
-    justify-content: space-around;
-    
-    width: 65%;
+    justify-content: space-between ;
+    border-radius: 10px;
+    width: 100%;
     gap: 20px;
     align-items: center;
     align-self: center;
@@ -935,6 +1052,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+     width: 80%;
     }
 
 
@@ -942,7 +1060,6 @@ html {
     font-size: 2.1rem;
     font-weight: bold;
     text-decoration: underline;
-    
     }
 
 .contact-header-content{
@@ -958,12 +1075,12 @@ html {
     border-radius: 5px;
     height: 45px;
     font-size: 1rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
     }      
 
 .contact-submit-button:hover{
     cursor: pointer;
-    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4);
+    
     transition: transform 0.4s ease-out;
     transform:scale(1.2);
     }
@@ -973,14 +1090,15 @@ html {
     flex-direction: column;
     gap: 30px;
     height: 100%;
-    width: 100%;
+    width: 80%;
     align-items: center;
     font-size: 1.6rem;
     padding-top: 10%;
     padding-bottom: 5%;
     margin-bottom: 20%;
     border-radius: 10px;
-    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.4) ;
+   
+   
     }
 
 
@@ -1081,7 +1199,7 @@ html {
     border-radius:5px ; 
     width: 70%;
     padding: 5px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+    
     text-align: center;
     color: inherit;
     }
@@ -1105,7 +1223,7 @@ html {
     justify-content: space-between;
     
     align-items: center;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    
     }
 
 .navbar a{
@@ -1129,29 +1247,28 @@ html {
 
 .navbar-left {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     flex-direction: row;
+    
     }
 .navbar-left h2{
     margin-left: 2px;
-    font-size: 1.5rem;
-    margin-top: 30px;
+    font-size: 2rem;
 }
 
 .profilePic{
-    width: 22%;
+    width: 21%;
     object-fit: contain;
     border-radius: 20px;
     }
 
 
-
 .navbar-left img{
-    border-radius: 20px;
+    border-radius: 10px;
     margin-left: 6px;
-   
+   margin-right: 10px;
     }
 
 .navbar h4 {
@@ -1168,7 +1285,7 @@ html {
    
     display: none;
     position: absolute;
-    top:90px;
+    top:18vh;
     right: 0;
     width: 100%;
     flex-direction: column;
@@ -1178,7 +1295,7 @@ html {
 .navbar h4:hover {
     cursor: pointer;
     transition: transform 0.3s ease;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+   
     transform: scale(1.25);
     }
 
@@ -1186,18 +1303,15 @@ html {
         visibility: visible;
         display: block;
         min-width: 15%;
-        
         margin: 8px;
         padding: 7px;
+        border-radius: 10px;
     }
     
     .hamburger:hover{
         cursor: pointer;
-        box-shadow: 4px 4px 8px rgba(0, 0, 0.3, 0.3);
         border-radius: 10px;
     }
-    
- 
     
     .dropdown-menu.open{
         display: flex;
@@ -1205,14 +1319,8 @@ html {
     .dropdown-menu a {
         padding: 10px;
         text-decoration: none;
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
         font-size: 1.7rem;
         transition: 0.3s;
-    }
-    
-
-    .dropdown-menu a:hover {
-        background-color: #555;
     }
     
     .hamburger img{
@@ -1236,17 +1344,11 @@ html {
     top: 30%;
     bottom: 20%;
     border-radius: 10px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    
 
     }
 
-.logobar-light{
-    background-color: bisque;
-    }
 
-.logobar-dark{
-    background-color: darkgrey;
-    }
 
 .logo {
     width: 40px;
@@ -1279,7 +1381,7 @@ html {
         margin-right: 0.5%;
     }
 
-    .themebar-light  {
+     .themebar-light  {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -1292,7 +1394,7 @@ html {
         
     }
     
-    .themebar-dark {
+     .themebar-dark {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -1358,7 +1460,7 @@ html {
    }
 
 .footer-content-left {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1370,19 +1472,20 @@ html {
     }
 
 .footer-content-right{
-    width: 25%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    
     }
 
 .footer-right-logos{
     display: flex;
-    flex-wrap: wrap;
+    
     justify-content: center;
     align-items: center;
-    gap: 35%;
+    gap: 30%;
     }
 
 
@@ -1416,7 +1519,7 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
-    margin-top: 18%;
+   padding-top: 10%;
     padding-bottom: 10%;
     top:0;
     left: 0;
@@ -1442,7 +1545,7 @@ html {
 
 .home-projects-button {
     align-self: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    
     font-size: 2rem;
     padding: 10px 25px;
     border-radius: 15px
@@ -1467,7 +1570,7 @@ html {
     text-align: center;
     position: relative;
     min-height: 100%;
-    width: 78%;
+    width: 80%;
     top:100%;
     gap: 30px;
     }
@@ -1508,10 +1611,11 @@ html {
     }
 
 .about-contact-tab{
+    
     padding: 8px;
     border-radius:10px ;
     font-size: larger;
-    box-shadow:  4px 4px 8px rgba(0, 0, 0, 0.3);;
+    
     }
 
 .about-contact-tab:hover{
@@ -1541,7 +1645,7 @@ html {
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    
     }
 
 .skill-tabs{
@@ -1570,16 +1674,14 @@ html {
    
 .contact-container{
     position: relative;
-    
     display: flex;
-    margin-left: 20%;
-    padding-bottom: 10%;
-    margin-bottom: 20px;
+    padding-bottom: 40px;
     flex-direction: column;
     justify-content: space-around;
-    
-    width: 60%;
-    gap: 20px;
+   
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
     align-items: center;
     align-self: center;
     }
@@ -1610,12 +1712,13 @@ html {
     border-radius: 5px;
     height: 45px;
     font-size: 1.2rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
+    margin-bottom: 14px;
     }      
 
 .contact-submit-button:hover{
     cursor: pointer;
-    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4);
+    
     transition: transform 0.4s ease-out;
     transform:scale(1.2);
     }
@@ -1625,14 +1728,13 @@ html {
     flex-direction: column;
     gap: 30px;
     height: 100%;
-    width: 100%;
+    width: 60%;
     align-items: center;
     font-size: 2rem;
     padding-top: 10%;
-    padding-bottom: 5%;
-    margin-bottom: 20%;
+   
     border-radius: 10px;
-    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.4) ;
+    
     }
 
 
@@ -1730,7 +1832,7 @@ html {
     border-radius:5px ; 
     width: 70%;
     padding: 5px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+   
     text-align: center;
     color: inherit;
     }
@@ -1754,7 +1856,7 @@ html {
     justify-content: space-between;
     height: 12%;
     align-items: center;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    
     }
 
 .navbar a{
@@ -1788,9 +1890,14 @@ html {
 
 .navbar-left {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    
     width: 30%;
     flex-direction: row;
+    }
+.navbar-left h2{
+    font-size: 2rem;
+    padding-top: 12px;
     }
 
 .profilePic{
@@ -1798,7 +1905,6 @@ html {
     object-fit: contain;
     border-radius: 50px;
     }
-
 
 
 .navbar-left img{
@@ -1817,7 +1923,7 @@ html {
 .navbar h4:hover {
     cursor: pointer;
     transition: transform 0.3s ease;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    
     transform: scale(1.25);
     }
 
@@ -1837,16 +1943,9 @@ html {
     top: 30%;
     bottom: 20%;
     border-radius: 10px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    
     }
 
-.logobar-light{
-    background-color: bisque;
-    }
-
-.logobar-dark{
-    background-color: darkgrey;
-    }
 
 .logo {
     width: 40px;
@@ -1910,26 +2009,30 @@ html {
         align-self: center;
     }
     
-    .themebar-light:hover {
-        cursor: pointer;
-        transition: transform 0.5s ease-in;
-        transform: scale(1.2);
-        background-color: white;
-        border: 1px solid white;
-    }
+  
     
     .active-scale {
         transform: scale(1.2);
         transition: transform 0.3s ease-in-out;
     }
     
-    .themebar-dark:hover {
+    
+    body.light .themebar-light:hover,
+    body.light .themebar-dark:hover {
+        background-color: #d9d9d9;
+        transition: transform 0.3s ease;
         cursor: pointer;
-        transition: transform 0.5s ease-in;
         transform: scale(1.2);
-        background-color:#333;
-        border: 1px solid #333;
-    }    
+    }
+
+/* Dark Theme Hover */
+    body.dark .themebar-light:hover,
+    body.dark .themebar-dark:hover {
+        background-color: #1e1e1e;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        transform: scale(1.2);
+    }
 
 
     /*----------------------------------------footer-section-------------------------------------*/
@@ -1938,7 +2041,7 @@ html {
     
 .footer-container {
     position: relative;
-    height: 40vh;
+    height: 45vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -1946,6 +2049,7 @@ html {
     align-items: center;
     margin: 0px;
     left: 0;
+    
     }
 
 .footer-content{
@@ -1953,29 +2057,26 @@ html {
     width: 80%;
     height: 90%;
    justify-content: space-between;
+    gap: 20px;
    }
 
 .footer-content-left {
-    width: 25%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    text-align: start;
-    }
-.footer-left-name{
-    text-align: start;
-}
-
-.footer-content-left p {
-    font-size:1.3rem;
+    align-items: flex-start;
     
     }
-.footer-content-left h2{
-        text-align: left;
-    }
+.footer-left-name p{
+    font-size: 1.4rem;
+}
+
 
 .footer-content-right{
-    width: 25%;
+    width: 35%;
+    text-align: right;
+    
     }
 
 .footer-right-logos{
@@ -1995,6 +2096,7 @@ html {
     bottom: 5px;
     border-top: 2px solid white;
     font-size: 1.1rem;
+    
     }
 
     /*-------------------------------------------project-tasknest-section--------------------------------------*/
@@ -2039,7 +2141,7 @@ html {
     cursor: pointer;
     transition: transform 0.4s ease-out;
     transform: scale(1.2);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+    
     }
 
 .hamburger{

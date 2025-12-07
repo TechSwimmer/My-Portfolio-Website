@@ -1,16 +1,96 @@
+/* =============================================
+   THEME STYLES — AFFINA PROJECT DETAILS PAGE
+   ============================================= */
+
+/* Main background + text */
+body.light .project-details-container {
+  background-color: #fff8f0;
+  color: #111;
+}
+
+body.dark .project-details-container {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* Card-like sections */
+
+
+
+
+
+body.light .btn-primary,
+body.light .btn-secondary,
+body.light .nav-index,
+body.light .toggle-nav {
+  background-color: bisque;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.25);
+}
+
+body.light .overview-item,
+body.light .tech-category,
+body.light .feature-card,
+body.light .challenge-item,
+body.light .impact-item,
+body.light .lesson-item{
+  background-color: #fff8f0;
+}
+
+/* Dark mode card theme */
+
+body.dark .btn-primary,
+body.dark .btn-secondary,
+body.dark .nav-index,
+body.dark .toggle-nav {
+  background-color: #121212;
+  box-shadow: 4px 4px 10px rgba(255,255,255,0.15);
+}
+
+body.dark .overview-item,
+body.dark .tech-category,
+body.dark .feature-card,
+body.dark .challenge-item,
+body.dark .impact-item,
+body.dark .lesson-item {
+   background-color: #1e1e1e;
+}
+
+/* Ensure text links inherit */
+.btn-primary a,
+.btn-secondary a,
+.nav-index-item a {
+  color: inherit;
+}
+
+body.light .nav-index a:hover{
+ background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+body.dark .nav-index a:hover{
+  background-color: #fff8f0;
+  color: #111;
+  font-weight: bold;
+}
+
+
+
 
 
 
 @media (max-width: 600px) {
      .project-details-container {
-        margin-top: 15vw;
-        width: 100%;
-        
+        padding-top: 15vw;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .project-hero {
         padding: 60px 0 40px;
         text-align: center;
+        width: 80vw;
     }
 
     .hero-content h1 {
@@ -237,9 +317,9 @@
   right: 1vw;
   bottom: 26vh;
   /* Removed: opacity: 1 (redundant - default value) */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 
   text-align: left;
-  width: 80vw;
+  width: 75vw;
   
 }
 
@@ -248,28 +328,16 @@
   border-radius: 12px;
 }
 
-.nav-index-item {
-  list-style: none;
-  text-align: left;
-  width: 100%;
-  /* Removed: align-self: flex-start (not needed in column layout) */
-  /* Removed: opacity: 1 (redundant) */
-}
 
-.nav-index-item a {
+
+.nav-index a {
   text-decoration: none;
   color: inherit;
+    
+  text-align: center;
+  width: 100%;
 }
-/* When parent has light theme */
-.project-details-container.light-mode .nav-index {
-  background-color: white;
-  color: black;
-}
-/* When parent has dark theme */
-.project-details-container.dark-mode .nav-index {
-  background-color: #333; /* better than flat grey */
-  color: white;
-}
+
 
 .toggle-nav::before {
   content: "◀";
@@ -294,13 +362,17 @@
       /* Project Details Styles */
 .project-details-container {
     min-height: 100vh;
-    margin-top: 10vw;
+    padding-top: 10vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .project-hero {
     padding: 120px 0 80px;
     text-align: center;
-    
+    width: 80vw;
 }
 
 .hero-content h1 {
@@ -331,8 +403,9 @@
     transition: all 0.3s ease;
 }
 
+
 .btn-primary {
-   width: 20vw;
+   width: 25vw;
      padding: 8px 15px;
     border-radius: 5px;
     font-size: 1.2rem;
@@ -340,7 +413,7 @@
 }
 
 .btn-secondary {
-    width: 20vw;
+    width: 25vw;
        padding: 8px 15px;
     border-radius: 5px;
     font-size: 1.2rem;
@@ -348,12 +421,14 @@
 }
 
 .btn-primary:hover, .btn-secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+     transition: transform 0.4s ease-out;
+    transform: scale(1.2);
+    
+    
 }
 
 .container {
-    max-width: 80vw;
+    width: 80vw;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -362,12 +437,11 @@
 }
 
 section {
-    padding: 80px 0;
+    padding: 40px 0;
+    width: 80vw;
 }
 
-section:nth-child(even) {
-   
-}
+
 
 h2 {
     text-align: center;
@@ -382,7 +456,12 @@ h2 {
     display: grid;
     gap: 1rem;
 }
-
+.key-features{
+  width: 80vw;
+}
+.challenges{
+  width: 80vw;
+}
 .overview-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
 .tech-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .features-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
@@ -394,7 +473,7 @@ h2 {
     
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   
     transition: transform 0.3s ease;
 }
 
@@ -413,7 +492,7 @@ table {
     
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   
 }
 
 th, td {
@@ -432,13 +511,13 @@ th {
 .fixed-nav {
   position: fixed;
   bottom: 1%;
-  left: 60%;
+  left: 50%;
   z-index: 10000;
   /* Removed: overflow: visible (default for fixed positioning) */
 }
 
 .toggle-nav {
-  width: 40.0vw;
+  width: 50vw;
   height: 4.5vh;
   display: flex;
   justify-content: space-between;
@@ -464,11 +543,11 @@ th {
   display: none;
   position: fixed;
   right: 2px;
-  top: 30vh;
+  bottom: 5.5vh;
   /* Removed: opacity: 1 (redundant - default value) */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ height: fit-content;
   text-align: left;
-  width: 34.5vw;
+  width: 45vw;
 }
 
 .fixed-nav a:hover {
@@ -476,29 +555,17 @@ th {
   border-radius: 12px;
 }
 
-.nav-index-item {
-  list-style: none;
-  text-align: left;
-  width: 100%;
-  /* Removed: align-self: flex-start (not needed in column layout) */
-  /* Removed: opacity: 1 (redundant) */
-}
 
-.nav-index-item a {
+.nav-index a {
   text-decoration: none;
   color: inherit;
+   
+  text-align: center;
+  width: 100%;
 }
 
 /* When parent has light theme */
-.project-details-container.light-mode .nav-index {
-  background-color: white;
-  color: black;
-}
-/* When parent has dark theme */
-.project-details-container.dark-mode .nav-index {
-  background-color: #333; /* better than flat grey */
-  color: white;
-}
+
 
 .toggle-nav::before {
   content: "▲"; /* Up arrow for mobile */
@@ -520,13 +587,18 @@ th {
   /* Project Details Styles */
 .project-details-container {
     min-height: 100vh;
-    margin-top: 10vw;
+    padding-top: 10vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-hero {
     padding: 120px 0 80px;
     text-align: center;
-    
+    width: 80vw;
 }
 
 .hero-content h1 {
@@ -580,7 +652,7 @@ th {
      cursor: pointer;
     transition: transform 0.4s ease-out;
     transform: scale(1.2);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+    
 }
 
 .container {
@@ -594,11 +666,10 @@ th {
 
 section {
     padding: 80px 0;
+    width: 80vw;
 }
 
-section:nth-child(even) {
-   
-}
+
 
 h2 {
     text-align: center;
@@ -629,7 +700,7 @@ h2 {
     
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
     transition: transform 0.3s ease;
 }
 
@@ -657,7 +728,7 @@ table {
     
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
 }
 
 th, td {
@@ -671,90 +742,71 @@ th {
     font-weight: 600;
 }
 
+ .project-cta p {
+        font-size: 1.2rem;
+       
+    }
 
-/* The fixed navigation bar */
 .fixed-nav {
   position: fixed;
   top: 12%;
-  left: 77%;
+  left: 74.5%;
   z-index: 10000;
   /* Removed: overflow: visible (not needed for fixed position) */
 }
 
 .toggle-nav {
-  width: 22.70vw;
+  width: 25vw;
   height: 4.5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
-  
+ 
   border-top: 1px solid; 
   font-weight: bold;
-  cursor: pointer;
-}
-
-.fixed-nav:hover .toggle-nav::before {
-  transform: rotate(180deg);
 }
 
 /* Links inside the navbar */
-.fixed-nav a {
-  /* Removed: float: right (conflicts with flexbox) */
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 4px 3px;
-  text-decoration: none;
-  /* Removed: z-index (not needed on child elements) */
-}
+
 
 /* Style for the dropdown index container */
 .nav-index {
   display: none;
-  position: fixed;
-  right: 2px;
-  top: 14%;
-  /* Removed: opacity: 1 (redundant - default value) */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  text-align: left;
-  width: 20vw;
+  position: absolute;    /* 🔥 relative to .fixed-nav now */
+  width: 45vw;
+  right: 2;
+  width: 100%;           /* same width as .toggle-nav */
+  text-align: center;
+  
 }
 
-.fixed-nav a:hover {
+
+.nav-index a {
+  display: block;        /* full clickable row */
+  width: 100%;           /* fill .nav-index */
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 10px;
+  text-align: center;
+}
+.nav-index a:hover {
   /* Removed: opacity: 1 (redundant - default value) */
   border-radius: 12px;
 }
 
-.nav-index-item {
-  list-style: none;
-  text-align: left;
-  width: 100%;
-  align-self: flex-start;
-  /* Removed: opacity: 1 (redundant) */
-}
 
-.nav-index-item a {
-  text-decoration: none;
-  color: inherit;
+
+.nav-index.active {
+  display: flex;
+  flex-direction: column;
+  
 }
-/* When parent has light theme */
-.project-details-container.light-mode .nav-index {
-  background-color: white;
-  color: black;
-}
-/* When parent has dark theme */
-.project-details-container.dark-mode .nav-index {
-  background-color: #333; /* better than flat grey */
-  color: white;
-}
-/* Show the dropdown when the parent nav is hovered or has a class */
 
 .toggle-nav::before {
   content: "▼";
   transition: transform 0.3s ease;
 }
-
 
 }
 

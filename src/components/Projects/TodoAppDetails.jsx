@@ -33,21 +33,21 @@ const TodoAppDetails = () => {
             <nav className='fixed-nav'>
                 <button className='toggle-nav'onClick={toggleIndex}><div></div><div className="vertical-label">Index</div> </button>
                
-                      <ul className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
-                    <li className='nav-index-item'><a href='#tasknest-content' onClick={toggleIndex}>Project overview</a></li>
-                    <li className='nav-index-item'><a href='#vanilla-js-container' onClick={toggleIndex}>The Vanilla JavaScript Approach</a></li>
-                    <li className='nav-index-item'><a href='#key-features-section' onClick={toggleIndex}>Key Features</a></li>
-                    <li className='nav-index-item'><a href='#achievements-list' onClick={toggleIndex}>Key achievements</a></li>
-                    <li className='nav-index-item'><a href='#architecture-calendar' onClick={toggleIndex}>Architeture & Calendar behaviour</a></li>
-                    <li className='nav-index-item'><a href='#security-notes' onClick={toggleIndex}>Security notes</a></li>
-                    <li className='nav-index-item'><a href='#api-endpoints' onClick={toggleIndex}>API endpoints (server routes)</a></li>
-                    <li className='nav-index-item'><a href='#challenges' onClick={toggleIndex}>Challenges</a></li>
-                    <li className='nav-index-item'><a href='#future-improvement' onClick={toggleIndex}>Future improvements</a></li>
-                    <li className='nav-index-item'><a href='#tasknest-tools' onClick={toggleIndex}>Technology Stack Content:</a></li>
+                      <div className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
+                    <a href='#tasknest-content' onClick={toggleIndex}>Project overview</a>
+                   <a href='#vanilla-js-container' onClick={toggleIndex}>The Vanilla JavaScript Approach</a>
+                    <a href='#key-features-section' onClick={toggleIndex}>Key Features</a>
+                    <a href='#achievements-list' onClick={toggleIndex}>Key achievements</a>
+                    <a href='#architecture-calendar' onClick={toggleIndex}>Architeture & Calendar behaviour</a>
+                    <a href='#security-notes' onClick={toggleIndex}>Security notes</a>
+                   <a href='#api-endpoints' onClick={toggleIndex}>API endpoints (server routes)</a>
+                    <a href='#challenges' onClick={toggleIndex}>Challenges</a>
+                    <a href='#future-improvement' onClick={toggleIndex}>Future improvements</a>
+                    <a href='#tasknest-tools' onClick={toggleIndex}>Technology Stack Content:</a>
                     
 
-                    <li className='nav-index-item'><a href='#tasknest-links' onClick={toggleIndex}>PROJECT LINK</a></li>
-                </ul>
+                    <a href='#tasknest-links' onClick={toggleIndex}>PROJECT LINK</a>
+                </div>
               
               
             </nav>
@@ -56,7 +56,7 @@ const TodoAppDetails = () => {
                 <h2 className="tasknest-heading">TASKNEST</h2>
                 <p className="tasknest-heading-content">This page contains the case study of TaskNest, Feature-Rich Full-Stack Todo Application, this page
                     includes the project overview, tools used, and live links to the official product.</p>
-                <button className="tasknest-heading-btn"><a href="https://github.com/TechSwimmer/Todo-list-app">PROJECT LINK</a></button>
+                <button className="tasknest-heading-btn"><a href="https://todotasknest.netlify.app">LIVE PROJECT LINK</a></button>
             </div>
             <div className="tasknest-content" id="tasknest-content">
                 <h3>PROJECT OVERVIEW</h3>
@@ -269,7 +269,7 @@ const TodoAppDetails = () => {
                 </div>
             </div>
             <div className="tasknest-links" id="tasknest-links">
-                <button type="click" className="tasknest-link-btn"><a href="https://todotasknest.netlify.app">SEE IT LIVE</a></button>
+                <button type="click" className="tasknest-link-btn"><a href="https://github.com/TechSwimmer/Todo-list-app">GITHUB REPO</a></button>
                 <button type="click" className="tasknest-link-btn" onClick={() => navigate('/Home')}>BACK TO PORTFOLIO</button>
 
             </div>

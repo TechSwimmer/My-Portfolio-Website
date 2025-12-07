@@ -1,3 +1,79 @@
+/* =============================================
+   THEME STYLES FOR CV-BUILDER PAGE
+   ============================================= */
+
+/* Background + Overall text */
+body.light .cvbuilder-container {
+  background-color: #fff8f0;
+  color: #111;
+}
+
+body.dark .cvbuilder-container {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* Card-like elements (content sections, image boxes, tools, buttons, index, toggle) */
+
+body.light .cvbuilder-tool,
+body.light .cvbuilder-link-btn,
+body.light .cvbuilder-heading-btn,
+body.light .nav-index,
+body.light .toggle-nav{
+  background-color: bisque; /* slightly bright card */
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.25);
+}
+body.light .cvbuilder-content-img,
+body.light .cvbuilder-content-img-overview,
+body.light .project-highlights,
+body.light .challenge-item,
+body.light .future-container,
+body.light .tech-imp-item,
+body.light .back-arch-item{
+    background-color: #fff8f0;
+    color: #111;
+}
+
+
+body.dark .cvbuilder-tool,
+body.dark .cvbuilder-link-btn,
+body.dark .cvbuilder-heading-btn,
+body.dark .nav-index,
+body.dark .toggle-nav{
+  background-color: #1e1e1e; /* slightly lighter than black for card */
+  box-shadow: 4px 4px 10px rgba(255,255,255,0.15);
+}
+body.dark .cvbuilder-content-img,
+body.dark .cvbuilder-content-img-overview,
+body.dark .project-highlights,
+body.dark .challenge-item,
+body.dark .future-container,
+body.dark .tech-imp-item,
+body.dark .back-arch-item{
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+/* Text inside theme-aware blocks inherits correctly */
+.cvbuilder-link-btn a,
+.cvbuilder-heading-btn a {
+  color: inherit;
+}
+body.light .nav-index a:hover{
+ background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+body.dark .nav-index a:hover{
+  background-color: #fff8f0;
+  color: #111;
+  font-weight: bold;
+}
+
+
+
+
+
 @media (max-width: 600px) {
 
     
@@ -7,11 +83,11 @@
         flex-direction: column;
         overflow: hidden;
         position: relative;
-        margin-top: 25%;
+        padding-top: 25%;
         width: 100vw;
         align-items: center;
         align-self: center;
-        margin-bottom: 2%;
+        padding-bottom: 5%;
     }
 
     .cvbuilder-header{
@@ -50,7 +126,7 @@
         cursor: pointer;
         transition: transform 0.4s ease-out;
         transform: scale(1.2);
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+        
     }
 
     .cvbuilder-content{
@@ -90,8 +166,6 @@
         margin-right:2% ;
     }
     
-
-
     .cvbuilder-project-image-left{
         width: 100%; /* Ensures image stays within container */
         height: auto; /* Maintains aspect ratio */
@@ -187,7 +261,7 @@
     }
      .cvbuilder-tool:hover{
         transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   
     }
 
     .cvbuilder-tools h3{
@@ -197,7 +271,7 @@
     .cvbuilder-tool{
     border-radius: 10px;
     padding: 8px 16px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+   
     font-weight: bold;
     }
     .future-container {
@@ -240,6 +314,7 @@
 
     .technical-implementation-container{
         text-align: center;
+        
     }
     .project-highlights{
         text-align: center;
@@ -301,19 +376,10 @@
   overflow-y: auto;
   border-radius: 8px;
 
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+
   
 }
-/* When parent has light theme */
-.cvbuilder-container.light-mode .nav-index {
-  background-color: white;
-  color: black;
-}
-/* When parent has dark theme */
-.cvbuilder-container.dark-mode .nav-index {
-  background-color: #333; /* better than flat grey */
-  color: white;
-}
+
 .nav-index-item {
   list-style: none;
   width: 100%;
@@ -358,14 +424,13 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    width:80vw;
+    width:100vw;
     position: relative;
-    margin-top: 15%;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-top: 15%;
+    
     align-items: center;
     align-self: center;
-    margin-bottom: 2%;
+    padding-bottom: 4%;
     }
 
     .cvbuilder-header{
@@ -373,7 +438,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    width: 60vw;
+    width: 80vw;
     margin-top: 8%;
     gap: 28px;
     }
@@ -406,7 +471,106 @@
     cursor: pointer;
     transition: transform 0.4s ease-out;
     transform: scale(1.2);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+    
+    }
+    .project-highlights{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8%;
+    }
+    .project-highlights h3{
+        font-size: 2rem;
+    }
+    .project-highlights h4{
+        font-size: 1.4rem;
+    }
+    .project-highlights p{
+        font-size: 1.3rem;
+    }
+    .highlight-content{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+    .highlight-item-1, .highlight-item-3{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        width: 30vw;
+        height: 25vh;
+    }
+      .highlight-item-2, .highlight-item-4{
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        align-items: right;
+        text-align: right;
+        width: 30vw;
+        height: 25vh;
+        
+    }
+    .technical-implementation-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .technical-implementation-container h3{
+        font-size: 2rem;
+    }
+      .technical-implementation-container h4{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .technical-implementation-container p{
+        font-size: 1.4rem;
+    }
+    .technical-implementation-container  ul li{
+        font-size: 1.4rem;
+    }
+    .backend-architecture-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .backend-architecture-container h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .backend-architecture-container p{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+      .backend-architecture-container h4{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    .challenges-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .challenges-container h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .challenges-container h4{
+        font-size:1.6rem;
+        text-align: center;
+    }
+    .challenges-container p{
+        font-size: 1.4rem;
+        text-align: center;
     }
     .cvbuilder-content{
     margin-top: 5%;
@@ -414,9 +578,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 80%;
     }
     .cvbuilder-content h3{
     font-size: 2.2rem;
+    }
+    .cvbuilder-content h4{
+        font-size: 1.6rem;
+        text-align: center;
     }
 
     
@@ -434,7 +603,8 @@
     
     }
 .cvbuilder-form-content{
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .cvbuilder-form-content p {
@@ -483,7 +653,7 @@
 
 
     .cvbuilder-stylepage-content{
-        margin-bottom: 80px;
+        margin-bottom: 50px;
     }
     .cvbuilder-stylepage-content p {
         font-size: 1.6rem;
@@ -528,7 +698,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
     }
 
     .cvbuilder-layout-img-content p {
@@ -538,7 +708,7 @@
     }
 
     .cvbuilder-tools{
-        margin-top: 10%;
+       width: 80%;
     }
     .cvbuilder-toolbox{
         display: flex;
@@ -569,7 +739,7 @@
     }
      .cvbuilder-tool:hover{
         transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    
     }
 
     .cvbuilder-tools h3{
@@ -579,7 +749,7 @@
     .cvbuilder-tool{
     border-radius: 10px;
     padding: 8px 16px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+     
     font-weight: bold;
     }
     .cvbuilder-links{
@@ -608,24 +778,34 @@
     cursor: pointer;
     transition: transform 0.4s ease-out;
     transform: scale(1.2);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+
     }
     
-
-
-    
+    .future-container{
+        margin-top: 10%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .future-container h3{
+        font-size: 2rem;
+    }
+    .future-container ul li{
+        font-size: 1.4rem;
+    }
  /* The fixed navigation bar */
 .fixed-nav {
   position: fixed;
   bottom: 1%;
-  left: 60%;
+  left: 50%;
   z-index: 10000;
  
   /* Removed: overflow: visible (default for fixed positioning) */
 }
 
 .toggle-nav {
-  width: 40.0vw;
+  width: 50vw;
   
   display: flex;
   justify-content: space-between;
@@ -653,9 +833,9 @@ border: 0;
   right: 2px;
   bottom: 3.6%;
   /* Removed: opacity: 1 (redundant - default value) */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
   text-align: left;
-  width: 34.5vw;
+  width: 45vw;
   overflow-y: auto;
   padding: 10px;
   border-radius: 8px;
@@ -665,29 +845,11 @@ border: 0;
   /* Removed: opacity: 1 (redundant) */
   border-radius: 12px;
 }
-
-/* When parent has light theme */
-.cvbuilder-container.light-mode .nav-index {
-  background-color: white;
-  color: black;
-}
-/* When parent has dark theme */
-.cvbuilder-container.dark-mode .nav-index {
-  background-color: #333; /* better than flat grey */
-  color: white;
-}
-
-.nav-index-item {
-  list-style: none;
-  text-align: left;
-  width: 100%;
-  /* Removed: align-self: flex-start (not needed in column layout) */
-  /* Removed: opacity: 1 (redundant) */
-}
-
-.nav-index-item a {
+.nav-index a {
   text-decoration: none;
-  
+   color: inherit;
+  text-align: center;
+  width: 100%;
 }
 
 /* Show the dropdown when the parent nav is hovered or has a class */
@@ -726,12 +888,12 @@ border: 0;
     
     width:100vw;
     position: relative;
-    margin-top: 15%;
+    padding-top: 15%;
     justify-content: center;
     
     align-items: center;
     align-self: center;
-    margin-bottom: 2%;
+    padding-bottom: 4%;
     }
 
     .cvbuilder-header{
@@ -770,7 +932,7 @@ border: 0;
         cursor: pointer;
         transition: transform 0.4s ease-out;
         transform: scale(1.2);
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+        
     }
 
    .cvbuilder-content{
@@ -905,7 +1067,7 @@ border: 0;
     }
      .cvbuilder-tool:hover{
         transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    
     }
 
     .cvbuilder-tools h3{
@@ -915,7 +1077,7 @@ border: 0;
     .cvbuilder-tool{
     border-radius: 10px;
     padding: 10px 20px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+  
     font-weight: bold;
     }
 
@@ -943,7 +1105,7 @@ border: 0;
     cursor: pointer;
     transition: transform 0.4s ease-out;
     transform: scale(1.2);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+     
     }
     .cvbuilder-form-content{
       margin-top: 10%;
@@ -1013,6 +1175,10 @@ border: 0;
 
     .project-highlights{
         margin-top: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .project-highlights h3{
         text-align: center;
@@ -1022,7 +1188,8 @@ border: 0;
     .highlight-content{
         display: flex;
         text-align: center;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
         width: 80vw;
         font-size: 1.25rem;
     }
@@ -1113,13 +1280,14 @@ border: 0;
 .fixed-nav {
   position: fixed;
   top: 12%;
-  left: 77%;
+  left: 74.5%;
   z-index: 10000;
   /* Removed: overflow: visible (not needed for fixed position) */
+  width: 25vw;
 }
 
 .toggle-nav {
-  width: 22.70vw;
+  width: 25vw;
   height: 4.5vh;
   display: flex;
   justify-content: space-between;
@@ -1128,71 +1296,41 @@ border: 0;
   
   border-top: 1px solid; 
   font-weight: bold;
+}
 
-   cursor: pointer;
-  
-}
-.fixed-nav:hover .toggle-nav::before {
-  transform: rotate(180deg);
-}
 /* Links inside the navbar */
-.fixed-nav a {
-  /* Removed: float: right (conflicts with flexbox) */
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 4px 3px;
-  text-decoration: none;
-  /* Removed: z-index (not needed on child elements) */
-}
+
 
 /* Style for the dropdown index container */
 .nav-index {
   display: none;
-  position: fixed;
-  right: 2px;
-  top: 14%;
-  /* Removed: opacity: 1 (redundant - default value) */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  text-align: left;
-  width: 20vw;
+  position: absolute;    /* 🔥 relative to .fixed-nav now */
+  width: 45vw;
+  right: 2;
+  width: 100%;           /* same width as .toggle-nav */
+  text-align: center;
+  
 }
 
-.fixed-nav a:hover {
+
+.nav-index a {
+  display: block;        /* full clickable row */
+  width: 100%;           /* fill .nav-index */
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 10px;
+  text-align: center;
+}
+.nav-index a:hover {
   /* Removed: opacity: 1 (redundant - default value) */
   border-radius: 12px;
 }
 
-.nav-index-item {
-  list-style: none;
-  text-align: left;
-  width: 100%;
-  align-self: flex-start;
-  /* Removed: opacity: 1 (redundant) */
-}
 
-/* When parent has light theme */
-.cvbuilder-container.light-mode .nav-index {
-  background-color: white;
-  color: black;
-}
-/* When parent has dark theme */
-.cvbuilder-container.dark-mode .nav-index {
-  background-color: #333; /* better than flat grey */
-  color: white;
-}
-
-.nav-index-item a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Show the dropdown when the parent nav is hovered or has a class */
 
 .nav-index.active {
   display: flex;
   flex-direction: column;
-  /* Removed: align-items: left (redundant with text-align) */
   
 }
 

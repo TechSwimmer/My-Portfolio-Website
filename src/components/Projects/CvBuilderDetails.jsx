@@ -26,21 +26,21 @@ const CvBuilderDetails = () => {
             <nav className='fixed-nav'>
                 <button className='toggle-nav' onClick={() => toggleIndex()}><div></div><div className='vertical-label'>Index</div> </button>
                
-                     <ul  className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
-                    <li className='nav-index-item'><a href='#project-highlights' onClick={toggleIndex}>PROJECT HIGHLIGHTS</a></li>
-                    <li className='nav-index-item'><a href='#technical-implementation-container' onClick={toggleIndex}>TECHNICAL IMPLEMENTATION CONTENT</a></li>
-                    <li className='nav-index-item'><a href='#backend-architecture-container' onClick={toggleIndex}>BACKEND ARCHITECTURE CONTENT</a></li>
-                    <li className='nav-index-item'><a href='#challenges-container' onClick={toggleIndex}>CHALLENGES AND SOLUTIONS CONTENT</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-content' onClick={toggleIndex}>Real-Time CV Preview</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-form-content' onClick={toggleIndex}>Dynamic Form Input System</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-stylepage-content' onClick={toggleIndex}>Style Customization Panel</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-layout-img-content-heading' onClick={toggleIndex}>Multiple Layout Templates</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-fullscreen-img-content' onClick={toggleIndex}>Full-Screen Preview & PDF Export</a></li>
-                    <li className='nav-index-item'><a href='#cvbuilder-tools' onClick={toggleIndex}>Technology Stack Content</a></li>
-                    <li className='nav-index-item'><a href='#future-container' onClick={toggleIndex}>FUTURE ENHANCEMENTS CONTENT</a>
-</li>
-                    <li className='nav-index-item'><a href='#cvbuilder-links'>PROJECT LINK</a></li>
-                </ul>
+                     <div  className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
+                    <a href='#project-highlights' onClick={toggleIndex}>PROJECT HIGHLIGHTS</a>
+                    <a href='#technical-implementation-container' onClick={toggleIndex}>TECHNICAL IMPLEMENTATION CONTENT</a>
+                    <a href='#backend-architecture-container' onClick={toggleIndex}>BACKEND ARCHITECTURE CONTENT</a>
+                   <a href='#challenges-container' onClick={toggleIndex}>CHALLENGES AND SOLUTIONS CONTENT</a>
+                    <a href='#cvbuilder-content' onClick={toggleIndex}>Real-Time CV Preview</a>
+                  <a href='#cvbuilder-form-content' onClick={toggleIndex}>Dynamic Form Input System</a>
+                <a href='#cvbuilder-stylepage-content' onClick={toggleIndex}>Style Customization Panel</a>
+                    <a href='#cvbuilder-layout-img-content-heading' onClick={toggleIndex}>Multiple Layout Templates</a>
+                <a href='#cvbuilder-fullscreen-img-content' onClick={toggleIndex}>Full-Screen Preview & PDF Export</a>
+                    <a href='#cvbuilder-tools' onClick={toggleIndex}>Technology Stack Content</a>
+                    <a href='#future-container' onClick={toggleIndex}>FUTURE ENHANCEMENTS CONTENT</a>
+
+                    <a href='#cvbuilder-links'>PROJECT LINK</a>
+                </div>
                
                
             </nav>
@@ -52,33 +52,27 @@ const CvBuilderDetails = () => {
                     making resume creation seamless for users. The app provides multiple layouts and customization
                     options, ensuring flexibility for users with different resume needs. From structured data input
                     to final PDF download, every feature is built with user experience and functionality in mind.</p>
-                <button className="cvbuilder-heading-btn"><a href="https://github.com/TechSwimmer/cv-Builder">PROJECT LINK</a></button>
+                <button className="cvbuilder-heading-btn"><a href="https://resume-baker.netlify.app/">lIVE PROJECT LINK</a></button>
             </div>
             <div className='project-highlights' id="project-highlights">
                 <h3>PROJECT HIGHLIGHTS</h3>
                 <div className='highlight-content'>
-                    <div className='highlight-item'>
+                    <div className='highlight-item-1'>
                         <h4>Full-Stack Architecture</h4>
                         <p>MERN Stack (MongoDB, Express, React, Node.js)</p>
                     </div>
-                    <div className='highlight-item'>
+                    <div className='highlight-item-2'>
                         <h4>User Authentication</h4>
                         <p>JWT-based auth with guest access</p>
                     </div>
-                    <div className='highlight-item'>
+                    <div className='highlight-item-3'>
                         <h4>Real-time Preview</h4>
                         <p>Instant CV updates as users type</p>
                     </div>
-                    <div className='highlight-item'>
+                    <div className='highlight-item-4'>
                         <h4>PDF Generation</h4>
                         <p>Client-side PDF export with jsPDF</p>
                     </div>
-
-
-
-
-
-
 
                 </div>
 
@@ -142,16 +136,16 @@ const CvBuilderDetails = () => {
                 <h3>CHALLENGES AND SOLUTIONS CONTENT:</h3>
                 <div className='challenge-item'>
                     <h4>Real-time Preview Synchronization</h4>
-                    <p><strong>challenge : </strong>Maintaining performance while synchronizing complex form state with
+                    <p><strong>Challenge : </strong>Maintaining performance while synchronizing complex form state with
                         the preview component across multiple layout templates.</p>
-                    <p><strong>solution : </strong>Implemented React's useMemo and debounced input handling to optimize
+                    <p><strong>Solution : </strong>Implemented React's useMemo and debounced input handling to optimize
                         re-renders, reducing latency by 70%.</p>
                 </div>
                 <div className='challenge-item'>
                     <h4>PDF Styling Consistency</h4>
-                    <p><strong>challenge : </strong>Ensuring CSS styles translated accurately from screen to PDF format
+                    <p><strong>Challenge : </strong>Ensuring CSS styles translated accurately from screen to PDF format
                         across different browsers.</p>
-                    <p><strong>solution : </strong>Created print-specific CSS and implemented client-side rendering
+                    <p><strong>Solution : </strong>Created print-specific CSS and implemented client-side rendering
                         techniques to maintain visual fidelity.</p>
                 </div>
             </div>
@@ -315,7 +309,7 @@ const CvBuilderDetails = () => {
                 </ul>
             </div>
             <div className="cvbuilder-links" id="cvbuilder-links">
-                <button type="click" className="cvbuilder-link-btn"><a href="https://resume-baker.netlify.app/">PROJECT LINK</a></button>
+                <button type="click" className="cvbuilder-link-btn"><a href="https://github.com/TechSwimmer/cv-Builder">GITHUB REPO</a></button>
                 <button type="click" className="cvbuilder-link-btn" onClick={() => navigate('/Home')}>GO BACK</button>
 
             </div>

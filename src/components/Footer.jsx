@@ -16,13 +16,11 @@ const Footer = () => {
         <div className="footer-container">
             <div className="footer-content">
                 <div className="footer-content-left">
-                <div className="footer-left-name">
-                    <h2>NIKHIL PILLAI</h2>
-                </div>
-                <div className="footer-left-content">
-                    <p>(FULL STACK WEB DEV)</p>
-                    
-                </div>
+                    <div className="footer-left-name">
+                        <h2>NIKHIL PILLAI</h2>
+                         <p>(FULL STACK WEB DEV)</p>
+                    </div>
+                   
                 </div>
                 <div className="footer-content-right">
                     <div className="footer-right-head">

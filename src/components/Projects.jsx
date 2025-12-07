@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import "./styles/styles.css"
 
-import basicShot from "../assets/basic-shot.png";
+import basicShot from "../assets/create-task.gif";
 import cvBuilderShot from "../assets/cvBuilderScreenshot.png";
 
 import affinaShot from "../assets/affina.png"
