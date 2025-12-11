@@ -17,7 +17,9 @@ const About = ({navigateToSection}) => {
                     <p>I'm a full-stack developer with a passion for turning complex problems into
                         elegant, user-friendly solutions. What excites me most is the entire development
                         process—from brainstorming initial ideas and designing database architecture to
-                         the thrill of deploying live, functioning applications.</p>
+                         the thrill of deploying live, functioning applications.I <strong> actively practice algorithms
+                          and problem-solving, with a 5 kyu rating on Codewars and 140+ completed challenges,</strong>
+                           which helps me write efficient and optimized solutions in my daily development work.</p>
 
                          <p>With a strong foundation in the MERN stack, I specialize in creating seamless
                             user experiences with React and building efficient backend systems with Node.js
