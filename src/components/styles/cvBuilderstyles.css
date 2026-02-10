@@ -966,9 +966,8 @@ border: 0;
     }
 
     .cvbuilder-project-image-preview{
-        width: 55%; /* Ensures image stays within container */
+        width: 40%; /* Ensures image stays within container */
         height: auto; /* Maintains aspect ratio */
-       
         object-fit: contain; /* Makes sure entire image is visible */
         display: block;
         border-radius: 5px;
