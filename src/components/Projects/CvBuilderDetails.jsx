@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import cvPreviewImg from '../../assets/cvShotpreview.png'
-import cvFormImg from '../../assets/cvShotformcontent.png'
+import cvPreviewImg from '../../assets/portfolio-builder-preview.png'
+import cvFormImg from '../../assets/PORTFOLIO-BUILDER-FORMCONTENT.png'
 import cvStyleImg from '../../assets/cvShotEditStyle.png'
-import cvLayoutImg from '../../assets/cvShotLayout.png'
-import cvFullscreenImg from '../../assets/fullscreenpreviewshot.png'
+import cvLayoutImg from '../../assets/portfolio-builder-layout.png'
+import cvFullscreenImg from '../../assets/PORTFOLIO-BUILDER-FULLSCREEN.png'
 
 import "../styles/cvBuilderstyles.css"
 
@@ -16,42 +16,46 @@ const CvBuilderDetails = () => {
         window.scrollTo(0, 0);
     }, []);
 
-  const [indexOpen,setIndexOpen] = useState(false)
+    const [indexOpen, setIndexOpen] = useState(false)
     const toggleIndex = () => {
         setIndexOpen(prev => !prev)
-    } ; 
+    };
 
     return (
         <div className="cvbuilder-container">
             <nav className='fixed-nav'>
                 <button className='toggle-nav' onClick={() => toggleIndex()}><div></div><div className='vertical-label'>Index</div> </button>
-               
-                     <div  className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
+
+                <div className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
                     <a href='#project-highlights' onClick={toggleIndex}>PROJECT HIGHLIGHTS</a>
                     <a href='#technical-implementation-container' onClick={toggleIndex}>TECHNICAL IMPLEMENTATION CONTENT</a>
                     <a href='#backend-architecture-container' onClick={toggleIndex}>BACKEND ARCHITECTURE CONTENT</a>
-                   <a href='#challenges-container' onClick={toggleIndex}>CHALLENGES AND SOLUTIONS CONTENT</a>
+                    <a href='#challenges-container' onClick={toggleIndex}>CHALLENGES AND SOLUTIONS CONTENT</a>
                     <a href='#cvbuilder-content' onClick={toggleIndex}>Real-Time CV Preview</a>
-                  <a href='#cvbuilder-form-content' onClick={toggleIndex}>Dynamic Form Input System</a>
-                <a href='#cvbuilder-stylepage-content' onClick={toggleIndex}>Style Customization Panel</a>
+                    <a href='#cvbuilder-form-content' onClick={toggleIndex}>Dynamic Form Input System</a>
+                    <a href='#cvbuilder-stylepage-content' onClick={toggleIndex}>Style Customization Panel</a>
                     <a href='#cvbuilder-layout-img-content-heading' onClick={toggleIndex}>Multiple Layout Templates</a>
-                <a href='#cvbuilder-fullscreen-img-content' onClick={toggleIndex}>Full-Screen Preview & PDF Export</a>
+                    <a href='#cvbuilder-fullscreen-img-content' onClick={toggleIndex}>Full-Screen Preview & PDF Export</a>
                     <a href='#cvbuilder-tools' onClick={toggleIndex}>Technology Stack Content</a>
                     <a href='#future-container' onClick={toggleIndex}>FUTURE ENHANCEMENTS CONTENT</a>
 
                     <a href='#cvbuilder-links'>PROJECT LINK</a>
                 </div>
-               
-               
+
+
             </nav>
             <div className="cvbuilder-header">
-                <h2 className="cvbuilder-heading">CV-BAKER : Full-stack resume builder</h2>
-                <p className="cvbuilder-heading-content">CV Baker is a responsive and interactive resume-building application
+                <h2 className="cvbuilder-heading">ResumeBaker : Full-stack resume builder</h2>
+                <p className="cvbuilder-heading-content">ResumeBaker is a responsive and interactive resume-building application
                     that allows users to create, customize, and download professional CVs with ease. It is a
                     React-based app designed to offer real-time preview and styling features,
                     making resume creation seamless for users. The app provides multiple layouts and customization
                     options, ensuring flexibility for users with different resume needs. From structured data input
                     to final PDF download, every feature is built with user experience and functionality in mind.</p>
+                <p className="cvbuilder-heading-content">Most resume builders either lack customization, perform poorly with real-time previews,
+                    or generate PDFs that don’t match what users see on screen.
+                    I built CV Baker to solve all three problems — performance, layout consistency,
+                    and user-controlled customization — in a single full-stack application.</p>
                 <button className="cvbuilder-heading-btn"><a href="https://resume-baker.netlify.app/">lIVE PROJECT LINK</a></button>
             </div>
             <div className='project-highlights' id="project-highlights">
@@ -133,21 +137,13 @@ const CvBuilderDetails = () => {
             </div>
 
             <div className='challenges-container' id="challenges-container">
-                <h3>CHALLENGES AND SOLUTIONS CONTENT:</h3>
-                <div className='challenge-item'>
-                    <h4>Real-time Preview Synchronization</h4>
-                    <p><strong>Challenge : </strong>Maintaining performance while synchronizing complex form state with
-                        the preview component across multiple layout templates.</p>
-                    <p><strong>Solution : </strong>Implemented React's useMemo and debounced input handling to optimize
-                        re-renders, reducing latency by 70%.</p>
-                </div>
-                <div className='challenge-item'>
-                    <h4>PDF Styling Consistency</h4>
-                    <p><strong>Challenge : </strong>Ensuring CSS styles translated accurately from screen to PDF format
-                        across different browsers.</p>
-                    <p><strong>Solution : </strong>Created print-specific CSS and implemented client-side rendering
-                        techniques to maintain visual fidelity.</p>
-                </div>
+                <h3>Key engineering challenges solved : </h3>
+                <ul>
+                    <li className='challenge-item'>Prevented full re-renders during live CV typing using memoization and debounced updates</li>
+                    <li className='challenge-item'>Designed a dual-render system (HTML preview + React-PDF export) while keeping layout parity</li>
+                    <li className='challenge-item'>Built reusable layout templates that share data but differ structurally</li>
+                    <li className='challenge-item'>Handled large DOM trees efficiently during PDF generation</li>
+                </ul>
             </div>
 
             <div className="cvbuilder-content" id="cvbuilder-content">
@@ -160,15 +156,12 @@ const CvBuilderDetails = () => {
                     </div>
 
                     <div className="cvbuilder-content-img-overview">
-                        <p>The preview section serves as the visual representation of the CV, updating live as users fill
-                            out the form or adjust styles. This area occupies the right side of the screen and is the core
-                            feedback mechanism that reflects the user’s data and design preferences in real time. The preview
-                            is built using a flexible layout system that adapts to different screen sizes and resume formats.
-                            Users can hover over specific sections within the preview to highlight editable areas, enhancing
-                            interactivity and making it easier to understand how changes in the form or style tabs affect the
-                            final result. The use of useRef ensures that the preview area can be programmatically accessed
-                            for PDF generation and scrolling behavior, while CSS modules and inline styles keep the
-                            structure clean and customizable.</p>
+                        <p>CV Baker is a full-stack resume builder designed to handle real-time editing,
+                            layout switching, and PDF export without performance degradation.</p>
+                        <p>The preview panel renders a live representation of the CV as users type,
+                            while avoiding full re-renders on every keystroke.
+                            The system separates draft input state from preview state and uses memoized
+                            layout components to keep interactions smooth even as the document grows.</p>
                     </div>
                     <div className='cvbuilder-form-content' id="cvbuilder-form-content">
                         <div className='cvbuilder-form-content-heading'>
@@ -179,11 +172,9 @@ const CvBuilderDetails = () => {
 
                                 <img src={cvFormImg} className="cvbuilder-project-image-left" alt="project-image"></img>
                             </div>
-                            <p>On the left side of the app, users interact with the FormSection—a cleanly structured panel
-                                where they can enter personal information, education history, work experience, and other CV
-                                details. Each field updates the CV preview in real time. The form is broken into clearly visible
-                                sections, and users can control the visibility of these sections to fine-tune their final resume.
-                                This section also adapts to the active tab, which can be toggled between "Content" and "Style".</p>
+                            <p>The left panel uses a structured, section-based form system to collect CV data.
+                                Each section is independently controlled, allowing users to toggle visibility
+                                while maintaining synchronization with the preview in real time.</p>
                         </div>
 
 
@@ -197,11 +188,9 @@ const CvBuilderDetails = () => {
 
                                 <img src={cvStyleImg} className="cvbuilder-project-image-left" alt="project-image"></img>
                             </div>
-                            <p>When users switch to the StylePages tab, they are presented with styling options like color themes,
-                                font choices, spacing, and layout refinements. This tab shares the left panel space with the
-                                FormSection, and a "Download as PDF" and "Edit" button are consistently available on the screen,
-                                whether users are in the form or style view. This ensures users can access full preview or
-                                resume customization options at any time without navigating away from their progress.</p>
+                            <p>The style editor allows users to modify colors, fonts, and spacing per layout.
+                                Each CV layout is paired with its own style configuration, ensuring changes
+                                remain scoped and predictable across templates.(This part is still being worked upon)</p>
                         </div>
 
                     </div>
@@ -212,12 +201,9 @@ const CvBuilderDetails = () => {
                             <h4>Multiple Layout Templates</h4>
                         </div>
                         <div className='cvbuilder-layout-img-content-content'>
-                            <p>The right side of the interface hosts the live CV preview, which dynamically reflects user
-                                input and styling changes. Here, a layout slider allows users to choose from multiple CV
-                                layouts, each with a different structure and design. The layout selector is fully dynamic,
-                                meaning that selecting a new layout instantly updates the preview and automatically
-                                switches the style editor to match the layout’s configuration. Each layout has a
-                                corresponding style editor to provide targeted customization for that particular design.</p>
+                            <p>Users can switch between multiple resume layouts without losing data.
+                                Each layout consumes the same structured CV data but renders it differently,
+                                demonstrating a shared-data / multiple-view architecture.</p>
                             <div className="cvbuilder-content-img">
 
                                 <img src={cvLayoutImg} className="cvbuilder-project-image-right" alt="project-image"></img>
@@ -236,13 +222,10 @@ const CvBuilderDetails = () => {
 
                                 <img src={cvFullscreenImg} className="cvbuilder-fullscreen-image" alt="project-image"></img>
                             </div>
-                            <p>In full-screen preview mode, users get an uninterrupted view of the resume. From here,
-                                they can use the Download as PDF feature, which captures the CV preview as an image
-                                using html2canvas, and generates a high-quality PDF via jsPDF. The app applies temporary
-                                styling changes to ensure that the downloaded version appears clean and print-ready.
-                                A dedicated print media query ensures buttons and unnecessary UI elements are hidden.
-                                Clicking the Edit button while in full preview seamlessly brings the user back to the
-                                editable form or style interface to make changes.</p>
+                            <p>Full-screen mode renders the CV using React-PDF for accurate pagination and export.
+                                To avoid UI freezes during editing, PDF rendering is disabled during live typing
+                                and activated only in preview or download mode.
+                                This approach balances visual fidelity with performance.</p>
                         </div>
 
 
@@ -283,6 +266,7 @@ const CvBuilderDetails = () => {
                         <div className='toolbox-item'>
                             <div className="cvbuilder-tool">html2canvas</div>
                             <div className="cvbuilder-tool">jsPDF</div>
+                            <div className="cvbuilder-tool">React-PDF</div>
                             <div className="cvbuilder-tool">Vite</div>
                             <div className="cvbuilder-tool">Git</div>
                         </div>

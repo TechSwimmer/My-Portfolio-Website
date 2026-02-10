@@ -1004,6 +1004,7 @@ border: 0;
         font-size: 1.8rem;
     
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-left: 10%;
@@ -1246,14 +1247,11 @@ border: 0;
         font-size: 2rem;
     }
 
-    .challenge-item h4{
-        font-size: 1.6rem;
-        text-align: center;
-    }
+    
 
-    .challenge-item p{
+    .challenge-item{
         font-size: 1.4rem;
-        text-align: center;
+        
     }
     .future-container {
         margin-top: 10%;
