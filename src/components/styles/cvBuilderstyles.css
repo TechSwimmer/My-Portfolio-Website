@@ -308,6 +308,9 @@ body.dark .nav-index a:hover{
     .challenges-container{
         text-align: center;
     }
+    .my-role-container{
+         text-align: center;
+    }
     .backend-architecture-container{
         text-align: center;
     }
@@ -560,6 +563,17 @@ body.dark .nav-index a:hover{
         flex-direction: column;
         align-items: center;
     }
+    .my-role-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .my-role-container h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+    
     .challenges-container h3{
         font-size: 2rem;
         text-align: center;
@@ -1240,6 +1254,16 @@ border: 0;
     .challenges-container{
         margin-top: 10%;
         width: 80vw;
+    }
+    .my-role-container{
+          font-size: 1.4rem;
+          margin-top: 10%;
+        width: 80vw;
+    }
+    
+    .my-role-container h3{
+          text-align: center;
+        font-size: 2rem;
     }
     .challenges-container h3{
         text-align: center;

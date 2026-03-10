@@ -1,7 +1,6 @@
-import { useState } from "react";
-
 import { useNavigate } from "react-router-dom";
 import "./styles/styles.css"
+import "./styles/logobar.css"
 
 import githubLogo from "../assets/icons8-github-50.png"
 import contactLogo from "../assets/icons8-contact-50.png"
@@ -27,9 +26,9 @@ const Logobar = () => {
 
     return (
         <div className="logobar">
-            <a href=""  onClick={(e) => e.preventDefault()} target="_blank" rel="noopener noreferrer">
-            <img onClick={handleContactClick} className="logo" src={contactLogo} alt="contact"></img>
-            </a>
+            <button type="button" className="logo-button" onClick={handleContactClick}>
+                <img className="logo" src={contactLogo} alt="contact"></img>
+            </button>
            
             <a href="https://github.com/TechSwimmer" target="_blank" rel="noopener noreferrer">
             <img className="logo" src={githubLogo} alt="github"></img>

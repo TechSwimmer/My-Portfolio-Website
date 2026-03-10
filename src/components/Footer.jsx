@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import "./styles/styles.css"
+import "./styles/footer.css"
 
 import githubLogo from "../assets/icons8-github-50.png"
 import contactLogo from "../assets/icons8-contact-50.png"

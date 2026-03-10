@@ -1,0 +1,348 @@
+/* About section styles */
+
+@media (max-width: 600px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .about-content-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content h4 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .about-value-list {
+    margin: 0;
+    padding-left: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.05rem;
+  }
+
+  .about-looking-line {
+    font-size: 1.05rem;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .about-contact-tab {
+    padding: 8px;
+    border-radius: 10px;
+    font-size: larger;
+  }
+
+  .about-contact-tab:hover {
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    transform: scale(1.05);
+  }
+
+  .about-skills {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-skills h4 {
+    font-size: 1.3rem;
+    text-align: right;
+  }
+
+  .skill-tab {
+    width: 120px;
+    border-radius: 10px;
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.7rem;
+  }
+
+  .skill-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .skill-tabs div {
+    width: 100%;
+  }
+
+  .skill-tabs-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-tabs-heading {
+    width: 100%;
+  }
+
+  .skill-tabs-heading h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 80%;
+    top: 100%;
+    gap: 30px;
+  }
+
+  .about-content-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-content h4 {
+    font-size: 2.1rem;
+    text-align: left;
+  }
+
+  .about-content p {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .about-value-list {
+    margin: 0;
+    padding-left: 22px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 1.2rem;
+  }
+
+  .about-looking-line {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-top: 12px;
+  }
+
+  .about-contact-tab {
+    padding: 8px;
+    border-radius: 10px;
+    font-size: larger;
+  }
+
+  .about-contact-tab:hover {
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    transform: scale(1.05);
+  }
+
+  .about-skills {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-skills h4 {
+    font-size: 1.4rem;
+    text-align: right;
+  }
+
+  .skill-tab {
+    width: 130px;
+    border-radius: 10px;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .skill-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .frontend-tabs,
+  .backend-tabs,
+  .database-tabs,
+  .authentication-security-tabs,
+  .tools-deployement-tabs {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+  }
+
+  .skill-tabs-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: end;
+    gap: 10px;
+  }
+
+  .skill-tabs-heading h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    min-height: 100%;
+    width: 80%;
+    top: 100%;
+    gap: 30px;
+  }
+
+  .about-content-skills {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-content h4 {
+    font-size: 1.7rem;
+    text-align: left;
+  }
+
+  .about-content p {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .about-value-list {
+    margin: 0;
+    padding-left: 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 1.2rem;
+  }
+
+  .about-looking-line {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-top: 12px;
+  }
+
+  .about-contact-tab {
+    padding: 8px;
+    border-radius: 10px;
+    font-size: larger;
+  }
+
+  .about-contact-tab:hover {
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    transform: scale(1.05);
+  }
+
+  .about-skills {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    width: 38%;
+  }
+
+  .about-skills h4 {
+    font-size: 1.7rem;
+    text-align: right;
+  }
+
+  .skill-tab {
+    width: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+
+  .skill-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 65px;
+    text-align: center;
+  }
+
+  .skill-tabs-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: end;
+    gap: 10px;
+  }
+
+  .skill-tabs-heading h4 {
+    font-size: 1.2rem;
+  }
+}

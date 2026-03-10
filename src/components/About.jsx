@@ -1,12 +1,7 @@
-import { useState } from "react";
 import "./styles/styles.css";
-
-import { Link,useLocation } from "react-router-dom";
+import "./styles/about.css";
 
 const About = ({navigateToSection}) => {
-
-    const location = useLocation();
-    const isProjectPage = location.pathname.startsWith('/Projects/');
 
     return (
         <div id="about" className="about-container">
@@ -14,26 +9,14 @@ const About = ({navigateToSection}) => {
             <section className="about-content-skills">   
                 <div className="about-content">
                     <h4>Get to know me!</h4>
-                    <p>I'm a full-stack developer with a passion for turning complex problems into
-                        elegant, user-friendly solutions. What excites me most is the entire development
-                        process—from brainstorming initial ideas and designing database architecture to
-                         the thrill of deploying live, functioning applications.I <strong> actively practice algorithms
-                          and problem-solving, with a 5 kyu rating on Codewars and 140+ completed challenges,</strong>
-                           which helps me write efficient and optimized solutions in my daily development work.</p>
-
-                         <p>With a strong foundation in the MERN stack, I specialize in creating seamless
-                            user experiences with React and building efficient backend systems with Node.js
-                            and MongoDB. My core strength is my ability to rapidly learn and adapt—whether
-                            it was mastering PDF generation for CV-Baker to ensure pixel-perfect results or
-                            tackling new challenges in backend optimization</p>
-
-                    <p>I'm passionate about writing clean, maintainable code and believe that every bug fixed
-                        or feature implemented is an opportunity to learn and improve. When I'm not coding,
-                        you'll find me exploring new technologies or writing poetry—a craft that sharpens my 
-                        ability to communicate complex ideas with clarity and impact.</p>
-
-                        <p>I'm currently seeking full-time opportunities where I can apply my full-stack expertise
-                            to build impactful products. Let's connect and discuss how I can contribute to your team.</p>
+                    <ul className="about-value-list">
+                        <li>I build end-to-end features: UI, API design, database modeling, and deployment.</li>
+                        <li>I focus on maintainable architecture, performance, and user-friendly product experience.</li>
+                        <li>I strengthen implementation quality through regular problem-solving practice (5 kyu, 140+ Codewars challenges).</li>
+                    </ul>
+                    <p className="about-looking-line">
+                        Currently looking for full-time full-stack roles where I can contribute to product delivery and engineering quality.
+                    </p>
                         <button type="button" onClick={() => navigateToSection("contact")} className="about-contact-tab">CONTACT</button>
                 </div>
                 <div className="about-skills">

@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
-
-
 import { Link } from 'react-router-dom';
 import "./styles/styles.css"
+import "./styles/projects.css"
 
 import basicShot from "../assets/create-task.gif";
 import cvBuilderShot from "../assets/PORTFOLIO-BUILDER-DISPLAY.png";
@@ -23,16 +21,18 @@ const Projects = () => {
             </div>
             <div className="project-wrapper">
                 <div className="project-content">
+                    <h3>TASKNEST</h3>
                     <div className="project-todo-app">
+                        
                         <div className="project-img">
-                            <img src={basicShot}></img>
+                            <img src={basicShot} alt="TaskNest project preview"></img>
                         </div>
                         <div className="project-img-content">
-                            <h3>TASKNEST</h3>
-                            <p>A full-stack todo application built using Node.js, Express, MongoDB Atlas, HTML, CSS,
-                                and JavaScript. It features a dynamic calendar to manage daily tasks,
-                                task categorization by due dates and completion status, and secure MongoDB
-                                authentication.</p>
+
+                            <p><strong>Problem:</strong> Users needed a simple way to manage daily tasks with clear deadline tracking.</p>
+                            <p><strong>Role:</strong> Built the application end-to-end, including task workflows, API endpoints, and deployment.</p>
+                            <p><strong>Stack:</strong> Node.js, Express, MongoDB Atlas, JavaScript, HTML, CSS.</p>
+                            <p><strong>Result:</strong> Delivered a responsive task manager with secure auth, calendar-based tracking, and status categorization.</p>
                             <Link to="/Projects/TodoAppDetails" className="project-img-content-btn">CASE STUDY</Link>
                         </div>
                     </div>
@@ -40,16 +40,18 @@ const Projects = () => {
             </div>
             <div className="project-wrapper">
                 <div className="project-content">
+                    <h3>ResumeBaker</h3>
                     <div className="project-cvmaker-app">
+                        
                         <div className="project-img">
-                            <img src={cvBuilderShot}></img>
+                            <img src={cvBuilderShot} alt="ResumeBaker project preview"></img>
                         </div>
                         <div className="project-img-content">
-                            <h3>ResumeBaker</h3>
-                            <p>An interactive resume builder built with React that lets users create,
-                                customize, and export professional CVs with live preview and multiple layouts.
-                                Designed to handle real-time updates and PDF generation smoothly, with full
-                                control over styling and content visibility..</p>
+
+                            <p><strong>Problem:</strong> Resume builders often lack flexible customization and smooth real-time editing.</p>
+                            <p><strong>Role:</strong> Implemented core resume creation flow, live preview behavior, and export-related features.</p>
+                            <p><strong>Stack:</strong> React, JavaScript, Node.js, Express, MongoDB, html2canvas, jsPDF.</p>
+                            <p><strong>Result:</strong> Delivered a multi-layout resume builder with real-time updates and downloadable CV output.</p>
                             <Link to="/Projects/CvBuilderDetails" className="project-img-content-btn">CASE STUDY</Link>
                         </div>
                     </div>
@@ -57,22 +59,22 @@ const Projects = () => {
             </div>
             <div className="project-wrapper">
                 <div className="project-content">
+                    <h3>Affina</h3>
                     <div className="project-cvmaker-app">
-                        <div className="project-img">
-                            <img src={affinaShot}></img>
-                        </div>
-                        <div className="project-img-content">
-                            <h3>Affina</h3>
-                            <p>Affina is a full-stack social media application that provides a seamless
-                                platform for user connection and interaction. Built with the modern MERN
-                                (MongoDB, Express.js, React, Node.js) stack, it features secure JWT
-                                authentication, allowing users to create and manage posts, engage with content
-                                through real-time likes and comments, and personalize their profiles. With a
-                                responsive design, image upload capabilities, and a dynamic user interface,
-                                Affina demonstrates robust full-stack development skills in creating a
-                                scalable and engaging social experience.</p>
-                            <Link to="/Projects/AffinaDetails" className="project-img-content-btn">CASE STUDY</Link>
-                        </div>
+                        
+                        
+                            <div className="project-img">
+                                <img src={affinaShot} alt="Affina project preview"></img>
+                            </div>
+                            <div className="project-img-content">
+
+                                <p><strong>Problem:</strong> Users needed a lightweight social platform for posting, interaction, and profile personalization.</p>
+                                <p><strong>Role:</strong> Developed authentication, post interaction flows, and core frontend-backend integration.</p>
+                                <p><strong>Stack:</strong> MongoDB, Express, React, Node.js, JWT, Cloudinary.</p>
+                                <p><strong>Result:</strong> Delivered a responsive social app with secure auth, post management, likes/comments, and media support.</p>
+                                <Link to="/Projects/AffinaDetails" className="project-img-content-btn">CASE STUDY</Link>
+                            </div>
+                        
                     </div>
                 </div>
             </div>

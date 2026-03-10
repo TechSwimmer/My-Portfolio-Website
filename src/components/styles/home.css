@@ -1,0 +1,148 @@
+/* Home section styles extracted from styles.css */
+
+@media (max-width: 600px) {
+  .home-container {
+    position: relative;
+    width: 100%;
+    padding-top: 25%;
+    padding-bottom: 10%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .home-head {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  .home-content {
+    text-align: center;
+    font-size: 1.1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 70%;
+  }
+
+  .home-projects-button {
+    align-self: center;
+    font-size: 1.3rem;
+    padding: 10px 25px;
+    border-radius: 15px;
+  }
+
+  .home-projects-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-out;
+  }
+
+  .home-team-line {
+    font-size: 1.1rem;
+    text-align: center;
+    width: 75%;
+    margin-top: 14px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .home-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 30%;
+    padding-bottom: 10%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .home-head {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bolder;
+  }
+
+  .home-content {
+    text-align: center;
+    font-size: 1.4rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 70%;
+  }
+
+  .home-projects-button {
+    align-self: center;
+    font-size: 1.7rem;
+    padding: 10px 25px;
+    border-radius: 15px;
+  }
+
+  .home-projects-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-out;
+  }
+
+  .home-team-line {
+    font-size: 1.4rem;
+    text-align: center;
+    width: 72%;
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .home-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .home-head {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+
+  .home-content {
+    text-align: center;
+    font-size: 1.7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 70%;
+  }
+
+  .home-projects-button {
+    align-self: center;
+    font-size: 2rem;
+    padding: 10px 25px;
+    border-radius: 15px;
+  }
+
+  .home-projects-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-out;
+  }
+
+  .home-team-line {
+    font-size: 1.7rem;
+    text-align: center;
+    width: 70%;
+    margin-top: 18px;
+  }
+}

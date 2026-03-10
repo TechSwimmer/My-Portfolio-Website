@@ -10,16 +10,16 @@ import "../styles/cvBuilderstyles.css"
 
 
 const CvBuilderDetails = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+        window.scrollTo(0, 0)
+    }, [])
 
     const [indexOpen, setIndexOpen] = useState(false)
     const toggleIndex = () => {
         setIndexOpen(prev => !prev)
-    };
+    }
 
     return (
         <div className="cvbuilder-container">
@@ -28,18 +28,19 @@ const CvBuilderDetails = () => {
 
                 <div className={`nav-index ${indexOpen ? "active" : ""}`} id='navIndex'>
                     <a href='#project-highlights' onClick={toggleIndex}>PROJECT HIGHLIGHTS</a>
-                    <a href='#technical-implementation-container' onClick={toggleIndex}>TECHNICAL IMPLEMENTATION CONTENT</a>
-                    <a href='#backend-architecture-container' onClick={toggleIndex}>BACKEND ARCHITECTURE CONTENT</a>
-                    <a href='#challenges-container' onClick={toggleIndex}>CHALLENGES AND SOLUTIONS CONTENT</a>
+                    <a href='#my-role-container' onClick={toggleIndex}>MY ROLE</a>
+                    <a href='#technical-implementation-container' onClick={toggleIndex}>TECHNICAL IMPLEMENTATION</a>
+                    <a href='#backend-architecture-container' onClick={toggleIndex}>BACKEND ARCHITECTURE</a>
+                    <a href='#challenges-container' onClick={toggleIndex}>CHALLENGES AND SOLUTIONS</a>
                     <a href='#cvbuilder-content' onClick={toggleIndex}>Real-Time CV Preview</a>
                     <a href='#cvbuilder-form-content' onClick={toggleIndex}>Dynamic Form Input System</a>
                     <a href='#cvbuilder-stylepage-content' onClick={toggleIndex}>Style Customization Panel</a>
                     <a href='#cvbuilder-layout-img-content-heading' onClick={toggleIndex}>Multiple Layout Templates</a>
                     <a href='#cvbuilder-fullscreen-img-content' onClick={toggleIndex}>Full-Screen Preview & PDF Export</a>
-                    <a href='#cvbuilder-tools' onClick={toggleIndex}>Technology Stack Content</a>
-                    <a href='#future-container' onClick={toggleIndex}>FUTURE ENHANCEMENTS CONTENT</a>
+                    <a href='#cvbuilder-tools' onClick={toggleIndex}>Technology Stack</a>
+                    <a href='#future-container' onClick={toggleIndex}>Future Enhancements</a>
 
-                    <a href='#cvbuilder-links'>PROJECT LINK</a>
+                    <a href='#cvbuilder-links' onClick={toggleIndex}>Project Links</a>
                 </div>
 
 
@@ -52,12 +53,21 @@ const CvBuilderDetails = () => {
                     making resume creation seamless for users. The app provides multiple layouts and customization
                     options, ensuring flexibility for users with different resume needs. From structured data input
                     to final PDF download, every feature is built with user experience and functionality in mind.</p>
-                <p className="cvbuilder-heading-content">Most resume builders either lack customization, perform poorly with real-time previews,
-                    or generate PDFs that don’t match what users see on screen.
-                    I built CV Baker to solve all three problems — performance, layout consistency,
-                    and user-controlled customization — in a single full-stack application.</p>
-                <button className="cvbuilder-heading-btn"><a href="https://resume-baker.netlify.app/">lIVE PROJECT LINK</a></button>
+
+                <button className="cvbuilder-heading-btn" type="button">
+                    <a href="https://resume-baker.netlify.app/" target="_blank" rel="noreferrer">LIVE PROJECT LINK</a>
+                </button>
             </div>
+
+            <div className='my-role-container' id='my-role-container'>
+                <h3>MY ROLE</h3>
+                <ul>
+                    <li>Designed and implemented the core resume creation flow, from form input to live preview.</li>
+                    <li>Built reusable section components and integrated route-based navigation for the app experience.</li>
+                    <li>Implemented export and customization features while balancing rendering quality and UI responsiveness.</li>
+                </ul>
+            </div>
+
             <div className='project-highlights' id="project-highlights">
                 <h3>PROJECT HIGHLIGHTS</h3>
                 <div className='highlight-content'>
@@ -83,7 +93,7 @@ const CvBuilderDetails = () => {
             </div>
 
             <div className='technical-implementation-container' id="technical-implementation-container">
-                <h3>TECHNICAL IMPLEMENTATION CONTENT:</h3>
+                <h3>TECHNICAL IMPLEMENTATION</h3>
                 <div className='tech-imp-item'>
                     <h4>Dual panel interface:</h4>
                     <p>Built a responsive two-panel layout using React state management to synchronize form inputs with
@@ -92,33 +102,33 @@ const CvBuilderDetails = () => {
                     <ul>
                         <li>React Hooks (useState, useEffect, useRef) for state management</li>
                         <li>Component-based architecture for reusability</li>
-                        <li>Real-time form validation and error handling</li>
+                        <li>Section-wise form validation and error handling</li>
                     </ul>
                 </div>
                 <div className='tech-imp-item'>
                     <h4>Dynamic Styling System:</h4>
                     <p>Developed a comprehensive style customization engine allowing users to modify colors, fonts, and
-                        layouts. The system persists styling preferences and applies them across different CV templates.</p>
+                        layouts. The system applies styling preferences across different CV templates.</p>
                     <ul>
                         <li>CSS-in-JS with dynamic style injection</li>
                         <li>Template system supporting multiple layout options</li>
-                        <li>Style persistence in MongoDB database</li>
+                        <li>Style settings logic prepared for persistence support</li>
                     </ul>
                 </div>
                 <div className='tech-imp-item'>
                     <h4>PDF Generation & Export:</h4>
-                    <p>Implemented client-side PDF generation using jsPDF and html2canvas, ensuring pixel-perfect
-                        conversion of HTML/CSS to printable PDF format. Added optimization for ATS-friendly formatting.</p>
+                    <p>Implemented client-side PDF generation using jsPDF and html2canvas to convert
+                        HTML/CSS content into printable resume output while keeping layout consistency in mind.</p>
                     <ul>
                         <li>jsPDF for PDF document creation</li>
                         <li>html2canvas for accurate HTML to image conversion</li>
-                        <li>Custom PDF styling for print optimization</li>
+                        <li>Print-focused styling for cleaner exports</li>
                     </ul>
                 </div>
             </div>
 
             <div className='backend-architecture-container' id="backend-architecture-container">
-                <h3>BACKEND ARCHITECTURE CONTENT:</h3>
+                <h3>BACKEND ARCHITECTURE</h3>
                 <div className='back-arch-item'>
                     <h4>RESTful API Design</h4>
                     <p>Built with Node.js and Express, featuring JWT authentication, secure password hashing
@@ -156,7 +166,7 @@ const CvBuilderDetails = () => {
                     </div>
 
                     <div className="cvbuilder-content-img-overview">
-                        <p>CV Baker is a full-stack resume builder designed to handle real-time editing,
+                        <p>ResumeBaker is a full-stack resume builder designed to handle real-time editing,
                             layout switching, and PDF export without performance degradation.</p>
                         <p>The preview panel renders a live representation of the CV as users type,
                             while avoiding full re-renders on every keystroke.
@@ -190,13 +200,13 @@ const CvBuilderDetails = () => {
                             </div>
                             <p>The style editor allows users to modify colors, fonts, and spacing per layout.
                                 Each CV layout is paired with its own style configuration, ensuring changes
-                                remain scoped and predictable across templates.(This part is still being worked upon)</p>
+                                remain scoped and predictable across templates. (This part is still in progress.)</p>
                         </div>
 
                     </div>
 
 
-                    <div className='cvbuilder-layout-img-content id="cvbuilder-layout-img-content'>
+                    <div className='cvbuilder-layout-img-content' id="cvbuilder-layout-img-content">
                         <div className='cvbuilder-layout-img-content-heading' id="cvbuilder-layout-img-content-heading">
                             <h4>Multiple Layout Templates</h4>
                         </div>
@@ -234,7 +244,7 @@ const CvBuilderDetails = () => {
             </div>
             <div className="cvbuilder-tools" id="cvbuilder-tools">
                 <div className="cvbuilder-tool-head">
-                    <h3>Technology Stack Content:</h3>
+                    <h3>Technology Stack</h3>
                 </div>
 
                 <div className="cvbuilder-toolbox">
@@ -284,7 +294,7 @@ const CvBuilderDetails = () => {
             </div>
 
             <div className='future-container' id="future-container">
-                <h3>FUTURE ENHANCEMENTS CONTENT </h3>
+                <h3>FUTURE ENHANCEMENTS</h3>
                 <ul>
                     <li>Mobile-responsive design implementation (In-Progress)</li>
                     <li> ATS (Applicant Tracking System) optimization scoring</li>
@@ -293,12 +303,14 @@ const CvBuilderDetails = () => {
                 </ul>
             </div>
             <div className="cvbuilder-links" id="cvbuilder-links">
-                <button type="click" className="cvbuilder-link-btn"><a href="https://github.com/TechSwimmer/cv-Builder">GITHUB REPO</a></button>
-                <button type="click" className="cvbuilder-link-btn" onClick={() => navigate('/Home')}>GO BACK</button>
+                <button type="button" className="cvbuilder-link-btn">
+                    <a href="https://github.com/TechSwimmer/cv-Builder" target="_blank" rel="noreferrer">GITHUB REPO</a>
+                </button>
+                <button type="button" className="cvbuilder-link-btn" onClick={() => navigate('/Home')}>GO BACK</button>
 
             </div>
         </div>
     )
 }
 
-export default CvBuilderDetails;
+export default CvBuilderDetails

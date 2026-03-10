@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, useLocation,useNavigate } from 'react-router-dom';
+import { useEffect } from 'react'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar'
 import Logobar from './components/Logobar'
 import Themebar from './components/Themebar'
@@ -46,7 +46,7 @@ const AppContent = () => {
   return (
     <div>
         <Navbar navigateToSection = {navigateToSection} />
-        <Logobar navigateToSection = {navigateToSection}/>
+        <Logobar />
         <Themebar/>
         <Routes>
           <Route path="/Projects/TodoAppDetails" element={<TodoAppDetails />}/>

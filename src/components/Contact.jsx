@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./styles/styles.css";
+import "./styles/contact.css";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -7,28 +8,39 @@ const Contact = () => {
         email: "",
         message: ""
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState("");
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value});
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevent page reload
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitMessage("");
 
-        const response = await fetch("https://my-portfolio-website-83bd.onrender.com/send-email", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData),
-        });
+        try {
+            const response = await fetch("https://my-portfolio-website-83bd.onrender.com/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData),
+            });
 
-        if (!response.ok) {
-            throw new Error("Failed to send email");
+            if (!response.ok) {
+                throw new Error("Failed to send email");
+            }
+
+            const result = await response.json();
+            setSubmitMessage(result.message || "Message sent successfully.");
+            setFormData({ name: "", email: "", message: "" });
+        } catch {
+            setSubmitMessage("Could not send message right now. Please try again.");
+        } finally {
+            setIsSubmitting(false);
         }
-
-        const result = await response.json();
-        alert(result.message); // Show success/error message
     };
 
     return (
@@ -75,7 +87,10 @@ const Contact = () => {
                         onChange={handleChange}
                     />
                 </div>
-                <button type="submit" className="contact-submit-button">SUBMIT</button>
+                <button type="submit" className="contact-submit-button" disabled={isSubmitting}>
+                    {isSubmitting ? "SENDING..." : "SUBMIT"}
+                </button>
+                {submitMessage && <p className="contact-submit-status">{submitMessage}</p>}
             </form>
         </div>
     );

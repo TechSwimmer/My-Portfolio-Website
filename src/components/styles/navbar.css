@@ -1,0 +1,339 @@
+/* Navbar section styles extracted from styles.css */
+
+@media (max-width: 600px) {
+  .navbar {
+    z-index: 5;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbar-right h4 {
+    padding: auto;
+  }
+
+  .navbar-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 30%;
+    align-items: center;
+  }
+
+  .navbar-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .navbar-left h2 {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    margin-top: 25px;
+  }
+
+  .profilePic {
+    width: 20%;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+
+  .navbar-left img {
+    border-radius: 20px;
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+
+  .navbar h4 {
+    padding: 12px 23px;
+    border-radius: 10px;
+    visibility: hidden;
+  }
+
+  .navbar-right h4 a {
+    color: inherit;
+  }
+
+  .navbar h4:hover {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: scale(1.25);
+  }
+
+  .hamburger {
+    visibility: visible;
+    display: block;
+    min-width: 29%;
+    height: 29%;
+    margin: 15px 6px;
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .dropdown-menu {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    top: 15vh;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .dropdown-menu.open {
+    display: flex !important;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 999;
+  }
+
+  .dropdown-menu a {
+    padding: 10px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+
+  .dropdown-menu button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .hamburger img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .navbar {
+    z-index: 5;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbar-right h4 {
+    padding: auto;
+  }
+
+  .navbar-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50%;
+    align-items: center;
+  }
+
+  .navbar-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .navbar-left h2 {
+    margin-left: 2px;
+    font-size: 2rem;
+  }
+
+  .profilePic {
+    width: 21%;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+
+  .navbar-left img {
+    border-radius: 10px;
+    margin-left: 6px;
+    margin-right: 10px;
+  }
+
+  .navbar h4 {
+    padding: 12px 23px;
+    border-radius: 10px;
+    visibility: hidden;
+  }
+
+  .navbar-right h4 a {
+    color: inherit;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 18vh;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar h4:hover {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: scale(1.25);
+  }
+
+  .hamburger {
+    visibility: visible;
+    display: block;
+    min-width: 15%;
+    margin: 8px;
+    padding: 7px;
+    border-radius: 10px;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .dropdown-menu.open {
+    display: flex;
+  }
+
+  .dropdown-menu a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.7rem;
+    transition: 0.3s;
+  }
+
+  .dropdown-menu button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.7rem;
+    text-align: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .hamburger img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar {
+    z-index: 5;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 12%;
+    align-items: center;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbar-right h4 {
+    padding: auto;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  .navbar-left {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    flex-direction: row;
+  }
+
+  .navbar-left h2 {
+    font-size: 2rem;
+    padding-top: 12px;
+  }
+
+  .profilePic {
+    width: 20%;
+    object-fit: contain;
+    border-radius: 50px;
+  }
+
+  .navbar-left img {
+    border-radius: 50px;
+  }
+
+  .navbar h4 {
+    padding: 12px 23px;
+    border-radius: 10px;
+  }
+
+  .navbar-right h4 a {
+    color: inherit;
+  }
+
+  .navbar h4:hover {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: scale(1.25);
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

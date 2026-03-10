@@ -1,0 +1,201 @@
+/* Themebar section styles extracted from styles.css */
+
+@media (max-width: 600px) {
+  .themebar {
+    z-index: 5;
+    position: fixed;
+    border-radius: 20px;
+    right: 30%;
+    left: 30%;
+    bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0.5%;
+  }
+
+  .themebar-light {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .themebar-dark {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .themebar img {
+    width: 60%;
+    align-self: center;
+  }
+
+  .themebar-light:hover {
+    cursor: pointer;
+    transition: transform 0.5s ease-in;
+    transform: scale(1.2);
+    background-color: white;
+    border: 1px solid white;
+  }
+
+  .active-scale {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .themebar-dark:hover {
+    cursor: pointer;
+    transition: transform 0.5s ease-in;
+    transform: scale(1.2);
+    background-color: #333;
+    border: 1px solid #333;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .themebar {
+    z-index: 5;
+    position: fixed;
+    border-radius: 20px;
+    right: 10px;
+    width: 8%;
+    top: 39%;
+    bottom: 39%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0.5%;
+  }
+
+  .themebar-light {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .themebar-dark {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .themebar img {
+    width: 60%;
+    align-self: center;
+  }
+
+  .themebar-light:hover {
+    cursor: pointer;
+    transition: transform 0.5s ease-in;
+    transform: scale(1.2);
+    background-color: white;
+    border: 1px solid white;
+  }
+
+  .active-scale {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .themebar-dark:hover {
+    cursor: pointer;
+    transition: transform 0.5s ease-in;
+    transform: scale(1.2);
+    background-color: #333;
+    border: 1px solid #333;
+  }
+}
+
+@media (min-width: 1025px) {
+  .themebar {
+    z-index: 5;
+    position: fixed;
+    border-radius: 20px;
+    right: 10px;
+    width: 5%;
+    top: 39%;
+    bottom: 39%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0.5%;
+  }
+
+  .themebar-light {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .themebar-dark {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .themebar img {
+    width: 60%;
+    align-self: center;
+  }
+
+  .active-scale {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  body.light .themebar-light:hover,
+  body.light .themebar-dark:hover {
+    background-color: #d9d9d9;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
+  body.dark .themebar-light:hover,
+  body.dark .themebar-dark:hover {
+    background-color: #1e1e1e;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}

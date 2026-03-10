@@ -1,11 +1,12 @@
 import { useTheme } from "../context/ThemeProvider.jsx";
 import "./styles/styles.css";
+import "./styles/themebar.css";
 
 import lightlogo from "../assets/icons8-sun-50.png";
 import darklogo from "../assets/icons8-dark-60.png";
 
 const Themebar = () => {
-   const { theme, setTheme, isLight } = useTheme();
+   const { setTheme, isLight } = useTheme();
 
 
     return (
