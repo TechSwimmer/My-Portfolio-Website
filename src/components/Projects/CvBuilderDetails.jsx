@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import cvPreviewImg from '../../assets/portfolio-builder-preview.png'
 import cvFormImg from '../../assets/PORTFOLIO-BUILDER-FORMCONTENT.png'
-import cvStyleImg from '../../assets/cvShotEditStyle.png'
+import cvStyleImg from '../../assets/resumeBaker-style.png'
 import cvLayoutImg from '../../assets/portfolio-builder-layout.png'
 import cvFullscreenImg from '../../assets/PORTFOLIO-BUILDER-FULLSCREEN.png'
 
@@ -107,22 +107,24 @@ const CvBuilderDetails = () => {
                 </div>
                 <div className='tech-imp-item'>
                     <h4>Dynamic Styling System:</h4>
-                    <p>Developed a comprehensive style customization engine allowing users to modify colors, fonts, and
-                        layouts. The system applies styling preferences across different CV templates.</p>
+                    <p>Implemented a focused styling system that allows users to switch color themes and update
+                        font styles for resume content. This keeps visual customization simple and consistent
+                        while users edit their CV in real time.</p>
                     <ul>
-                        <li>CSS-in-JS with dynamic style injection</li>
-                        <li>Template system supporting multiple layout options</li>
-                        <li>Style settings logic prepared for persistence support</li>
+                        <li>Theme-based color switching for resume appearance</li>
+                        <li>Font-style selection controls for text presentation</li>
+                        <li>Live style updates applied directly to the preview</li>
                     </ul>
                 </div>
                 <div className='tech-imp-item'>
                     <h4>PDF Generation & Export:</h4>
-                    <p>Implemented client-side PDF generation using jsPDF and html2canvas to convert
-                        HTML/CSS content into printable resume output while keeping layout consistency in mind.</p>
+                    <p>Implemented a dual-output export workflow: React-PDF is used for the final downloadable CV,
+                        while html2canvas + jsPDF are used to generate a compact CV snapshot for dashboard display.
+                        This separation preserves text selection and clickable links in the downloaded resume.</p>
                     <ul>
-                        <li>jsPDF for PDF document creation</li>
-                        <li>html2canvas for accurate HTML to image conversion</li>
-                        <li>Print-focused styling for cleaner exports</li>
+                        <li>React-PDF for downloadable CV output with selectable text and clickable links</li>
+                        <li>html2canvas + jsPDF pipeline for generating dashboard preview images</li>
+                        <li>Separate render paths optimized for export quality and dashboard performance</li>
                     </ul>
                 </div>
             </div>
@@ -198,9 +200,9 @@ const CvBuilderDetails = () => {
 
                                 <img src={cvStyleImg} className="cvbuilder-project-image-left" alt="project-image"></img>
                             </div>
-                            <p>The style editor allows users to modify colors, fonts, and spacing per layout.
-                                Each CV layout is paired with its own style configuration, ensuring changes
-                                remain scoped and predictable across templates. (This part is still in progress.)</p>
+                            <p>The style editor currently supports theme color switching and font-style updates.
+                                These changes are reflected in the live preview to help users quickly compare visual options.
+                                Advanced per-layout styling controls are planned and still in progress.</p>
                         </div>
 
                     </div>
